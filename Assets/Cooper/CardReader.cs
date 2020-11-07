@@ -28,5 +28,7 @@ public class CardReader : MonoBehaviour
         generateSpeed.text = card.generateSpeed.ToString();
     }
 
+
+
     
 }

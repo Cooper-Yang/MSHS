@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CardAnimation : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class CardAnimation : MonoBehaviour
         }
         
     }
+
 
     void OnMouseEnter()
     {
