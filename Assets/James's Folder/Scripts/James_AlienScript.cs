@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class James_AlienScript : MonoBehaviour
 {
@@ -10,10 +11,10 @@ public class James_AlienScript : MonoBehaviour
 	}
 	public Continent myCon;
 
-    public int pol_Influence; // 0~100
-    public int rel_Influence; // 0~100
-    public int cul_Influence; // 0~100
-    public int tech_Influence; // 0~100
+    public float pol_Influence; // 0~100
+    public float rel_Influence; // 0~100
+    public float cul_Influence; // 0~100
+    public float tech_Influence; // 0~100
 
 	private float radius = 0; // caculated with total influence
 
@@ -54,11 +55,11 @@ public class James_AlienScript : MonoBehaviour
 	{
 		James_AlienScript aS = alien.GetComponent<James_AlienScript>();
 		// calculate total influence
-		int influence_Total = aS.pol_Influence + aS.rel_Influence + aS.cul_Influence + aS.tech_Influence;
+		float influence_Total = aS.pol_Influence + aS.rel_Influence + aS.cul_Influence + aS.tech_Influence;
 		// calculate radius based on total influence
 		radius = influence_Total / 100;
 		// roll which type of dot to spawn
-		int rnd = Random.Range(0, influence_Total+1);
+		float rnd = Random.Range(0, influence_Total+1);
 		if (rnd <= aS.pol_Influence)
 		{
 			// pol dot
