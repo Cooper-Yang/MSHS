@@ -27,6 +27,11 @@ public class ContinentScript : MonoBehaviour
 		continentInfo.text = "";
 	}
 
+	private void OnMouseExit()
+	{
+		continentInfo.text = "";
+	}
+
 	public void CalculateIindividualDots()
 	{
 		polDot_count = 0;
