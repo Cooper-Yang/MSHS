@@ -22,9 +22,15 @@ public class infobars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        religionbar.fillAmount = religion / 100;
-        politicsbar.fillAmount = politics / 100;
-        culturebar.fillAmount = culture / 100;
-        techbar.fillAmount = tech / 100;
+        James_AlienScript jas = gameObject.GetComponentInParent<James_AlienScript>();
+        
+        
+        religionbar.fillAmount = jas.rel_Influence / 100;
+        politicsbar.fillAmount = jas.pol_Influence / 100;
+        culturebar.fillAmount = jas.cul_Influence / 100;
+        techbar.fillAmount = jas.tech_Influence / 100;
+
+
+        Debug.Log(jas.tech_Influence);
     }
 }
