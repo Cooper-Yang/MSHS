@@ -13,9 +13,11 @@ public class CardMvmt : MonoBehaviour
 
     private Transform cardTransform;
     private Vector2 originalPos;
+    private Vector2 originalScal;
     private Vector2 currentMPos;
 
     public Vector3 cardPos;
+    public Vector3 cardScal;
     public Vector3 mousePos;
 
     public bool mouseOn = false;
@@ -26,6 +28,8 @@ public class CardMvmt : MonoBehaviour
     {
         cardTransform = GetComponent<Transform>();
         originalPos = cardTransform.position;
+        originalScal = cardTransform.localScale;
+        cardScal = originalScal;
     }
 
     // Update is called once per frame
@@ -35,6 +39,7 @@ public class CardMvmt : MonoBehaviour
         moveCardUp();
         dragCards();
         cardTransform.position = cardPos;
+        cardTransform.localScale = cardScal;
     }
 
     public void moveCardUp()
@@ -42,22 +47,28 @@ public class CardMvmt : MonoBehaviour
         float lerpGoal = 1;
         float lerpTime = .1f;
         float lerpValue;
+        float scaleLerpGoal = .05f;
+        float scaleLerpValue;
         Vector2 lerpPos;
 
 
         if (mouseOn == true)
         {
             
-                lerpValue = Mathf.Lerp(cardTransform.position.y, originalPos.y + lerpGoal, Time.deltaTime / lerpTime);
-                cardPos = new Vector2(cardTransform.position.x, lerpValue);
-            
+            lerpValue = Mathf.Lerp(cardTransform.position.y, originalPos.y + lerpGoal, Time.deltaTime / lerpTime);
+            cardPos = new Vector2(cardTransform.position.x, lerpValue);
+
+            scaleLerpValue = Mathf.Lerp(cardTransform.localScale.x, originalScal.x + scaleLerpGoal, Time.deltaTime / lerpTime);
+            cardScal = new Vector2(scaleLerpValue, scaleLerpValue);
             
         }
         if (mouseOn == false)
         {
             lerpPos = Vector2.Lerp(cardTransform.position, originalPos, Time.deltaTime / lerpTime);
             cardPos = lerpPos;
-           
+
+            scaleLerpValue = Mathf.Lerp(cardTransform.localScale.x, originalScal.x , Time.deltaTime / lerpTime);
+            cardScal = new Vector2(scaleLerpValue, scaleLerpValue);
         }
 
         
