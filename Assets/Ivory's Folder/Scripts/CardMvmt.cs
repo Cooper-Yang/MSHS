@@ -15,7 +15,8 @@ public class CardMvmt : MonoBehaviour
     private Vector2 originalPos;
     private Vector2 currentMPos;
 
-    public Vector2 cardPos;
+    public Vector3 cardPos;
+    public Vector3 mousePos;
 
     public bool mouseOn = false;
     public bool dragging;
@@ -30,7 +31,7 @@ public class CardMvmt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        mousePos = Camera.main.ScreenToWorldPoint( new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z * -1));
         moveCardUp();
         dragCards();
         cardTransform.position = cardPos;
@@ -38,7 +39,7 @@ public class CardMvmt : MonoBehaviour
 
     public void moveCardUp()
     {
-        float lerpGoal = 30;
+        float lerpGoal = 1;
         float lerpTime = .1f;
         float lerpValue;
         Vector2 lerpPos;
@@ -66,7 +67,7 @@ public class CardMvmt : MonoBehaviour
     {
         if(dragging == true)
         {
-            cardPos = Input.mousePosition;
+            cardPos = new Vector3(mousePos.x, mousePos.y, cardPos.z);
             mouseOn = false;
         }
 
