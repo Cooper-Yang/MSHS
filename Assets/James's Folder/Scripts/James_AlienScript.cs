@@ -32,6 +32,8 @@ public class James_AlienScript : MonoBehaviour
 	public GameObject europe;
 	public GameObject australia;
 
+	public Camera cam;
+
 	private void Start()
 	{
 		timer = world_interval;
@@ -110,22 +112,27 @@ public class James_AlienScript : MonoBehaviour
 			case Continent.northAmerica:
 				dot.transform.parent = northAmerica.transform;
 				northAmerica.GetComponent<ContinentScript>().dots.Add(dot);
+				northAmerica.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 			case Continent.southAmerica:
 				dot.transform.parent = southAmerica.transform;
 				southAmerica.GetComponent<ContinentScript>().dots.Add(dot);
+				southAmerica.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 			case Continent.asia:
 				dot.transform.parent = asia.transform;
 				asia.GetComponent<ContinentScript>().dots.Add(dot);
+				asia.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 			case Continent.europe:
 				dot.transform.parent = europe.transform;
 				europe.GetComponent<ContinentScript>().dots.Add(dot);
+				europe.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 			case Continent.australia:
 				dot.transform.parent = australia.transform;
 				australia.GetComponent<ContinentScript>().dots.Add(dot);
+				australia.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 		}
 	}
