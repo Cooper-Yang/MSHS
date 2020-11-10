@@ -9,9 +9,9 @@ public class CardManager : MonoBehaviour
     public List<GameObject> deck = new List<GameObject>();
     public List<CardAnimation> CAs = new List<CardAnimation>();
 
-    private float Posy = 122f;
-    private float midPosx = 381f;
-    private float mid2Posx = -50f;
+    private float Posy = -3.8f;
+    private float midPosx = -7f;
+    private float mid2Posx = -0.5f;
 
     private Vector2 cardSpawnPos;
     private Vector3 cardFinalScale;
@@ -21,8 +21,8 @@ public class CardManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cardSpawnPos = new Vector2(-496f, 197f);
-        cardFinalScale = new Vector3(0.58f, 0.58f, 0.58f);
+        cardSpawnPos = new Vector2(-88f, 27f);
+        cardFinalScale = new Vector3(0.058f, 0.058f, 0.058f);
     }
 
     // Update is called once per frame
@@ -31,10 +31,11 @@ public class CardManager : MonoBehaviour
         
         //DealCard();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&& deck.Count<=10)
         {
             SpawnCard();
             DealCard();
+            Debug.Log("card out");
         }
     }
 
@@ -56,7 +57,8 @@ public class CardManager : MonoBehaviour
             
             Vector2 lerpPos;
             Vector3 lerpScale;
-            GameObject thisCard = deck[deck.Count - 1];
+            int theCardNum = deck.Count - 1;
+            GameObject thisCard = deck[theCardNum];
             StartCoroutine(LerpTime(5));
 
             IEnumerator LerpTime( float duration)
@@ -65,7 +67,7 @@ public class CardManager : MonoBehaviour
 
                 while (time < duration-4.5)
                 {
-                    lerpPos = Vector2.Lerp(thisCard.transform.position, new Vector2(midPosx, Posy), time/duration);
+                    lerpPos = Vector2.Lerp(thisCard.transform.position, new Vector2(midPosx+ (theCardNum) *1.3f, Posy), time/duration);
                     lerpScale = Vector3.Lerp(thisCard.transform.localScale, cardFinalScale, time / duration);
                     time += Time.deltaTime;
                     thisCard.transform.position = lerpPos;
@@ -74,7 +76,7 @@ public class CardManager : MonoBehaviour
                 }
                 
                 thisCard.transform.localScale = cardFinalScale;
-                thisCard.transform.position = new Vector2(midPosx, Posy);
+                thisCard.transform.position = new Vector2(midPosx + (theCardNum) * 1.3f, Posy);
                 thisCard.transform.GetComponent<CardMvmt>().enabled= true;
                 //thisCard.transform.position = thisCard.GetComponent<CardAnimation>().cardPos;
                 //yield return null;
