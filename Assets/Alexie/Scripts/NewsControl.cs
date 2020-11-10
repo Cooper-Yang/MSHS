@@ -41,7 +41,7 @@ public class NewsControl : MonoBehaviour
         news.transform.position += Vector3.left * speed;
 
         //Breaking news jump out and in
-        if (resetTime <= 1)
+        if (Input.GetKeyDown(KeyCode.B))//Press B to call break news
         {
             readingNews = true;
         }
