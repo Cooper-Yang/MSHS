@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 1172636482}
   - component: {fileID: 1172636481}
   m_Layer: 0
-  m_Name: BreakNewsBack
+  m_Name: BreakNews
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -841,6 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   readingNews: 0
+  rollingNews: 0
   newsControls:
   - {fileID: 0}
   - {fileID: 0}

@@ -7,15 +7,16 @@ using UnityEngine.UI;
 public class NewsControl : MonoBehaviour
 {
     //Changeable variables
-    public bool readingNews = false;
+    public bool readingNews = false;//Break news pop out
+    public bool rollingNews = false;//Normal news rolling
 
     public List<NewsControl> newsControls;
-    public Text news;
+    public Text news;//Text for normal news
 
     public float speed; //0~1
     public float resetTime; //For testing
 
-    public GameObject breakNews;
+    public GameObject breakNews;//put break news here
     //Default Numbers
     float resetDefTime; //For testing
     Vector3 newsDefPos;
@@ -33,11 +34,15 @@ public class NewsControl : MonoBehaviour
 
         if (resetTime <= 0)
         {
+            rollingNews = false;
             resetTime = resetDefTime;
             news.transform.position = newsDefPos;
+            rollingNews = true;
         }
 
-        news.text = "Hello";//Waiting for fix
+        
+
+        news.text = "Hi, this is rolling news.";//Waiting for fix
         news.transform.position += Vector3.left * speed;
 
         //Breaking news jump out and in
