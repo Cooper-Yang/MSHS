@@ -78,6 +78,7 @@ public class CardManager : MonoBehaviour
                 thisCard.transform.localScale = cardFinalScale;
                 thisCard.transform.position = new Vector2(midPosx + (theCardNum) * 1.3f, Posy);
                 thisCard.transform.GetComponent<CardMvmt>().enabled= true;
+                thisCard.transform.GetComponent<CardDelete>().enabled = true;
                 //thisCard.transform.position = thisCard.GetComponent<CardAnimation>().cardPos;
                 //yield return null;
 
