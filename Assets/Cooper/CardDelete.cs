@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CardDelete : MonoBehaviour
 {
 
-    public Image deleteZone;
+    Image deleteZone;
     // Update is called once per frame
 
     private void Start()
@@ -16,25 +16,27 @@ public class CardDelete : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.y > 5.5)
+        if(transform.position.y > 5)
         {
             deleteZone.color = new Color(deleteZone.color.r, deleteZone.color.g, deleteZone.color.b,0.5f);
-            
+            //Debug.Log(transform.position.y); 
             if (Input.GetMouseButtonUp(0))
             {
+
+                
                 deleteZone.color = new Color(deleteZone.color.r, deleteZone.color.g, deleteZone.color.b, 0);
                 Destroy(gameObject);
             }
         }
         else
         {
-            
+            deleteZone.color = new Color(deleteZone.color.r, deleteZone.color.g, deleteZone.color.b, 0);
         }
         
         
 
 
         
-        //Debug.Log(transform.position.y);
+        //
     }
 }
