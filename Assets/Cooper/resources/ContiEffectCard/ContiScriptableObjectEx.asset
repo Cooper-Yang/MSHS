@@ -10,12 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdcfa4c6d6104dc4688a4e30fcc603bc, type: 3}
-  m_Name: AlienHank
+  m_Name: ContiScriptableObjectEx
   m_EditorClassIdentifier: 
-  cardName: Alien Hank
-  background: {fileID: 21300000, guid: 59196ef969814ec46936a5302b0119a8, type: 3}
-  artwork: {fileID: 21300000, guid: c25f0eec6c7cb9f4b8c36de0d9d90e37, type: 3}
-  icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  description: The one and only hank
-  lifeSpan: 100
-  generateSpeed: 17
+  cardName: Infiltrate NASA
+  description: This card affects all aliens in the same continent. NASA is a technology
+    base for homo sapien. Maybe it will give us some more surprise..
+  isConti: 0
+  politics: 0
+  culture: 0
+  religion: 0
+  technology: 1
+  poliVal: 0
+  culVal: 0
+  reliVal: 0
+  techVal: 5
+  genVal: 0
+  lifeVal: 0

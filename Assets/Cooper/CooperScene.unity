@@ -6573,9 +6573,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 3801206832184811269, guid: 3485a82a4ebf8e44c804bfb76b86f47b, type: 3}
+  cards:
+  - {fileID: 3801206832184811269, guid: 3485a82a4ebf8e44c804bfb76b86f47b, type: 3}
+  - {fileID: 3801206832184811269, guid: 1be8157bde04a1c4fada45fea18e7a7a, type: 3}
+  - {fileID: 3801206832184811269, guid: a7d1c2f3cb168294c80663cfe237829c, type: 3}
   CM: {fileID: 6999101257066605294, guid: 3485a82a4ebf8e44c804bfb76b86f47b, type: 3}
   deck: []
-  CAs: []
   onLerp: 0
 --- !u!4 &2127107501
 Transform:

@@ -47,7 +47,7 @@ public class CardMvmt : MonoBehaviour
         float lerpGoal = 1;
         float lerpTime = .1f;
         float lerpValue;
-        float scaleLerpGoal = .05f;
+        float scaleLerpGoal = .07f;
         float scaleLerpValue;
         Vector2 lerpPos;
 
@@ -60,7 +60,7 @@ public class CardMvmt : MonoBehaviour
 
             scaleLerpValue = Mathf.Lerp(cardTransform.localScale.x, originalScal.x + scaleLerpGoal, Time.deltaTime / lerpTime);
             cardScal = new Vector2(scaleLerpValue, scaleLerpValue);
-            
+            this.transform.SetAsLastSibling();
         }
         if (mouseOn == false)
         {

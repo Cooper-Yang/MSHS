@@ -5,11 +5,11 @@ using UnityEngine;
 public class CardManager : MonoBehaviour
 {
     [SerializeField] private GameObject card;
+    [SerializeField] private GameObject[] cards;
     [SerializeField] private CardMvmt CM;
     public List<GameObject> deck = new List<GameObject>();
-    public List<CardAnimation> CAs = new List<CardAnimation>();
 
-    private float Posy = -3.8f;
+    private float Posy = -3.7f;
     private float midPosx = -7f;
     private float mid2Posx = -0.5f;
 
@@ -39,9 +39,31 @@ public class CardManager : MonoBehaviour
         }
     }
 
+    public void CardArgmt()
+    {
+        for (int i = 0; i < deck.Count; i++)
+        {
+            if (deck[i] == null)
+            {
+                if (i < deck.Count - 2)
+                {
+                    deck[i] = deck[i - 1];
+                    deck[i - 1] = null;
+                }
+                if (i == deck.Count - 2)
+                {
+
+                }
+
+            }
+        }
+
+    }
+
     void SpawnCard()
     {
-        GameObject newCard = Instantiate(card, new Vector2(cardSpawnPos.x, cardSpawnPos.y), Quaternion.identity);
+        int randnum = Random.Range(0, cards.Length);
+        GameObject newCard = Instantiate(cards[randnum], new Vector2(cardSpawnPos.x, cardSpawnPos.y), Quaternion.identity);
         newCard.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
         newCard.transform.localScale = new Vector3(newCard.transform.localScale.x*.1f, newCard.transform.localScale.y * .1f, newCard.transform.localScale.z * .1f);
         deck.Add(newCard);
