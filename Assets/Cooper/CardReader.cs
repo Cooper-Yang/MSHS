@@ -21,6 +21,7 @@ public class CardReader : MonoBehaviour
     int genVal;
     int lifeVal;
 
+
     void Start()
     {
         cardName.text = card.cardName;

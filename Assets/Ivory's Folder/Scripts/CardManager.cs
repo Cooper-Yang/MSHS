@@ -23,54 +23,73 @@ public class CardManager : MonoBehaviour
     {
         cardSpawnPos = new Vector2(-88f, 27f);
         cardFinalScale = new Vector3(0.058f, 0.058f, 0.058f);
+        for (int i = 0; i < 10; i++)
+        {
+            deck.Add(null);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        //DealCard();
 
-        if (Input.GetKeyDown(KeyCode.Space)&& deck.Count<=10)
+        //DealCard();
+        int dealIndex = 0;
+        bool candeal = false;
+        for (int i = 0; i < deck.Count; i++)
         {
-            SpawnCard();
-            DealCard();
-            Debug.Log("card out");
+            if(deck[i] == null)
+            {
+                candeal = true;
+                dealIndex = i;
+                break;
+            }
         }
+
+        if (candeal)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SpawnCard(dealIndex);
+                DealCard(dealIndex);
+                Debug.Log("card out");
+            }
+        }
+       
+
     }
 
-    public void CardArgmt()
+    public void CardArgmt()//not working
     {
         for (int i = 0; i < deck.Count; i++)
         {
             if (deck[i] == null)
             {
-                if (i < deck.Count - 2)
+                if (i <= deck.Count - 2)
                 {
-                    deck[i] = deck[i - 1];
-                    deck[i - 1] = null;
-                }
-                if (i == deck.Count - 2)
-                {
+                    deck[i] = deck[i + 1];
 
+                    deck[i].transform.position = new Vector2(midPosx + i * 1.3f, Posy);
+                    deck[i + 1] = null;
                 }
+                
 
             }
         }
 
     }
 
-    void SpawnCard()
+    void SpawnCard(int index)
     {
         int randnum = Random.Range(0, cards.Length);
         GameObject newCard = Instantiate(cards[randnum], new Vector2(cardSpawnPos.x, cardSpawnPos.y), Quaternion.identity);
         newCard.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
         newCard.transform.localScale = new Vector3(newCard.transform.localScale.x*.1f, newCard.transform.localScale.y * .1f, newCard.transform.localScale.z * .1f);
-        deck.Add(newCard);
+        deck[index] = newCard;
 
     }
 
-    void DealCard()
+    void DealCard(int index)
     {
         
         if (deck.Count > 0)
@@ -79,7 +98,7 @@ public class CardManager : MonoBehaviour
             
             Vector2 lerpPos;
             Vector3 lerpScale;
-            int theCardNum = deck.Count - 1;
+            int theCardNum = index;
             GameObject thisCard = deck[theCardNum];
             StartCoroutine(LerpTime(5));
 

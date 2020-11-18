@@ -550,12 +550,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continentInfo: {fileID: 1272108920}
-  dots: []
-  aliens: []
-  polDot_count: 0
-  culDot_count: 0
-  relDot_count: 0
-  techDot_count: 0
+  myDots: []
+  myAliens: []
+  pol_cont: 0
+  cul_cont: 0
+  rel_cont: 0
+  tech_cont: 0
+  pol_tendency: 1
+  cul_tendency: 1
+  rel_tendency: 1
+  tech_tendency: 1
 --- !u!210 &57234184
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -878,12 +882,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continentInfo: {fileID: 1129828778}
-  dots: []
-  aliens: []
-  polDot_count: 0
-  culDot_count: 0
-  relDot_count: 0
-  techDot_count: 0
+  myDots: []
+  myAliens: []
+  pol_cont: 0
+  cul_cont: 0
+  rel_cont: 0
+  tech_cont: 0
+  pol_tendency: 1
+  cul_tendency: 1
+  rel_tendency: 1
+  tech_tendency: 1
 --- !u!210 &228514771
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1645,12 +1653,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continentInfo: {fileID: 1695288830}
-  dots: []
-  aliens: []
-  polDot_count: 0
-  culDot_count: 0
-  relDot_count: 0
-  techDot_count: 0
+  myDots: []
+  myAliens: []
+  pol_cont: 0
+  cul_cont: 0
+  rel_cont: 0
+  tech_cont: 0
+  pol_tendency: 1
+  cul_tendency: 1
+  rel_tendency: 1
+  tech_tendency: 1
 --- !u!210 &478336573
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1899,12 +1911,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continentInfo: {fileID: 570942377}
-  dots: []
-  aliens: []
-  polDot_count: 0
-  culDot_count: 0
-  relDot_count: 0
-  techDot_count: 0
+  myDots: []
+  myAliens: []
+  pol_cont: 0
+  cul_cont: 0
+  rel_cont: 0
+  tech_cont: 0
+  pol_tendency: 1
+  cul_tendency: 1
+  rel_tendency: 1
+  tech_tendency: 1
 --- !u!210 &502474467
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -2877,10 +2893,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCon: 3
+  myDots: []
   pol_Influence: 50
   rel_Influence: 40
   cul_Influence: 30
   tech_Influence: 70
+  radius: 0
   polVfxIcon: {fileID: 282251270}
   relVfxIcon: {fileID: 1619504950}
   culVfxIcon: {fileID: 1838550085}
@@ -3870,6 +3888,10 @@ MonoBehaviour:
   asia: {fileID: 478336569}
   europe: {fileID: 2065507992}
   australia: {fileID: 228514767}
+  pol_gl: 0
+  cul_gl: 0
+  rel_gl: 0
+  tech_gl: 0
 --- !u!4 &1251256345
 Transform:
   m_ObjectHideFlags: 0
@@ -5673,12 +5695,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continentInfo: {fileID: 1335762290}
-  dots: []
-  aliens: []
-  polDot_count: 0
-  culDot_count: 0
-  relDot_count: 0
-  techDot_count: 0
+  myDots: []
+  myAliens: []
+  pol_cont: 0
+  cul_cont: 0
+  rel_cont: 0
+  tech_cont: 0
+  pol_tendency: 1
+  cul_tendency: 1
+  rel_tendency: 1
+  tech_tendency: 1
 --- !u!210 &1768254155
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -6342,12 +6368,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continentInfo: {fileID: 395612853}
-  dots: []
-  aliens: []
-  polDot_count: 0
-  culDot_count: 0
-  relDot_count: 0
-  techDot_count: 0
+  myDots: []
+  myAliens: []
+  pol_cont: 0
+  cul_cont: 0
+  rel_cont: 0
+  tech_cont: 0
+  pol_tendency: 1
+  cul_tendency: 1
+  rel_tendency: 1
+  tech_tendency: 1
 --- !u!210 &2065507996
 SortingGroup:
   m_ObjectHideFlags: 0
