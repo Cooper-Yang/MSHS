@@ -1073,7 +1073,7 @@ GameObject:
   - component: {fileID: -6207825322816370622}
   - component: {fileID: 2378879488168069705}
   m_Layer: 5
-  m_Name: AlienHankCard
+  m_Name: AlienCardPrefabEx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1145,11 +1145,18 @@ MonoBehaviour:
   eyes: {fileID: 6988195630166860281}
   mouth: {fileID: 8196693241683936340}
   headSpr:
-  - {fileID: 21300000, guid: 5d07c321d6c50b64a84b0278d30e3bc0, type: 3}
+  - {fileID: 21300000, guid: bca5b472291e9254eb5dba37d30c63af, type: 3}
+  - {fileID: 21300000, guid: 57c5aee8ade9e24498cd6e96e9e5044b, type: 3}
+  - {fileID: 21300000, guid: f0312219ed4fcd7419b39a23381deaf8, type: 3}
   eyesSpr:
-  - {fileID: 21300000, guid: d2af10d1ec0d5404ead1d813a2bdf8dc, type: 3}
+  - {fileID: 21300000, guid: 2ccde8567b4b24b439c16c79101cb8da, type: 3}
+  - {fileID: 21300000, guid: f481b253993228541aa234dc2a2ed9c8, type: 3}
+  - {fileID: 21300000, guid: f0deab5607901df4f82f9878b5288658, type: 3}
   mouthSpr:
-  - {fileID: 21300000, guid: 62ca279a7d2816c40a976f0e758182bc, type: 3}
+  - {fileID: 21300000, guid: 11ae468ac4fdae942b26633f160df4d0, type: 3}
+  - {fileID: 21300000, guid: 532dc6f7f15692b49b94435831f3f3d2, type: 3}
+  - {fileID: 21300000, guid: 7a9654add6325994098e2b5ba7950a7a, type: 3}
+  genSpeed: 0
 --- !u!114 &6999101257066605294
 MonoBehaviour:
   m_ObjectHideFlags: 0

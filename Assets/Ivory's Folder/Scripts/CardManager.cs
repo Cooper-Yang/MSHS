@@ -39,6 +39,27 @@ public class CardManager : MonoBehaviour
         }
     }
 
+    public void CardArgmt()
+    {
+        for (int i = 0; i < deck.Count; i++)
+        {
+            if (deck[i] == null)
+            {
+                if (i < deck.Count - 2)
+                {
+                    deck[i] = deck[i - 1];
+                    deck[i - 1] = null;
+                }
+                if (i == deck.Count - 2)
+                {
+
+                }
+
+            }
+        }
+
+    }
+
     void SpawnCard()
     {
         int randnum = Random.Range(0, cards.Length);
