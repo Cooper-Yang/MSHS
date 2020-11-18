@@ -6,26 +6,37 @@ using UnityEngine.UI;
 public class CardReader : MonoBehaviour
 {
     public CardObject card;
-
     public Text cardName;
-    
-    public Image background;
-    public Image artwork;
 
-    public Image icon;
+    public GameObject techIcon;
+    public GameObject culIcon;
+    public GameObject reliIcon;
+    public GameObject poliIcon;
     public Text description;
-    public Text lifeSpan;
-    public Text generateSpeed;
+
+    int poliVal;
+    int culVal;
+    int reliVal;
+    int techVal;
+    int genVal;
+    int lifeVal;
 
     void Start()
     {
         cardName.text = card.cardName;
-        background.sprite = card.background;
-        artwork.sprite = card.artwork;
-        icon.sprite = card.icon;
+        techIcon.SetActive(card.technology);
+        culIcon.SetActive(card.culture);
+        reliIcon.SetActive(card.religion);
+        poliIcon.SetActive(card.politics);
+
         description.text = card.description;
-        lifeSpan.text = card.lifeSpan.ToString();
-        generateSpeed.text = card.generateSpeed.ToString();
+
+        poliVal = card.poliVal;
+        culVal = card.culVal;
+        reliVal = card.reliVal;
+        techVal = card.techVal;
+        genVal = card.genVal;
+        lifeVal = card.lifeVal;
     }
 
 

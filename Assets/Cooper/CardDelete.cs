@@ -28,15 +28,15 @@ public class CardDelete : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else
+        else if (transform.position.y >-2)
         {
             deleteZone.color = new Color(deleteZone.color.r, deleteZone.color.g, deleteZone.color.b, 0);
         }
-        
-        
 
 
-        
-        //
+
+
+
+        //Debug.Log(transform.position.y);
     }
 }
