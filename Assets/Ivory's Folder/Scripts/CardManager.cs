@@ -27,18 +27,27 @@ public class CardManager : MonoBehaviour
         {
             deck.Add(null);
         }
+        for (int i = 0; i < 5; i++)
+        {
+            SpawnAlienCard(i);
+            DealCard(i);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        //DealCard();
+        
+
+    }
+    public bool SendCard()
+    {
         int dealIndex = 0;
         bool candeal = false;
         for (int i = 0; i < deck.Count; i++)
         {
-            if(deck[i] == null)
+            if (deck[i] == null)
             {
                 candeal = true;
                 dealIndex = i;
@@ -48,15 +57,15 @@ public class CardManager : MonoBehaviour
 
         if (candeal)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                SpawnCard(dealIndex);
-                DealCard(dealIndex);
-                Debug.Log("card out");
-            }
-        }
-       
 
+            SpawnCard(dealIndex);
+            DealCard(dealIndex);
+            Debug.Log("card out");
+
+            return true;
+        }
+
+        return false;
     }
 
     public void CardArgmt()//not working
@@ -87,6 +96,15 @@ public class CardManager : MonoBehaviour
         newCard.transform.localScale = new Vector3(newCard.transform.localScale.x*.1f, newCard.transform.localScale.y * .1f, newCard.transform.localScale.z * .1f);
         deck[index] = newCard;
 
+    }
+
+    void SpawnAlienCard(int index)
+    {
+        int randnum = 0;
+        GameObject newCard = Instantiate(cards[randnum], new Vector2(cardSpawnPos.x, cardSpawnPos.y), Quaternion.identity);
+        newCard.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
+        newCard.transform.localScale = new Vector3(newCard.transform.localScale.x * .1f, newCard.transform.localScale.y * .1f, newCard.transform.localScale.z * .1f);
+        deck[index] = newCard;
     }
 
     void DealCard(int index)

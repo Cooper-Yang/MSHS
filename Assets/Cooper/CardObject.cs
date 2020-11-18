@@ -23,6 +23,6 @@ public class CardObject : ScriptableObject
 	public int lifeVal;
 	public int cardLvl;
 	public int discovRate;
-	public int discovEffect;
+	//public int discovEffect;
 
 }
