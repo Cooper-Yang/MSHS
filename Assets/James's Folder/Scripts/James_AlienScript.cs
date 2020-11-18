@@ -10,13 +10,14 @@ public class James_AlienScript : MonoBehaviour
 		africa, northAmerica, southAmerica, asia, europe, australia
 	}
 	public Continent myCon;
+	public List<GameObject> myDots;
 
     public float pol_Influence; // 0~100
     public float rel_Influence; // 0~100
     public float cul_Influence; // 0~100
     public float tech_Influence; // 0~100
 
-	private float radius = 0; // caculated with total influence
+	public float radius = 0; // caculated with total influence
 
 	private float timer; // for generating dots
 	
@@ -33,6 +34,27 @@ public class James_AlienScript : MonoBehaviour
 		culVfxIcon.GetComponent<Image>().fillAmount = cul_Influence / 100;
 		relVfxIcon.GetComponent<Image>().fillAmount = rel_Influence / 100;
 		techVfxIcon.GetComponent<Image>().fillAmount = tech_Influence / 100;
+		switch (myCon)
+		{
+			case Continent.africa:
+				GameManager.me.africa.GetComponent<ContinentScript>().myAliens.Add(gameObject);
+				break;
+			case Continent.asia:
+				GameManager.me.asia.GetComponent<ContinentScript>().myAliens.Add(gameObject);
+				break;
+			case Continent.northAmerica:
+				GameManager.me.northAmerica.GetComponent<ContinentScript>().myAliens.Add(gameObject);
+				break;
+			case Continent.southAmerica:
+				GameManager.me.southAmerica.GetComponent<ContinentScript>().myAliens.Add(gameObject);
+				break;
+			case Continent.europe:
+				GameManager.me.europe.GetComponent<ContinentScript>().myAliens.Add(gameObject);
+				break;
+			case Continent.australia:
+				GameManager.me.australia.GetComponent<ContinentScript>().myAliens.Add(gameObject);
+				break;
+		}
 	}
 
 	private void Update()
@@ -67,6 +89,7 @@ public class James_AlienScript : MonoBehaviour
 			// pol dot
 			GameObject dot = Instantiate(GameManager.me.politicDotPrefab);
 			SetParent(dot);
+			myDots.Add(dot);
 			dot.transform.position = transform.position + Random.insideUnitSphere * radius;
 			dot.transform.position = new Vector3(dot.transform.position.x, dot.transform.position.y, 0);
 		}
@@ -75,6 +98,7 @@ public class James_AlienScript : MonoBehaviour
 			// rel dot
 			GameObject dot = Instantiate(GameManager.me.religionDotPrefab);
 			SetParent(dot);
+			myDots.Add(dot);
 			dot.transform.position = transform.position + Random.insideUnitSphere * radius;
 			dot.transform.position = new Vector3(dot.transform.position.x, dot.transform.position.y, 0);
 		}
@@ -83,6 +107,7 @@ public class James_AlienScript : MonoBehaviour
 			// cul dot
 			GameObject dot = Instantiate(GameManager.me.cultureDotPrefab);
 			SetParent(dot);
+			myDots.Add(dot);
 			dot.transform.position = transform.position + Random.insideUnitSphere * radius;
 			dot.transform.position = new Vector3(dot.transform.position.x, dot.transform.position.y, 0);
 		}
@@ -91,6 +116,7 @@ public class James_AlienScript : MonoBehaviour
 			// tech dot
 			GameObject dot = Instantiate(GameManager.me.techDotPrefab);
 			SetParent(dot);
+			myDots.Add(dot);
 			dot.transform.position = transform.position + Random.insideUnitSphere * radius;
 			dot.transform.position = new Vector3(dot.transform.position.x, dot.transform.position.y, 0);
 		}
@@ -106,35 +132,36 @@ public class James_AlienScript : MonoBehaviour
 		{
 			case Continent.africa:
 				dot.transform.parent = GameManager.me.africa.transform;
-				GameManager.me.africa.GetComponent<ContinentScript>().dots.Add(dot);
+				GameManager.me.africa.GetComponent<ContinentScript>().myDots.Add(dot);
 				GameManager.me.africa.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 			case Continent.northAmerica:
 				dot.transform.parent = GameManager.me.northAmerica.transform;
-				GameManager.me.northAmerica.GetComponent<ContinentScript>().dots.Add(dot);
+				GameManager.me.northAmerica.GetComponent<ContinentScript>().myDots.Add(dot);
 				GameManager.me.northAmerica.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 			case Continent.southAmerica:
 				dot.transform.parent = GameManager.me.southAmerica.transform;
-				GameManager.me.southAmerica.GetComponent<ContinentScript>().dots.Add(dot);
+				GameManager.me.southAmerica.GetComponent<ContinentScript>().myDots.Add(dot);
 				GameManager.me.southAmerica.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 			case Continent.asia:
 				dot.transform.parent = GameManager.me.asia.transform;
-				GameManager.me.asia.GetComponent<ContinentScript>().dots.Add(dot);
+				GameManager.me.asia.GetComponent<ContinentScript>().myDots.Add(dot);
 				GameManager.me.asia.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 			case Continent.europe:
 				dot.transform.parent = GameManager.me.europe.transform;
-				GameManager.me.europe.GetComponent<ContinentScript>().dots.Add(dot);
+				GameManager.me.europe.GetComponent<ContinentScript>().myDots.Add(dot);
 				GameManager.me.europe.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 			case Continent.australia:
 				dot.transform.parent = GameManager.me.australia.transform;
-				GameManager.me.australia.GetComponent<ContinentScript>().dots.Add(dot);
+				GameManager.me.australia.GetComponent<ContinentScript>().myDots.Add(dot);
 				GameManager.me.australia.GetComponent<ContinentScript>().CalculateIindividualDots();
 				break;
 		}
+		GameManager.me.CalculateGlobalNums();
 	}
 
 	public IEnumerator NumberChangedVFX(float pol, float cul, float rel, float tech) // input change amount
