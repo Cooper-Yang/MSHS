@@ -6,20 +6,25 @@ using TMPro;
 public class ContinentScript : MonoBehaviour
 {
 	public TextMeshProUGUI continentInfo;
-    public List<GameObject> dots;
-	public List<GameObject> aliens; // need to have a GameManager that stores all the aliens based on the continents they are on
-	public int polDot_count;
-	public int culDot_count;
-	public int relDot_count;
-	public int techDot_count;
+    public List<GameObject> myDots;
+	public List<GameObject> myAliens; // need to have a GameManager that stores all the aliens based on the continents they are on
+	public float pol_cont;
+	public float cul_cont;
+	public float rel_cont;
+	public float tech_cont;
+
+	public float pol_tendency;
+	public float cul_tendency;
+	public float rel_tendency;
+	public float tech_tendency;
 
 	private void OnMouseDown()
 	{
 		continentInfo.text = "Aliens: " + 
-							 "\nPol Ctrl: " + polDot_count + 
-							 "\nCul Ctrl: " + culDot_count +
-							 "\nRel Ctrl: " + relDot_count +
-							 "\nTech Ctrl: " + techDot_count;
+							 "\nPol Ctrl: " + pol_cont + 
+							 "\nCul Ctrl: " + cul_cont +
+							 "\nRel Ctrl: " + rel_cont +
+							 "\nTech Ctrl: " + tech_cont;
 	}
 
 	private void OnMouseUpAsButton()
@@ -34,27 +39,31 @@ public class ContinentScript : MonoBehaviour
 
 	public void CalculateIindividualDots()
 	{
-		polDot_count = 0;
-		culDot_count = 0;
-		relDot_count = 0;
-		techDot_count = 0;
-		for (int i = 0; i < dots.Count; i++)
+		pol_cont = 0;
+		cul_cont = 0;
+		rel_cont = 0;
+		tech_cont = 0;
+		foreach (GameObject alien in myAliens)
 		{
-			if (dots[i].name == "pol dot(Clone)")
+			James_AlienScript aS = alien.GetComponent<James_AlienScript>();
+			for (int i = 0; i < aS.myDots.Count; i++)
 			{
-				polDot_count++;
-			}
-			else if (dots[i].name == "cul dot(Clone)")
-			{
-				culDot_count++;
-			}
-			else if (dots[i].name == "rel dot(Clone)")
-			{
-				relDot_count++;
-			}
-			else if (dots[i].name == "tech dot(Clone)")
-			{
-				techDot_count++;
+				if (aS.myDots[i].name == "pol dot(Clone)")
+				{
+					pol_cont += aS.radius * pol_tendency;
+				}
+				else if (aS.myDots[i].name == "cul dot(Clone)")
+				{
+					cul_cont += aS.radius * cul_tendency;
+				}
+				else if (aS.myDots[i].name == "rel dot(Clone)")
+				{
+					rel_cont += aS.radius * rel_tendency;
+				}
+				else if (aS.myDots[i].name == "tech dot(Clone)")
+				{
+					tech_cont += aS.radius * tech_tendency;
+				}
 			}
 		}
 	}
