@@ -6,14 +6,15 @@ using UnityEngine.UI;
 public class alienpercentage : MonoBehaviour
 {
     public float percent = 0;
-    public float delayTimer;
-    public float timer;
+    //public float delayTimer;
+    //public float timer;
 
+    int turn;
     Animator alienAnim;
     void Start()
     {
-        delayTimer = 0.1f;
-
+        //delayTimer = 0.1f;
+        turn = TurnsManager._instance.turns;
         alienAnim = gameObject.GetComponent<Animator>(); 
     }
 
@@ -24,13 +25,20 @@ public class alienpercentage : MonoBehaviour
         {
             alienAnim.SetBool("charged", false);//no animation
 
-            timer += Time.deltaTime;
-            if (timer >= delayTimer)
+            if(turn< TurnsManager._instance.turns)
             {
-                timer = 0;
-                percent++;
-
+                Debug.Log(100f / GetComponent<James_AlienScript>().genSpeed);
+                percent += 100f/GetComponent<James_AlienScript>().genSpeed;
+                turn = TurnsManager._instance.turns;
             }
+
+            //timer += Time.deltaTime;
+            //if (timer >= delayTimer)
+            //{
+            //    timer = 0;
+            //    percent++;
+
+            //}
         }
         else if (percent >= 100)
         {

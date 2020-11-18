@@ -42,6 +42,9 @@ public class CardMvmt : MonoBehaviour
         cardTransform.localScale = cardScal;
     }
 
+
+
+
     public void moveCardUp()
     {
         float lerpGoal = 1;

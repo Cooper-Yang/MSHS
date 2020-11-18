@@ -12,10 +12,16 @@ public class James_AlienScript : MonoBehaviour
 	public Continent myCon;
 	public List<GameObject> myDots;
 
-    public float pol_Influence; // 0~100
+	int turn;
+
+	//the alien data
+	public float pol_Influence; // 0~100
     public float rel_Influence; // 0~100
     public float cul_Influence; // 0~100
     public float tech_Influence; // 0~100
+	public int lifeSpan;
+	public int genSpeed;
+	public int discoverRate;
 
 	public float radius = 0; // caculated with total influence
 
@@ -29,6 +35,8 @@ public class James_AlienScript : MonoBehaviour
 
 	private void Start()
 	{
+		turn = TurnsManager._instance.turns;
+
 		timer = GameManager.me.world_interval;
 		polVfxIcon.GetComponent<Image>().fillAmount = pol_Influence / 100;
 		culVfxIcon.GetComponent<Image>().fillAmount = cul_Influence / 100;
@@ -59,6 +67,7 @@ public class James_AlienScript : MonoBehaviour
 
 	private void Update()
 	{
+		alienLifeDeath(); //control the life span
 		if (Input.GetKeyDown(KeyCode.T))
 		{
 			StartCoroutine(NumberChangedVFX(20, 0, 15, -30));
@@ -214,4 +223,19 @@ public class James_AlienScript : MonoBehaviour
 		relVfxIcon.SetActive(false);
 		techVfxIcon.SetActive(false);
 	}
+
+	
+
+	public void alienLifeDeath() //alien's life span
+    {
+        if (lifeSpan < 0)
+        {
+			Destroy(gameObject);
+        }
+		if(turn< TurnsManager._instance.turns)
+        {
+			lifeSpan--;
+			turn = TurnsManager._instance.turns;
+		}
+    }
 }

@@ -21,16 +21,24 @@ public class AlienCardProcGen : MonoBehaviour
     public Sprite[] eyesSpr;
     public Sprite[] mouthSpr;
 
+    public int cul;
+    public int rel;
+    public int pol;
+    public int tech;
+    public int lifeSpanNumber;
     public int genSpeed;
+    public int discoverRate;
     
     // Start is called before the first frame update
     void Start()
     {
 
-        genSpeed = 1; //value unsure
-        
-        
-        lifeSpan.text = "Life Span: " + Random.Range(10, 31);
+        genSpeed = 3; //value unsure
+        discoverRate = 2;//small
+
+
+        lifeSpanNumber = 9;
+        lifeSpan.text = "Life Span: " +lifeSpan;
 
         int randomStat = Random.Range(0,4);         //0 = Poli, 1= culture, 2 = religion, 3= tech 
 
@@ -49,30 +57,40 @@ public class AlienCardProcGen : MonoBehaviour
                 culIcon.sizeDelta = minStat;
                 relIcon.sizeDelta = minStat;
                 techIcon.sizeDelta = minStat;
+                cul = 0;
+                rel = 0;
+                pol = 100;
+                tech =0;
                 break;
             case 1:
                 polIcon.sizeDelta = minStat;
                 culIcon.sizeDelta = maxStat;
                 relIcon.sizeDelta = minStat;
                 techIcon.sizeDelta = minStat;
+                cul = 100;
+                rel = 0;
+                pol = 0;
+                tech = 0;
                 break;
             case 2:
                 polIcon.sizeDelta = minStat;
                 culIcon.sizeDelta = minStat;
                 relIcon.sizeDelta = maxStat;
                 techIcon.sizeDelta = minStat;
+                cul = 0;
+                rel = 100;
+                pol = 0;
+                tech = 0;
                 break;
             case 3:
                 polIcon.sizeDelta = minStat;
                 culIcon.sizeDelta = minStat;
                 relIcon.sizeDelta = minStat;
                 techIcon.sizeDelta = maxStat;
-                break;
-            case 4:
-                polIcon.sizeDelta = minStat;
-                culIcon.sizeDelta = minStat;
-                relIcon.sizeDelta = minStat;
-                techIcon.sizeDelta = maxStat;
+                cul = 0;
+                rel = 0;
+                pol = 0;
+                tech = 100;
                 break;
         }
 
