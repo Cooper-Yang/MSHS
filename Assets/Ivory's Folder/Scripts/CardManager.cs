@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-    [SerializeField] private GameObject card;
+    //[SerializeField] private GameObject card;
     [SerializeField] private GameObject[] cards;
     [SerializeField] private CardMvmt CM;
     public List<GameObject> deck = new List<GameObject>();
 
     private float Posy = -3.7f;
     private float midPosx = -7f;
-    private float mid2Posx = -0.5f;
+    //private float mid2Posx = -0.5f;
 
     private Vector2 cardSpawnPos;
     private Vector3 cardFinalScale;
@@ -41,7 +41,7 @@ public class CardManager : MonoBehaviour
         
 
     }
-    public bool SendCard()
+    public bool SendCard(float influencePol, float influenceRel, float influenceCol, float influenceTech)
     {
         int dealIndex = 0;
         bool candeal = false;
@@ -57,9 +57,20 @@ public class CardManager : MonoBehaviour
 
         if (candeal)
         {
+            //random here
+            int num = Random.Range(0, 3);
+            if(num == 0)//alien 
+            {
+                SpawnAlienCard(dealIndex);
+                DealCard(dealIndex);
+            }
+            if (num == 1 || num ==2)//effect 
+            {
+                SpawnEffectCard(dealIndex, influencePol, influenceRel, influenceCol, influenceTech);
+                DealCard(dealIndex);
+            }
 
-            SpawnCard(dealIndex);
-            DealCard(dealIndex);
+            
             Debug.Log("card out");
 
             return true;
@@ -88,10 +99,14 @@ public class CardManager : MonoBehaviour
 
     }
 
-    void SpawnCard(int index)
+    void SpawnEffectCard(int index, float influencePol, float influenceRel, float influenceCol, float influenceTech)
     {
-        int randnum = Random.Range(0, cards.Length);
+        int randnum = 1; //card's random, decides whether alien card or effect cards
         GameObject newCard = Instantiate(cards[randnum], new Vector2(cardSpawnPos.x, cardSpawnPos.y), Quaternion.identity);
+
+        newCard.GetComponent<CardReader>().loadCardScriptableObj(influencePol, influenceRel, influenceCol, influenceTech);
+                                                //float sourcePol, float sourceRel, float sourceCol, float sourceTech
+
         newCard.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
         newCard.transform.localScale = new Vector3(newCard.transform.localScale.x*.1f, newCard.transform.localScale.y * .1f, newCard.transform.localScale.z * .1f);
         deck[index] = newCard;

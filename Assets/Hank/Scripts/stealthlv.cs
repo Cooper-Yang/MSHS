@@ -6,15 +6,28 @@ public class stealthlv : MonoBehaviour
 {
     public int stealthlev;
 
-    public int smallInc;
-    public int midInc;
-    public int bigInc;
-    public int smallDec;
-    public int midDec;
-    public int bigDec;
-    void Start()
+    public static stealthlv _instance;
+
+    public static stealthlv Instance
     {
-        
+        get { return _instance; }
+    }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+
+    private void Start()
+    {
+        stealthlev = 0;
     }
 
     // Update is called once per frame
@@ -26,51 +39,12 @@ public class stealthlv : MonoBehaviour
         }
     }
 
-    void SmallIncrease()
+    public void changeDisValue(int num)
     {
-        stealthlev += smallInc;
-    }
-    void MidIncrease()
-    {
-        stealthlev += midInc;
-    }
-    void BigIncrease()
-    {
-        stealthlev += bigInc;
-    }
-    void SmallDecrease()
-    {
-        if (stealthlev < smallDec)
-        {
+        stealthlev += num;
+
+        if (stealthlev < 0)
             stealthlev = 0;
-        }
-        else
-        {
-            stealthlev -= smallDec;
-        }
-        
-    }
-    void MidDecrease()
-    {
-        if (stealthlev < midDec)
-        {
-            stealthlev = 0;
-        }
-        else
-        {
-            stealthlev -= midDec;
-        }
-    }
-    void BigDecrease()
-    {
-        if (stealthlev < bigDec)
-        {
-            stealthlev = 0;
-        }
-        else
-        {
-            stealthlev -= bigDec;
-        }
     }
 
 

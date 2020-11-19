@@ -17,7 +17,7 @@ public class stealthbar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        charge = gameObject.GetComponent<stealthlv>().stealthlev;
+        charge = stealthlv._instance.stealthlev;
         fillImage.fillAmount = charge / 100;
 
 
