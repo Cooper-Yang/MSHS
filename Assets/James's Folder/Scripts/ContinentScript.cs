@@ -6,20 +6,50 @@ using TMPro;
 public class ContinentScript : MonoBehaviour
 {
 	public TextMeshProUGUI continentInfo;
-    public List<GameObject> dots;
-	public List<GameObject> aliens; // need to have a GameManager that stores all the aliens based on the continents they are on
-	public int polDot_count;
-	public int culDot_count;
-	public int relDot_count;
-	public int techDot_count;
+    public List<GameObject> myDots;
+	public List<GameObject> myAliens; // need to have a GameManager that stores all the aliens based on the continents they are on
+	public float pol_cont;
+	public float cul_cont;
+	public float rel_cont;
+	public float tech_cont;
 
-	private void OnMouseDown()
+	public GameObject alienPrefab;
+
+	public float pol_tendency;
+	public float cul_tendency;
+	public float rel_tendency;
+	public float tech_tendency;
+
+	//glow sprite
+	public Sprite normalSprite;
+	public Sprite glowSprite;
+	public bool canGlow;
+	public bool onStay = false;
+	public Collision2D collidedCard;
+
+    private void Update()
+    {
+		
+		ContiGlow();
+		if (onStay == true)
+		{
+			//Debug.Log(1111);
+			if (Input.GetMouseButtonUp(0))
+			{
+				doThingsToCards(collidedCard);
+				onStay = false;
+			}
+		}
+
+	}
+
+    private void OnMouseDown()
 	{
 		continentInfo.text = "Aliens: " + 
-							 "\nPol Ctrl: " + polDot_count + 
-							 "\nCul Ctrl: " + culDot_count +
-							 "\nRel Ctrl: " + relDot_count +
-							 "\nTech Ctrl: " + techDot_count;
+							 "\nPol Ctrl: " + pol_cont + 
+							 "\nCul Ctrl: " + cul_cont +
+							 "\nRel Ctrl: " + rel_cont +
+							 "\nTech Ctrl: " + tech_cont;
 	}
 
 	private void OnMouseUpAsButton()
@@ -34,28 +64,146 @@ public class ContinentScript : MonoBehaviour
 
 	public void CalculateIindividualDots()
 	{
-		polDot_count = 0;
-		culDot_count = 0;
-		relDot_count = 0;
-		techDot_count = 0;
-		for (int i = 0; i < dots.Count; i++)
+		pol_cont = 0;
+		cul_cont = 0;
+		rel_cont = 0;
+		tech_cont = 0;
+		foreach (GameObject alien in myAliens)
 		{
-			if (dots[i].name == "pol dot(Clone)")
+			if (alien == null)
+				continue;
+			
+			James_AlienScript aS = alien.GetComponent<James_AlienScript>();
+			for (int i = 0; i < aS.myDots.Count; i++)
 			{
-				polDot_count++;
-			}
-			else if (dots[i].name == "cul dot(Clone)")
-			{
-				culDot_count++;
-			}
-			else if (dots[i].name == "rel dot(Clone)")
-			{
-				relDot_count++;
-			}
-			else if (dots[i].name == "tech dot(Clone)")
-			{
-				techDot_count++;
+				if (aS.myDots[i].name == "pol dot(Clone)")
+				{
+					pol_cont += aS.radius * pol_tendency;
+				}
+				else if (aS.myDots[i].name == "cul dot(Clone)")
+				{
+					cul_cont += aS.radius * cul_tendency;
+				}
+				else if (aS.myDots[i].name == "rel dot(Clone)")
+				{
+					rel_cont += aS.radius * rel_tendency;
+				}
+				else if (aS.myDots[i].name == "tech dot(Clone)")
+				{
+					tech_cont += aS.radius * tech_tendency;
+				}
 			}
 		}
+	}
+
+	void ContiGlow()
+    {
+		if(canGlow == true)
+        {
+			this.GetComponent<SpriteRenderer>().sprite = glowSprite;
+        }
+		else
+			this.GetComponent<SpriteRenderer>().sprite = normalSprite;
+
+	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(Input.GetMouseButton(0) )
+        {
+			if (collision.gameObject.tag == "AlienCard" || collision.gameObject.tag == "EffectCard")
+			{
+
+				canGlow = true;
+			}
+			
+        }
+		
+		//Debug.Log(1);
+
+	}
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+
+			onStay = true;
+			collidedCard = collision;
+
+		
+	}
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+		
+		canGlow = false;
+	}
+
+	public void doThingsToCards(Collision2D collision)
+		{
+			Debug.Log("night");
+			if (collision.gameObject.tag == "AlienCard")
+			{
+				canGlow = false;
+
+				summonAlien(collision);
+			}
+			if (collision.gameObject.tag == "EffectCard")
+			{
+				canGlow = false;
+				affectAlien(collision);
+			}
+		}
+
+
+	public void affectAlien(Collision2D collision)
+    {
+		GameObject otherCard = collision.gameObject;
+		CardReader cR = otherCard.GetComponent<CardReader>();
+        if (cR.isConti)
+        {
+			//miss apply conti effect (use StartCoroutine(gameobject.NumberChangedVFX(x, x, x, x));) Coop: how to know which alien? 
+			//probly a conti hold a list of alien? works with line 10 probly
+		}
+		else
+        {
+			//miss apply single effect
+		}
+		TurnsManager._instance.nextTurn();
+		//miss +discov here (use + cR.discoverRate)
+		Destroy(collision.gameObject);
+	}
+
+	
+
+	public void summonAlien(Collision2D collision)
+    {
+		//save date
+		GameObject otherCard = collision.gameObject;
+		AlienCardProcGen acp = otherCard.GetComponent<AlienCardProcGen>();
+		int cul = acp.cul;
+		int rel = acp.rel;
+		int pol = acp.pol;
+		int tech = acp.tech;
+		int lifeSpan = acp.lifeSpanNumber;
+		int genSpeed = acp.genSpeed;
+		int discoverRate = acp.discoverRate;
+		//generate alien
+		GameObject aliens = Instantiate(alienPrefab, GameObject.FindGameObjectWithTag("AlienCanvas").transform);
+		aliens.transform.position = new Vector3(aliens.transform.position.x+Random.Range(-2f,2f), aliens.transform.position.y + Random.Range(-2f, 2f), aliens.transform.position.z);
+		//aliens.transform.SetParent();
+		aliens.GetComponent<James_AlienScript>().pol_Influence = pol;
+		aliens.GetComponent<James_AlienScript>().rel_Influence = rel;
+		aliens.GetComponent<James_AlienScript>().cul_Influence = cul;
+		aliens.GetComponent<James_AlienScript>().tech_Influence = tech;
+		aliens.GetComponent<James_AlienScript>().lifeSpan = lifeSpan;
+		aliens.GetComponent<James_AlienScript>().genSpeed = genSpeed;
+		aliens.GetComponent<James_AlienScript>().discoverRate = discoverRate;
+		//destroy card
+		TurnsManager._instance.nextTurn();
+		//miss +discov here (use + acp.discoverRate)
+		
+		Destroy(collision.gameObject.GetComponent<Collider2D>());
+		Destroy(collision.gameObject);
+		
 	}
 }

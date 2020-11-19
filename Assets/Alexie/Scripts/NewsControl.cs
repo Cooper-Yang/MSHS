@@ -40,7 +40,7 @@ public class NewsControl : MonoBehaviour
             rollingNews = true;
         }
 
-        
+
 
         news.text = "Hi, this is rolling news.";//Waiting for fix
         news.transform.position += Vector3.left * speed;

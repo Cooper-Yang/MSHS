@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Canvas
+  - AlienCanvas
+  - EffectCard
+  - AlienCard
   layers:
   - Default
   - TransparentFX
