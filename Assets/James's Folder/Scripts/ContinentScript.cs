@@ -24,10 +24,22 @@ public class ContinentScript : MonoBehaviour
 	public Sprite normalSprite;
 	public Sprite glowSprite;
 	public bool canGlow;
+	public bool onStay = false;
+	public Collision2D collidedCard;
 
     private void Update()
     {
+		
 		ContiGlow();
+		if (onStay == true)
+		{
+			//Debug.Log(1111);
+			if (Input.GetMouseButtonUp(0))
+			{
+				doThingsToCards(collidedCard);
+				onStay = false;
+			}
+		}
 
 	}
 
@@ -58,6 +70,9 @@ public class ContinentScript : MonoBehaviour
 		tech_cont = 0;
 		foreach (GameObject alien in myAliens)
 		{
+			if (alien == null)
+				continue;
+			
 			James_AlienScript aS = alien.GetComponent<James_AlienScript>();
 			for (int i = 0; i < aS.myDots.Count; i++)
 			{
@@ -110,28 +125,35 @@ public class ContinentScript : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(Input.GetMouseButtonUp(0))
-        {
+
+			onStay = true;
+			collidedCard = collision;
+
+		
+	}
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+		
+		canGlow = false;
+	}
+
+	public void doThingsToCards(Collision2D collision)
+		{
 			Debug.Log("night");
 			if (collision.gameObject.tag == "AlienCard")
 			{
 				canGlow = false;
-				
+
 				summonAlien(collision);
 			}
-			if(collision.gameObject.tag == "EffectCard")
-            {
+			if (collision.gameObject.tag == "EffectCard")
+			{
 				canGlow = false;
-
 				affectAlien(collision);
 			}
 		}
-    }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-		canGlow = false;
-	}
 
 	public void affectAlien(Collision2D collision)
     {
@@ -150,6 +172,8 @@ public class ContinentScript : MonoBehaviour
 		//miss +discov here (use + cR.discoverRate)
 		Destroy(collision.gameObject);
 	}
+
+	
 
 	public void summonAlien(Collision2D collision)
     {
@@ -177,6 +201,9 @@ public class ContinentScript : MonoBehaviour
 		//destroy card
 		TurnsManager._instance.nextTurn();
 		//miss +discov here (use + acp.discoverRate)
+		
+		Destroy(collision.gameObject.GetComponent<Collider2D>());
 		Destroy(collision.gameObject);
+		
 	}
 }
