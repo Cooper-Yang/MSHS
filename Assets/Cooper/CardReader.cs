@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class CardReader : MonoBehaviour
 {
+    public Image backGround;
+    public Sprite contiBack;
+    public Sprite normalBack;
     public CardObject card;
     public Text cardName;
 
@@ -20,7 +23,7 @@ public class CardReader : MonoBehaviour
     public int culVal;
     public int reliVal;
     public int techVal;
-    public int genVal;
+    public float genVal;
     public int lifeVal;
 
     public int cardLvl; //Coop: for what
@@ -29,6 +32,33 @@ public class CardReader : MonoBehaviour
 
     void Start()
     {
+        //loadCardScriptableObj();
+        
+
+    }
+
+    public void loadCardScriptableObj(float influencePol, float influenceRel, float influenceCol, float influenceTech)
+    {
+        //random
+        float influenceAll = influencePol + influenceRel + influenceCol + influenceTech;
+        float num = Random.value;
+        if(num < influencePol/influenceAll)//politics
+        {
+            card = CardHolder._instance.politicDeckLevelOne[Random.Range(0, CardHolder._instance.politicDeckLevelOne.Count)];
+        }
+        else if(num < influencePol / influenceAll + influenceRel / influenceAll)//religion
+        {
+            card = CardHolder._instance.religionDeckLevelOne[Random.Range(0, CardHolder._instance.religionDeckLevelOne.Count)];
+        }
+        else if(num< influencePol / influenceAll + influenceRel / influenceAll + influenceCol / influenceAll)//culture
+        {
+            card = CardHolder._instance.cultureDeckLevelOne[Random.Range(0, CardHolder._instance.cultureDeckLevelOne.Count)];
+        }
+        else if(num< influencePol / influenceAll + influenceRel / influenceAll + influenceCol / influenceAll + influenceTech / influenceAll)//technology
+        {
+            card = CardHolder._instance.technologyDeckLevelOne[Random.Range(0, CardHolder._instance.technologyDeckLevelOne.Count)];
+        }
+
         cardName.text = card.cardName;
         techIcon.SetActive(card.technology);
         culIcon.SetActive(card.culture);
@@ -36,11 +66,16 @@ public class CardReader : MonoBehaviour
         poliIcon.SetActive(card.politics);
 
         description.text = card.description;
-        
+
         isConti = card.isConti;
         if (isConti)
         {
+            backGround.sprite = contiBack;
             description.text = "This card affects all aliens in the same continent." + description.text;
+        }
+        else
+        {
+            backGround.sprite = normalBack;
         }
 
         poliVal = card.poliVal;
@@ -52,10 +87,7 @@ public class CardReader : MonoBehaviour
 
         cardLvl = card.cardLvl;
         discovRate = card.discovRate;
-
     }
 
 
-
-    
 }

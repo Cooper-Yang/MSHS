@@ -24,12 +24,15 @@ public class alienclick : MonoBehaviour
         {
             if (panel != null)
             {
+                
                 panel.SetActive(true);
             }
         }
         else if (charge >= 100)
         {
-            if (CM.GetComponent<CardManager>().SendCard())//if can deal card then deal card
+            James_AlienScript JAS = GetComponent<James_AlienScript>();
+            if (CM.GetComponent<CardManager>().SendCard(JAS.pol_Influence,JAS.rel_Influence,JAS.cul_Influence,JAS.tech_Influence))//if can deal card then deal card
+                                                          //float sourcePol, float sourceRel, float sourceCol, float sourceTech
             {
                 gameObject.GetComponent<alienpercentage>().percent = 0; //return to 0
             }
