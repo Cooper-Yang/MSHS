@@ -5,6 +5,7 @@ using TMPro;
 
 public class ContinentScript : MonoBehaviour
 {
+	public James_AlienScript.Continent ContiName;
 	public TextMeshProUGUI continentInfo;
     public List<GameObject> myDots;
 	public List<GameObject> myAliens; // need to have a GameManager that stores all the aliens based on the continents they are on
@@ -24,10 +25,23 @@ public class ContinentScript : MonoBehaviour
 	public Sprite normalSprite;
 	public Sprite glowSprite;
 	public bool canGlow;
+	public bool onStay = false;
+	public Collision2D collidedCard;
+
 
     private void Update()
     {
+		
 		ContiGlow();
+		if (onStay == true)
+		{
+			//Debug.Log(1111);
+			if (Input.GetMouseButtonUp(0))
+			{
+				doThingsToCards(collidedCard);
+				//onStay = false;
+			}
+		}
 
 	}
 
@@ -58,6 +72,9 @@ public class ContinentScript : MonoBehaviour
 		tech_cont = 0;
 		foreach (GameObject alien in myAliens)
 		{
+			if (alien == null)
+				continue;
+			
 			James_AlienScript aS = alien.GetComponent<James_AlienScript>();
 			for (int i = 0; i < aS.myDots.Count; i++)
 			{
@@ -94,7 +111,8 @@ public class ContinentScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(Input.GetMouseButton(0) )
+		onStay = true;
+		if (Input.GetMouseButton(0) )
         {
 			if (collision.gameObject.tag == "AlienCard" || collision.gameObject.tag == "EffectCard")
 			{
@@ -110,28 +128,35 @@ public class ContinentScript : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(Input.GetMouseButtonUp(0))
-        {
-			Debug.Log("night");
-			if (collision.gameObject.tag == "AlienCard")
-			{
-				canGlow = false;
-				
-				summonAlien(collision);
-			}
-			if(collision.gameObject.tag == "EffectCard")
-            {
-				canGlow = false;
-
-				affectAlien(collision);
-			}
-		}
-    }
+			
+			collidedCard = collision;		
+	}
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+		onStay = false;
 		canGlow = false;
 	}
+
+	public void doThingsToCards(Collision2D collision)
+		{
+			//Debug.Log("night");
+			if (collision.gameObject.tag == "AlienCard")
+			{
+				canGlow = false;
+			//Debug.Log("before summon");
+				summonAlien(collision); //use alien card
+				onStay = false;
+		}
+			if (collision.gameObject.tag == "EffectCard")
+			{
+				canGlow = false;
+			//Debug.Log("before effect affect"); 
+				affectAlien(collision); //use effect card
+				onStay = false;
+		}
+		}
+
 
 	public void affectAlien(Collision2D collision)
     {
@@ -146,14 +171,38 @@ public class ContinentScript : MonoBehaviour
         {
 			//miss apply single effect
 		}
+
+		//change discover value
+		stealthlv._instance.changeDisValue(cR.discovRate);
+
 		TurnsManager._instance.nextTurn();
 		//miss +discov here (use + cR.discoverRate)
 		Destroy(collision.gameObject);
 	}
 
+	
+
 	public void summonAlien(Collision2D collision)
     {
 		//save date
+
+		Collider2D contiCollider = GetComponent<PolygonCollider2D>();
+		Bounds thisbound = contiCollider.bounds;
+		float randx = Random.Range(thisbound.min.x, thisbound.max.x);
+		float randy = Random.Range(thisbound.min.y, thisbound.max.y);
+
+		float posx = 0;
+		float posy = 0;
+
+		while(!contiCollider.OverlapPoint(new Vector2(randx,randy)))
+        {
+			randx = Random.Range(thisbound.min.x, thisbound.max.x);
+			randy = Random.Range(thisbound.min.y, thisbound.max.y);
+		}
+
+		posx = randx;
+		posy = randy;
+
 		GameObject otherCard = collision.gameObject;
 		AlienCardProcGen acp = otherCard.GetComponent<AlienCardProcGen>();
 		int cul = acp.cul;
@@ -163,9 +212,15 @@ public class ContinentScript : MonoBehaviour
 		int lifeSpan = acp.lifeSpanNumber;
 		int genSpeed = acp.genSpeed;
 		int discoverRate = acp.discoverRate;
+
+
+		//change discover value
+		stealthlv._instance.changeDisValue(acp.discoverRate);
+
 		//generate alien
 		GameObject aliens = Instantiate(alienPrefab, GameObject.FindGameObjectWithTag("AlienCanvas").transform);
-		aliens.transform.position = new Vector3(aliens.transform.position.x+Random.Range(-2f,2f), aliens.transform.position.y + Random.Range(-2f, 2f), aliens.transform.position.z);
+		aliens.GetComponent<James_AlienScript>().myCon = ContiName;
+		aliens.transform.position = new Vector3(posx, posy, aliens.transform.position.z);
 		//aliens.transform.SetParent();
 		aliens.GetComponent<James_AlienScript>().pol_Influence = pol;
 		aliens.GetComponent<James_AlienScript>().rel_Influence = rel;
@@ -177,6 +232,9 @@ public class ContinentScript : MonoBehaviour
 		//destroy card
 		TurnsManager._instance.nextTurn();
 		//miss +discov here (use + acp.discoverRate)
+		
+		Destroy(collision.gameObject.GetComponent<Collider2D>());
 		Destroy(collision.gameObject);
+		
 	}
 }

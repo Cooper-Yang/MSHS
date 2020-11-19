@@ -23,6 +23,8 @@ public class James_AlienScript : MonoBehaviour
 	public int genSpeed;
 	public int discoverRate;
 
+	int myIndexinList;
+
 	public float radius = 0; // caculated with total influence
 
 	private float timer; // for generating dots
@@ -228,8 +230,9 @@ public class James_AlienScript : MonoBehaviour
 
 	public void alienLifeDeath() //alien's life span
     {
-        if (lifeSpan < 0)
+        if (lifeSpan <= 0)
         {
+			GameManager.me.africa.GetComponent<ContinentScript>().myAliens.Remove(gameObject);
 			Destroy(gameObject);
         }
 		if(turn< TurnsManager._instance.turns)
