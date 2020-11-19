@@ -27,7 +27,7 @@ public class alienpercentage : MonoBehaviour
 
             if(turn< TurnsManager._instance.turns)
             {
-                Debug.Log(100f / GetComponent<James_AlienScript>().genSpeed);
+                //Debug.Log(100f / GetComponent<James_AlienScript>().genSpeed);
                 percent += 100f/GetComponent<James_AlienScript>().genSpeed;
                 turn = TurnsManager._instance.turns;
             }
