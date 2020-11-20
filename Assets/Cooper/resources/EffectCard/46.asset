@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdcfa4c6d6104dc4688a4e30fcc603bc, type: 3}
-  m_Name: 33
+  m_Name: 46
   m_EditorClassIdentifier: 
-  cardName: Amend the Constitution
+  cardName: Bribe
   cardLvl: 1
-  description: All cats can vote!
+  description: Not a good thing, but the right thing
   isConti: 1
-  politicsSource: 1
-  cultureSource: 0
+  politicsSource: 0
+  cultureSource: 1
   religionSource: 0
   technologySource: 0
   politics: 1
-  culture: 1
-  religion: 1
-  technology: 1
-  poliVal: 10
-  culVal: -5
-  reliVal: -5
-  techVal: -5
+  culture: 0
+  religion: 0
+  technology: 0
+  poliVal: 5
+  culVal: 0
+  reliVal: 0
+  techVal: 0
   genVal: 0
-  discovRate: 10
+  discovRate: 2
   lifeVal: 0
