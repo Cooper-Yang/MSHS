@@ -34,9 +34,17 @@ public class James_AlienScript : MonoBehaviour
 	public GameObject culVfxIcon;
 	public GameObject techVfxIcon;
 
+	// for using effect card on a single alien
+	public Collision2D collidedCard;
+	public Sprite glowSp;
+	public Sprite ogSp;
+	public bool glowPls;
+	public bool targetingMe = false;
 
 	private void Start()
 	{
+		ogSp = GetComponent<Image>().sprite;
+
 		turn = TurnsManager._instance.turns;
 
 		//timer = GameManager.me.world_interval;
@@ -65,13 +73,35 @@ public class James_AlienScript : MonoBehaviour
 				GameManager.me.australia.GetComponent<ContinentScript>().myAliens.Add(gameObject);
 				break;
 		}
+		// update GameManager alien list
+		GameManager.me.UpdateAlienList();
 	}
 
 	private void Update()
 	{
 		alienLifeDeath(); //control the life span (and generate dots)
-
+		if (Input.GetMouseButtonUp(0))
+		{
+			if (targetingMe)
+            {
+				AffectSingleAlien(collidedCard);
+			}
+		}
+		Glow();
 	}
+
+	// Glow ctrl
+	private void Glow()
+    {
+		if (glowPls)
+        {
+			GetComponent<Image>().sprite = glowSp;
+		}
+        else
+        {
+			GetComponent<Image>().sprite = ogSp;
+		}
+    }
 
 	// 根据影响力长小点点
 	public void GenerateDots(GameObject alien)
@@ -245,5 +275,53 @@ public class James_AlienScript : MonoBehaviour
 			GenerateDots(gameObject);
 			turn = TurnsManager._instance.turns;
 		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "EffectCard")
+		{
+			glowPls = true;
+			collidedCard = collision;
+			targetingMe = true;
+		}
+		
+	}
+
+	private void OnCollisionExit2D(Collision2D collision)
+    {
+		if (collision.gameObject.tag == "EffectCard")
+		{
+			glowPls = false;
+			StartCoroutine(WaitThenReset());
+		}
+		
+	}
+
+	private void AffectSingleAlien(Collision2D collision)
+    {
+		if (collision.gameObject.tag == "EffectCard")
+		{
+			// apply effects to this alien
+			Debug.Log("apply effects to this alien");
+			GameObject otherCard = collision.gameObject;
+			CardReader cR = otherCard.GetComponent<CardReader>();
+			pol_Influence += cR.poliVal;
+			cul_Influence += cR.culVal;
+			rel_Influence += cR.reliVal;
+			tech_Influence += cR.techVal;
+			lifeSpan += cR.lifeVal;
+			stealthlv._instance.changeDisValue(cR.discovRate);
+			TurnsManager._instance.nextTurn();
+			targetingMe = false;
+			Destroy(collision.gameObject);
+		}
+	}
+
+	private IEnumerator WaitThenReset()
+    {
+		yield return new WaitForEndOfFrame();
+		targetingMe = false;
+		collidedCard = null;
 	}
 }
