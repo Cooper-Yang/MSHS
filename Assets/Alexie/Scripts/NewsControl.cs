@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 using UnityEngine.UI;
 
 public class NewsControl : MonoBehaviour
@@ -10,8 +11,9 @@ public class NewsControl : MonoBehaviour
     public bool readingNews = false;//Break news pop out
     public bool rollingNews = false;//Normal news rolling
 
-    public List<NewsControl> newsControls;
+    public List<string> normalRandNews;
     public Text news;//Text for normal news
+    int selectNews;
 
     public float speed; //0~1
     public float resetTime; //For testing
@@ -37,13 +39,17 @@ public class NewsControl : MonoBehaviour
             rollingNews = false;
             resetTime = resetDefTime;
             news.transform.position = newsDefPos;
+            selectNews = Random.Range(0, normalRandNews.Count);
             rollingNews = true;
         }
 
 
 
-        news.text = "Hi, this is rolling news.";//Waiting for fix
-        news.transform.position += Vector3.left * speed;
+        news.text = normalRandNews[selectNews];//Waiting for fix
+        if(rollingNews == true)
+        {
+            news.transform.position += Vector3.left * speed;
+        }
 
         //Breaking news jump out and in
         if (Input.GetKeyDown(KeyCode.B))//Press B to call break news
