@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public float rel_gl;
     public float tech_gl;
 
+    public List<GameObject> aliens;
+
 	public enum thingy
 	{
         pol, cul, rel, tech
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         me = this;
+        aliens = new List<GameObject>();
     }
 
     public void CalculateGlobalNums()
@@ -60,5 +63,34 @@ public class GameManager : MonoBehaviour
                  europe.GetComponent<ContinentScript>().tech_cont +
                  asia.GetComponent<ContinentScript>().tech_cont +
                  australia.GetComponent<ContinentScript>().tech_cont) / 6;
+    }
+
+    public void UpdateAlienList()
+    {
+        aliens.Clear();
+        foreach (var alien in africa.GetComponent<ContinentScript>().myAliens)
+        {
+            aliens.Add(alien);
+        }
+        foreach (var alien in northAmerica.GetComponent<ContinentScript>().myAliens)
+        {
+            aliens.Add(alien);
+        }
+        foreach (var alien in southAmerica.GetComponent<ContinentScript>().myAliens)
+        {
+            aliens.Add(alien);
+        }
+        foreach (var alien in europe.GetComponent<ContinentScript>().myAliens)
+        {
+            aliens.Add(alien);
+        }
+        foreach (var alien in asia.GetComponent<ContinentScript>().myAliens)
+        {
+            aliens.Add(alien);
+        }
+        foreach (var alien in australia.GetComponent<ContinentScript>().myAliens)
+        {
+            aliens.Add(alien);
+        }
     }
 }

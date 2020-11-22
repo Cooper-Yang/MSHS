@@ -1129,7 +1129,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4294963968
   m_fontColor: {r: 0, g: 0.9510727, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2780,6 +2780,7 @@ MonoBehaviour:
   cul_gl: 0
   rel_gl: 0
   tech_gl: 0
+  aliens: []
 --- !u!4 &1251256345
 Transform:
   m_ObjectHideFlags: 0
@@ -2831,7 +2832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: ' '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c3cc0c6d91de23458d996570cc8e200, type: 2}
   m_sharedMaterial: {fileID: -8260397911762292740, guid: 2c3cc0c6d91de23458d996570cc8e200,
@@ -2841,7 +2842,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4294963968
   m_fontColor: {r: 0, g: 0.9510727, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3090,7 +3091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: ' '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c3cc0c6d91de23458d996570cc8e200, type: 2}
   m_sharedMaterial: {fileID: -8260397911762292740, guid: 2c3cc0c6d91de23458d996570cc8e200,
@@ -3100,7 +3101,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4294963968
   m_fontColor: {r: 0, g: 0.9510727, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -5196,6 +5197,7 @@ MonoBehaviour:
   CM: {fileID: 6999101257066605294, guid: 3485a82a4ebf8e44c804bfb76b86f47b, type: 3}
   deck: []
   onLerp: 0
+  CardBeingHeld: {fileID: 0}
 --- !u!4 &2127107501
 Transform:
   m_ObjectHideFlags: 0
@@ -5217,11 +5219,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1331490202}
     m_Modifications:
-    - target: {fileID: 5146664472099454626, guid: dd5a49b63a3de7542867e805fe6d8c4d,
-        type: 3}
-      propertyPath: CM
-      value: 
-      objectReference: {fileID: 2127107499}
+    - target: {fileID: 1935105074, guid: dd5a49b63a3de7542867e805fe6d8c4d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5146664472099454680, guid: dd5a49b63a3de7542867e805fe6d8c4d,
         type: 3}
       propertyPath: m_LocalPosition.x

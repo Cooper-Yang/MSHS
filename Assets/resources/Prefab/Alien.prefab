@@ -697,6 +697,8 @@ GameObject:
   - component: {fileID: 5146664472099454685}
   - component: {fileID: 5146664472099454686}
   - component: {fileID: 5146664472099454687}
+  - component: {fileID: 1935105074}
+  - component: {fileID: 7606063965964787733}
   m_Layer: 5
   m_Name: Alien
   m_TagString: Untagged
@@ -711,7 +713,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5146664472099454681}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000386, y: 1.0000386, z: 1.0000386}
   m_Children:
@@ -909,10 +911,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCon: 3
   myDots: []
-  pol_Influence: 50
-  rel_Influence: 40
-  cul_Influence: 30
-  tech_Influence: 70
+  pol_Influence: 0
+  rel_Influence: 0
+  cul_Influence: 0
+  tech_Influence: 0
   lifeSpan: 0
   genSpeed: 0
   discoverRate: 0
@@ -921,6 +923,46 @@ MonoBehaviour:
   relVfxIcon: {fileID: 5146664473035648725}
   culVfxIcon: {fileID: 5146664472818486694}
   techVfxIcon: {fileID: 5146664473134349887}
+  glowSp: {fileID: 21300000, guid: 74c0b3c7466094bf5852ba2ca907ff38, type: 3}
+  ogSp: {fileID: 0}
+  glowPls: 0
+--- !u!58 &1935105074
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5146664472099454681}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 25
+--- !u!50 &7606063965964787733
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5146664472099454681}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &5146664472106715801
 GameObject:
   m_ObjectHideFlags: 0
