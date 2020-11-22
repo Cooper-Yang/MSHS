@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcfa4c6d6104dc4688a4e30fcc603bc, type: 3}
+  m_Name: 12
+  m_EditorClassIdentifier: 
+  cardName: Spread Antieducationism
+  cardLvl: 2
+  description: '"Education is useless, school is useless!"'
+  isConti: 1
+  politicsSource: 0
+  cultureSource: 0
+  religionSource: 1
+  technologySource: 0
+  politics: 1
+  culture: 1
+  religion: 0
+  technology: 1
+  poliVal: 10
+  culVal: -10
+  reliVal: 0
+  techVal: 10
+  genVal: 0
+  discovRate: 5
+  lifeVal: 0
