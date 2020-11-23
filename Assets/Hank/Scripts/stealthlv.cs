@@ -27,7 +27,7 @@ public class stealthlv : MonoBehaviour
 
     private void Start()
     {
-        stealthlev = 0;
+        stealthlev = 98;
     }
 
     // Update is called once per frame
