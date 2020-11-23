@@ -79,15 +79,19 @@ public class James_AlienScript : MonoBehaviour
 
 	private void Update()
 	{
-		alienLifeDeath(); //control the life span (and generate dots)
-		if (Input.GetMouseButtonUp(0))
+		if (GameManager.me.state == GameManager.me.game_screen)
 		{
-			if (targetingMe)
-            {
-				AffectSingleAlien(collidedCard);
+			alienLifeDeath(); //control the life span (and generate dots)
+			if (Input.GetMouseButtonUp(0))
+			{
+				if (targetingMe)
+				{
+					AffectSingleAlien(collidedCard);
+				}
 			}
+			Glow();
 		}
-		Glow();
+		
 	}
 
 	// Glow ctrl

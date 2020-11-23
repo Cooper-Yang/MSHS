@@ -31,68 +31,70 @@ public class ContinentScript : MonoBehaviour
 
     private void Update()
     {
-
-		if (collidedCard != null)
-        {
-			//Debug.Log(ContiName+": "+collidedCard.gameObject.name);
-			//foreach (var alien in myAliens)
-   //         {
-			//	if (alien == collidedCard.gameObject)
-   //             {
-			//		collidedCard = null;
-   //             }
-   //         }
-        }
-		
-		
-		if (CardManager.me.CardBeingHeld != null) // if player is holding a card
-        {
-			// enable aliens' colliders if its not a conti effect card, disable aliens' colliders otherwise
-			if (CardManager.me.CardBeingHeld.tag == "EffectCard") // check if its an effect card
+		if (GameManager.me.state == GameManager.me.game_screen)
+		{
+			if (collidedCard != null)
 			{
-				if (CardManager.me.CardBeingHeld.GetComponent<CardReader>().isConti) // if its a conti card
+				//Debug.Log(ContiName+": "+collidedCard.gameObject.name);
+				//foreach (var alien in myAliens)
+				//         {
+				//	if (alien == collidedCard.gameObject)
+				//             {
+				//		collidedCard = null;
+				//             }
+				//         }
+			}
+
+
+			if (CardManager.me.CardBeingHeld != null) // if player is holding a card
+			{
+				// enable aliens' colliders if its not a conti effect card, disable aliens' colliders otherwise
+				if (CardManager.me.CardBeingHeld.tag == "EffectCard") // check if its an effect card
 				{
-					GetComponent<PolygonCollider2D>().enabled = true;
+					if (CardManager.me.CardBeingHeld.GetComponent<CardReader>().isConti) // if its a conti card
+					{
+						GetComponent<PolygonCollider2D>().enabled = true;
+						foreach (var alien in myAliens)
+						{
+							alien.GetComponent<CircleCollider2D>().enabled = false;
+						}
+					}
+					else // if its not a conti card
+					{
+						GetComponent<PolygonCollider2D>().enabled = false;
+						foreach (var alien in myAliens)
+						{
+							alien.GetComponent<CircleCollider2D>().enabled = true;
+						}
+					}
+				}
+				else // if its an alien card, disable aliens' colliders
+				{
 					foreach (var alien in myAliens)
 					{
 						alien.GetComponent<CircleCollider2D>().enabled = false;
 					}
-				}
-				else // if its not a conti card
-				{
-					GetComponent<PolygonCollider2D>().enabled = false;
-					foreach (var alien in myAliens)
-					{
-						alien.GetComponent<CircleCollider2D>().enabled = true;
-					}
+					GetComponent<PolygonCollider2D>().enabled = true;
 				}
 			}
-			else // if its an alien card, disable aliens' colliders
+			else // if player is not holding a card
 			{
+				GetComponent<PolygonCollider2D>().enabled = true;
 				foreach (var alien in myAliens)
 				{
 					alien.GetComponent<CircleCollider2D>().enabled = false;
 				}
-				GetComponent<PolygonCollider2D>().enabled = true;
 			}
-		}
-        else // if player is not holding a card
-        {
-			GetComponent<PolygonCollider2D>().enabled = true;
-			foreach (var alien in myAliens)
+
+			ContiGlow();
+			if (onStay == true)
 			{
-				alien.GetComponent<CircleCollider2D>().enabled = false;
-			}
-		}
-		
-		ContiGlow();
-		if (onStay == true)
-		{
-			//Debug.Log(1111);
-			if (Input.GetMouseButtonUp(0))
-			{
-				doThingsToCards(collidedCard);
-				//onStay = false;
+				//Debug.Log(1111);
+				if (Input.GetMouseButtonUp(0))
+				{
+					doThingsToCards(collidedCard);
+					//onStay = false;
+				}
 			}
 		}
 	}

@@ -39,11 +39,14 @@ public class CardMvmt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = Camera.main.ScreenToWorldPoint( new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z * -1));
-        moveCardUp();
-        dragCards();
-        cardTransform.position = cardPos;
-        cardTransform.localScale = cardScal;
+        if (GameManager.me.state == GameManager.me.game_screen)
+		{
+            mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z * -1));
+            moveCardUp();
+            dragCards();
+            cardTransform.position = cardPos;
+            cardTransform.localScale = cardScal;
+        } 
     }
 
 
