@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
+    static public CardManager me;
+
     //[SerializeField] private GameObject card;
     [SerializeField] private GameObject[] cards;
     [SerializeField] private CardMvmt CM;
@@ -17,10 +19,12 @@ public class CardManager : MonoBehaviour
     private Vector3 cardFinalScale;
     public bool onLerp = false;
 
+    public GameObject CardBeingHeld;
 
     // Start is called before the first frame update
     void Start()
     {
+        me = this;
         cardSpawnPos = new Vector2(-88f, 27f);
         cardFinalScale = new Vector3(0.058f, 0.058f, 0.058f);
         for (int i = 0; i < 10; i++)

@@ -31,9 +31,6 @@ public class infobars : MonoBehaviour
         techbar.fillAmount = jas.tech_Influence / 100;
 
 
-        Debug.Log(jas.tech_Influence);
-
-
         if (Input.GetMouseButtonDown(0))
         {
             gameObject.SetActive(false);
