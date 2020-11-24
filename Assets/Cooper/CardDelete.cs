@@ -26,6 +26,7 @@ public class CardDelete : MonoBehaviour
                 
                 deleteZone.color = new Color(deleteZone.color.r, deleteZone.color.g, deleteZone.color.b, 0);
                 TurnsManager._instance.nextTurn();
+                AudioManager._instance.DeletCard();
                 Destroy(gameObject);
             }
         }

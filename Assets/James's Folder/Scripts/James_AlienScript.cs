@@ -339,6 +339,7 @@ public class James_AlienScript : MonoBehaviour
 			stealthlv._instance.changeDisValue(cR.discovRate);
 			TurnsManager._instance.nextTurn();
 			targetingMe = false;
+			AudioManager._instance.AfterPlay();
 			Destroy(collision.gameObject);
 		}
 	}

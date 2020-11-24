@@ -60,13 +60,13 @@ public class CardMvmt : MonoBehaviour
         float scaleLerpGoal = .07f;
         float scaleLerpValue;
         Vector2 lerpPos;
-
+        
 
         if (mouseOn == true)
         {
             lerpValue = Mathf.Lerp(cardTransform.position.y, originalPos.y + lerpGoal, Time.deltaTime / lerpTime);
             cardPos = new Vector2(cardTransform.position.x, lerpValue);
-
+            //AudioManager._instance.CursorOnCard();
             scaleLerpValue = Mathf.Lerp(cardTransform.localScale.x, originalScal.x + scaleLerpGoal, Time.deltaTime / lerpTime);
             cardScal = new Vector2(scaleLerpValue, scaleLerpValue);
             this.transform.SetAsLastSibling();
@@ -75,7 +75,7 @@ public class CardMvmt : MonoBehaviour
         {
             lerpPos = Vector2.Lerp(cardTransform.position, originalPos, Time.deltaTime / lerpTime);
             cardPos = lerpPos;
-
+            //AudioManager._instance.cardOnce = true;
             scaleLerpValue = Mathf.Lerp(cardTransform.localScale.x, targetScale.x , Time.deltaTime / lerpTime);
             cardScal = new Vector2(scaleLerpValue, scaleLerpValue);
         }
@@ -98,7 +98,8 @@ public class CardMvmt : MonoBehaviour
                 float shortestDis = 1000;
                 foreach (var alien in GameManager.me.aliens)
                 {
-                    if (Vector2.Distance(cardTransform.position, alien.transform.position) < shortestDis)
+                    
+                    if (alien != null &&Vector2.Distance(cardTransform.position, alien.transform.position) < shortestDis  )
                     {
                         shortestDis = Vector2.Distance(cardTransform.position, alien.transform.position);
                     }

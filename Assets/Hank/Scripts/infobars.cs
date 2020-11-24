@@ -37,6 +37,7 @@ public class infobars : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             gameObject.SetActive(false);
+            AudioManager._instance.UseLowPass();
         }
     }
 }
