@@ -675,7 +675,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e95c6ee7d1d164d87a51626d298a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isContiPrefab: 1
+  backGround: {fileID: 0}
+  contiBack: {fileID: 0}
+  normalBack: {fileID: 0}
   card: {fileID: 11400000, guid: d8e40d11bdf8d0547921980a38854d70, type: 2}
   cardName: {fileID: 5272015627792615364}
   techIcon: {fileID: 3562513351604179714}
