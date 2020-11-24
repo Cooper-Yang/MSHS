@@ -19,15 +19,21 @@ public class NewsControl : MonoBehaviour
     public bool readingNews = false;//Break news pop out
     public bool rollingNews = false;//Normal news rolling
 
+    [TextArea]
     public List<string> normalRandNews;//Random news list
+    public List<string> breakingNewsTitles; // titles of breaking news
+    [TextArea]
     public List<string> breakNewsList;//Break news list
     public Text normalNews;//Text for normal news
     public Text breakNewsText;
+    public Text breakingNewsTitleText;
 
     public float speed; //0~1
     public float resetTime; //For testing
 
     public GameObject breakNews;//put break news here
+    //public GameObject breakingNewsTitle;
+
     //Do not change Numbers
     float resetDefTime; //For testing
     Vector3 newsDefPos;
@@ -43,6 +49,10 @@ public class NewsControl : MonoBehaviour
 
     void Update()
     {
+        testPol = GameManager.me.pol_gl;
+        testCul = GameManager.me.cul_gl;
+        testRel = GameManager.me.rel_gl;
+        testTec = GameManager.me.tech_gl;
         resetTime -= Time.deltaTime;//For testing time
         //Normal news move and reset
 
@@ -600,11 +610,14 @@ public class NewsControl : MonoBehaviour
         if (readingNews == true)
         {
             breakNews.SetActive(true);
+            //breakingNewsTitle.SetActive(true);
+            breakingNewsTitleText.text = breakingNewsTitles[selectBreakNews];
             breakNewsText.text = breakNewsList[selectBreakNews];
         }
         else
         {
             breakNews.SetActive(false);
+            //breakingNewsTitle.SetActive(false);
         }
     }
 
