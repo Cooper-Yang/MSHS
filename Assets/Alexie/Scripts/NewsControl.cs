@@ -11,6 +11,10 @@ public class NewsControl : MonoBehaviour
     public float testCul;
     public float testRel;
     public float testTec;
+    public int polPhase = 0;
+    public int culPhase = 0;
+    public int relPhase = 0;
+    public int tecPhase = 0;
     //Changeable variables
     public bool readingNews = false;//Break news pop out
     public bool rollingNews = false;//Normal news rolling
@@ -29,10 +33,6 @@ public class NewsControl : MonoBehaviour
     Vector3 newsDefPos;
     int selectNormalNews;
     int selectBreakNews;
-    public int polPhase = 0;
-    public int culPhase = 0;
-    public int relPhase = 0;
-    public int tecPhase = 0;
 
     void Start()
     {
@@ -72,7 +72,6 @@ public class NewsControl : MonoBehaviour
             if (Input.GetMouseButtonUp(0) && readingNews == true)
             {
                 polPhase += 1; 
-                readingNews = false;
             }
         }
         if (testPol >= 13.32 && polPhase == 1)
@@ -591,6 +590,11 @@ public class NewsControl : MonoBehaviour
             readingNews = true;
             if (Input.GetMouseButtonUp(0) && readingNews == true)
                 tecPhase += 1;
+        }
+
+        if(Input.GetMouseButtonDown(0) && readingNews == true)
+        {
+            readingNews = false;
         }
 
         if (readingNews == true)
