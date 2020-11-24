@@ -8,7 +8,7 @@ public class ContinentScript : MonoBehaviour
 	public James_AlienScript.Continent ContiName;
 	public TextMeshProUGUI continentInfo;
     public List<GameObject> myDots;
-	public List<GameObject> myAliens; // need to have a GameManager that stores all the aliens based on the continents they are on
+	public List<GameObject> myAliens;
 	public float pol_cont;
 	public float cul_cont;
 	public float rel_cont;
@@ -31,18 +31,72 @@ public class ContinentScript : MonoBehaviour
 
     private void Update()
     {
-		
-		ContiGlow();
-		if (onStay == true)
+		if (GameManager.me.state == GameManager.me.game_screen)
 		{
-			//Debug.Log(1111);
-			if (Input.GetMouseButtonUp(0))
+			if (collidedCard != null)
 			{
-				doThingsToCards(collidedCard);
-				//onStay = false;
+				//Debug.Log(ContiName+": "+collidedCard.gameObject.name);
+				//foreach (var alien in myAliens)
+				//         {
+				//	if (alien == collidedCard.gameObject)
+				//             {
+				//		collidedCard = null;
+				//             }
+				//         }
+			}
+
+
+			if (CardManager.me.CardBeingHeld != null) // if player is holding a card
+			{
+				// enable aliens' colliders if its not a conti effect card, disable aliens' colliders otherwise
+				if (CardManager.me.CardBeingHeld.tag == "EffectCard") // check if its an effect card
+				{
+					if (CardManager.me.CardBeingHeld.GetComponent<CardReader>().isConti) // if its a conti card
+					{
+						GetComponent<PolygonCollider2D>().enabled = true;
+						foreach (var alien in myAliens)
+						{
+							alien.GetComponent<CircleCollider2D>().enabled = false;
+						}
+					}
+					else // if its not a conti card
+					{
+						GetComponent<PolygonCollider2D>().enabled = false;
+						foreach (var alien in myAliens)
+						{
+							alien.GetComponent<CircleCollider2D>().enabled = true;
+						}
+					}
+				}
+				else // if its an alien card, disable aliens' colliders
+				{
+					foreach (var alien in myAliens)
+					{
+						alien.GetComponent<CircleCollider2D>().enabled = false;
+					}
+					GetComponent<PolygonCollider2D>().enabled = true;
+				}
+			}
+			else // if player is not holding a card
+			{
+				GetComponent<PolygonCollider2D>().enabled = true;
+				foreach (var alien in myAliens)
+				{
+					alien.GetComponent<CircleCollider2D>().enabled = false;
+				}
+			}
+
+			ContiGlow();
+			if (onStay == true)
+			{
+				//Debug.Log(1111);
+				if (Input.GetMouseButtonUp(0))
+				{
+					doThingsToCards(collidedCard);
+					//onStay = false;
+				}
 			}
 		}
-
 	}
 
     private void OnMouseDown()
@@ -121,41 +175,58 @@ public class ContinentScript : MonoBehaviour
 			}
 			
         }
-		
+		//bool alreadyProcessed = false;
+  //      foreach (var alien in myAliens)
+  //      {
+		//	if (alien == collision.gameObject)
+  //          {
+		//		alreadyProcessed = true;
+  //          }
+  //      }
+		//if (!alreadyProcessed)
+		//{
+		//	collidedCard = collision;
+		//}
 		//Debug.Log(1);
 
 	}
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-			
-			collidedCard = collision;		
+		collidedCard = collision;
 	}
 
     private void OnCollisionExit2D(Collision2D collision)
     {
 		onStay = false;
 		canGlow = false;
+		//if (collidedCard != null)
+  //      {
+		//	//Debug.Log(collidedCard.gameObject.name);
+		//	//collidedCard.gameObject.GetComponent<CardMvmt>().contiImOn = null;
+		//	collidedCard = null;
+		//}
 	}
 
 	public void doThingsToCards(Collision2D collision)
+	{
+		//Debug.Log("night");
+		if (collision.gameObject.tag == "AlienCard")
 		{
-			//Debug.Log("night");
-			if (collision.gameObject.tag == "AlienCard")
-			{
-				canGlow = false;
+			canGlow = false;
 			//Debug.Log("before summon");
-				summonAlien(collision); //use alien card
-				onStay = false;
+			summonAlien(collision); //use alien card
+			onStay = false;
 		}
-			if (collision.gameObject.tag == "EffectCard")
-			{
-				canGlow = false;
+		if (collision.gameObject.tag == "EffectCard")
+		{
+			canGlow = false;
 			//Debug.Log("before effect affect"); 
-				affectAlien(collision); //use effect card
-				onStay = false;
+			affectAlien(collision); //use effect card
+			onStay = false;
+
 		}
-		}
+	}
 
 
 	public void affectAlien(Collision2D collision)
@@ -164,19 +235,29 @@ public class ContinentScript : MonoBehaviour
 		CardReader cR = otherCard.GetComponent<CardReader>();
         if (cR.isConti)
         {
-			//miss apply conti effect (use StartCoroutine(gameobject.NumberChangedVFX(x, x, x, x));) Coop: how to know which alien? 
-			//probly a conti hold a list of alien? works with line 10 probly
+            //miss apply conti effect (use StartCoroutine(gameobject.NumberChangedVFX(x, x, x, x));) Coop: how to know which alien? 
+            //probly a conti hold a list of alien? works with line 10 probly
+            foreach (var alien in myAliens)
+            {
+				James_AlienScript ja = alien.GetComponent<James_AlienScript>();
+				ja.pol_Influence += cR.poliVal;
+				ja.cul_Influence += cR.culVal;
+				ja.rel_Influence += cR.reliVal;
+				ja.tech_Influence += cR.techVal;
+				ja.lifeSpan += cR.lifeVal;
+			}
 		}
 		else
         {
 			//miss apply single effect
+			Debug.Log("not conti");
 		}
 
 		//change discover value
 		stealthlv._instance.changeDisValue(cR.discovRate);
 
 		TurnsManager._instance.nextTurn();
-		//miss +discov here (use + cR.discoverRate)
+		//miss +discov here (use + cR.discoverRate) is it still missing? ain't line 186 does the job?
 		Destroy(collision.gameObject);
 	}
 
@@ -184,7 +265,8 @@ public class ContinentScript : MonoBehaviour
 
 	public void summonAlien(Collision2D collision)
     {
-		//save date
+		
+		//save data
 
 		Collider2D contiCollider = GetComponent<PolygonCollider2D>();
 		Bounds thisbound = contiCollider.bounds;

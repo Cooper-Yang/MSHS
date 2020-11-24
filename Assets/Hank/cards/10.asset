@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcfa4c6d6104dc4688a4e30fcc603bc, type: 3}
+  m_Name: 10
+  m_EditorClassIdentifier: 
+  cardName: Establish Shadow Government
+  cardLvl: 3
+  description: It's like playing with Barbies.
+  isConti: 1
+  politicsSource: 0
+  cultureSource: 0
+  religionSource: 1
+  technologySource: 0
+  politics: 1
+  culture: 0
+  religion: 0
+  technology: 0
+  poliVal: 15
+  culVal: 0
+  reliVal: 0
+  techVal: 0
+  genVal: 0
+  discovRate: -15
+  lifeVal: 0

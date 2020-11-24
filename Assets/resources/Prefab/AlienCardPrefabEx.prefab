@@ -1176,6 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee6235e693816a4281b7d125577ae3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalScal: {x: 0, y: 0}
   cardPos: {x: 0, y: 0, z: 0}
   cardScal: {x: 0, y: 0, z: 0}
   mousePos: {x: 0, y: 0, z: 0}

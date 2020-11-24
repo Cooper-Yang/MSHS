@@ -35,6 +35,6 @@ public class TurnsManager : MonoBehaviour
     public void nextTurn()
     {
         turns++;
-        Debug.Log("Turn #" + turns);
+        //Debug.Log("Turn #" + turns);
     }
 }
