@@ -216,6 +216,8 @@ public class ContinentScript : MonoBehaviour
 			canGlow = false;
 			//Debug.Log("before summon");
 			summonAlien(collision); //use alien card
+			AudioManager._instance.AfterPlay();
+			AudioManager._instance.MusicStart();
 			onStay = false;
 		}
 		if (collision.gameObject.tag == "EffectCard")
@@ -223,6 +225,7 @@ public class ContinentScript : MonoBehaviour
 			canGlow = false;
 			//Debug.Log("before effect affect"); 
 			affectAlien(collision); //use effect card
+			AudioManager._instance.AfterPlay();
 			onStay = false;
 
 		}
