@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Ivory's Folder/StartScene.unity
+    guid: ae45e02602ee92a468a519d06677b849
+  - enabled: 1
+    path: Assets/Cooper/CooperScene.unity
+    guid: 80142f22bb3923c4abafc9797824fd0d
+  - enabled: 1
+    path: Assets/Ivory's Folder/Ivory'sScene.unity
+    guid: 67704d71b552bd64a83448e085af50c4
   m_configObjects: {}
