@@ -739,8 +739,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.135}
-  m_SizeDelta: {x: 7578.1016, y: 397.42902}
+  m_AnchoredPosition: {x: -0.1, y: 0.36}
+  m_SizeDelta: {x: 10000, y: 397.42902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62486492
 MonoBehaviour:
@@ -762,7 +762,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 301ebc6426c16404ab9bbd7d19a3b006, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2305,8 +2305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1510, y: 541}
-  m_SizeDelta: {x: 7578.1016, y: 397.42902}
+  m_AnchoredPosition: {x: 2099, y: 541}
+  m_SizeDelta: {x: 17323.8, y: 397.42902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &534939631
 BoxCollider:
@@ -2773,8 +2773,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.012070936}
-  m_SizeDelta: {x: 7578.1016, y: 397.42902}
+  m_AnchoredPosition: {x: -0.1, y: 0.06}
+  m_SizeDelta: {x: 10000, y: 3479.6042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845397437
 MonoBehaviour:
@@ -2796,7 +2796,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 301ebc6426c16404ab9bbd7d19a3b006, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -6585,96 +6585,99 @@ MonoBehaviour:
   - AI News Anchor Makes Debut In China
   - "Hideo Kojima Announced Retiring, \u201Cthe Politics Limited the Art.\u201D"
   breakingNewsTitles:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - "A New Party, \u201CAhon\u201D,  Rose up in the Country "
+  - 'The Medical Insurance Plan Has Been Delayed, Again. '
+  - 'The Governors of Some States Announced They Are Resigning.  '
+  - 'Mass labor strikes are causing serious problems. '
+  - "The Famous Economist Said \u201CThis Country Needs a New President.\u201D "
+  - "Former Government  Consultant Stated,  \u201CThe wheels of this country are
+    falling apart.\u201D "
+  - 'Several Places in the Country Breaking Out Riots. '
+  - 'Famines Broke Out in the Country.  '
+  - 'The Government Announced the Curfew.  '
+  - "A New Nationwide NGO, \u201CAolig\u201D, Established. "
+  - 'The President Resigned.  '
+  - "The Chairman Delivered the Speech, \u201CStrength Through Unity, Unity Through
+    Faith.\u201D"
+  - 'The National Guard Deployed Into Major Cities.  '
+  - The Capitol Was Destroyed by the Terrorists.
+  - 'The Supreme Court and the Congress Decided They Will Reevaluate the social problems. '
+  - Many Cities Cannot Afford Running Public Facilities.
+  - "\u201CFour Equals, not one less.\u201D "
+  - 'Parades Broke Out in the Major Cities. '
+  - "\u201CRevolution, Reconstruction, Reconciliation.\u201D  "
+  - "\u201CAolig\u201D Provides Shelter and Supplies for the Citizens."
+  - 'Government Entered the Reorganization Phase.  '
+  - The silence of the party is disturbing
+  - 'Census Showed 78.7% of the Citizens Would Vote for Ahonist Candidate. '
+  - Country Plunged Into Anarchism.
+  - "Ahonist Party\u2019s Candidates Dominated the Congress. "
+  - "\u201CAolig\u201D will use the necessary means to put our country on the right
+    track.  "
+  - 'Vote Rate Is the Highest in History, 99.7%. '
+  - All the Former Senior Government Officials Are Mysteriously Dead.
+  - 'Ahonist Won the Election.  '
+  - "\u201CAolig\u201D claimed that they will help our people form a new government. "
+  - Company Named Cantaloupe Aims to Provide the Best Smartphones
+  - MIT Student Solves Satellite Efficiency Problem
+  - Cantaloupe Reveals Its Phone Design
+  - NASA Promises MIT Student a Place After Graduation
+  - Aphone Is Officially Released
+  - "Mit\u2019s Prodigy Student Joins NASA After Receiving PhD"
+  - Cantaloupe Announces Homebox
+  - NASA Initiates Program on Alien Communication
+  - Cantaloupe Gains Official Government Support
+  - Michael Scoot Improves Data Transmission Between Satellites
+  - Aphone and Homebox Receives Huge Update
+  - 'Michael Scoot Wins Nobel Prize of Physics '
+  - Cantaloupe Now Free to Trade on NYSE and Nasdaq
+  - NASA Sends Multiple Messages Towards Neighboring Galaxy
+  - Cantaloupe Announces Android Maid
+  - XXX Steps up as New Administrator of NASA
+  - Cantaloupe Now Has Physical Stores in 150 Other Countries
+  - 'NASA Launches 4 Energy Cube Satellites Around Earth '
+  - "Cantaloupe\u2019s Android Now Works in Various Fields"
+  - NASA Gains United Nations Support to Increase Message Frequency
+  - All Cantaloupe Devices Are Permanently 40% Off
+  - NASA Receives Possible Alien Response
+  - Cantaloupe Buys Apple and Microsoft
+  - Entire World Ignites in Interest
+  - Some Cantaloupe Devices Are Malfunctioning
+  - Michael Scoot Appointed as Official Communicator With Aliens
+  - Rumors of a Secret Alien Invasion Spreads
+  - Satellite Shuts Down All Communication Across the Globe
+  - Android Declares War on Humans, With the Support of Their Masters
+  - Alien Spaceships Surround Earth
+  - "\u201CPulp Science-Fiction\u201D Wins NYC Indie Film Festival"
+  - The Voice Season 20 Winner Declared
+  - XXX Works on New Movie With Tom Hanks
+  - Calvin Harris Collaborates With XXX
+  - "\u201CKill Will\u201D Receives Generally Positive Review From Critics "
+  - "New Star XXX\u2019s First Album Tops Billboard 100 "
+  - "\u201CKill Will\u201D Played in Over 100 Countries"
+  - "XXX Announces Concert in la\u2019s Staple Stadium"
+  - E.t. II Confirmed by Spielberg, Although He Will Only Be the Producer
+  - "XXX\u2019s Second Studio Album Features Rihanna and Eminem"
+  - 'ET II Receives Overwhelmingly Positive Reviews '
+  - "\u201CAdolescent Dreams\u201D Reigns Over Billboard 100 for Two Months Straight"
+  - "ET II\u2019s Box Office Exceeds 700 Million Globally"
+  - XXX Announces Nationwide Tour That Lasts One Year
+  - "XXX Announces Next Sci-FI Film \u201CWar of the Galaxies\u201D"
+  - XXX Releases Companion Merch That Lets You Sing Along With It
+  - "Budget of \u201CWar of the Galaxies\u201D Rumors to Be Over 900 Million"
+  - XXX Hints at Brand New Studio Album in the Works
+  - "\u201CWar of the Galaxies\u201D Shown in Over 180 Countries"
+  - XXX Drops Surprise Ep
+  - XXX Wins Best Director and Film at Oscars
+  - XXX Drops Another Single, and It Is Beautiful
+  - "\u201CWar of the Galaxies\u201D Breaks World Record of Gross Box Office  "
+  - "People Cannot Stop Listening to \u201CStarfall\u201D"
+  - "Audiences Who Watched\u201CWar of the Galaxies\u201D Claim Aliens Are Real"
+  - "USA Has Changed Its National Anthem to \u201CStarfall\u201D"
+  - More and More People Claim a War Against Aliens Is Inevitable
+  - Society Completely Shuts Down Due to Lack of People Working
+  - Millions Across the Globe Have Completely Lost Their Minds
+  - XXX Leads Fans Into Full-Scale Invasion
   - 
   - 
   - 
@@ -6706,99 +6709,301 @@ MonoBehaviour:
   - 
   - 
   breakNewsList:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - "\u201CAhon,\u201D the new private political party recently registered in the
+    country. The leader of the party stated that the country was sick and in need
+    of new medicine. Rumors said they are already preparing for the next presidential
+    election. "
+  - Medical resources relocation has been a problem for decades. The social problems
+    around the medical issues are escalating. The formation of a new medical insurance
+    plan is the blood and tears of generations of citizens. With the delay of the
+    plan, the society is going to express its resent.
+  - Many governors of major states in the country had resigned for various reasons.
+    All of them refused to accept the interviews. Are there external forces behind
+    the scene? Or is this country really in crysis?
+  - 'Just after the announcement of medical insurance, there are nationwide labor
+    strikes. Public facilities are almost paralyzed. The stock market hitted the
+    limit down. National production capacity has been reduced by 40%. '
+  - "One of the greatest and the most controversial economists in the human world,
+    Adam Jitler, had a bald statement, \u201CThis country cannot be saved. It needs
+    to start over. New law, new government, and a new president. This country is
+    rotted to her foundation\u201D"
+  - "Doggy Alpha, the Former Government  Consultant, are spotted leaving the country
+    on his personal jet. He declared that this country had broken away from his path
+    and was gradually heading for destruction. \u201CThe wheels of this country are
+    falling apart.\u201D"
+  - 'The peaceful parade for equal human rights has evolved into riots, causing billions
+    of financial loss. The causes of riots happening simultaneously in several cities
+    are still being investigated. But an anonymous police officer said that police
+    violence was the  sasdasd problem. '
+  - A large-scale famine broke out across the country, and the cause is under investigation.
+    It is estimated that in the next five months, this Congress will suffer a total
+    food shortage. It is not clear whether the government will import large amounts
+    of food.
+  - "The riots and parades in the country cannot be controlled effectively. Many
+    police stations have been attacked. Government officials have announced the most
+    strict curfews in history. All citizens on the streets after 7 o\u2019clock will
+    face charges. "
+  - A new NGO was established. It is reported that this organization will establish
+    shelters across the country to ensure that low-income groups have food and clothing.
+    The organization also declared that it would not compromise on unequal human
+    rights in the country.
+  - "The president has been accused of inaction due to the chaos. In the recent conference,
+    the president announced his resignation, \u201CI\u2019ve done my best to keep
+    the peace in this country. But I feel helpless about all the things that have
+    happened recently. I cannot make rational decisions during this difficult time.
+    So I will resign from the presidency.\u201D What Adam Jitler is becoming true. "
+  - The chairman of the country made a heartening speech. He hoped that the country
+    could unite and tide over the difficulties. He also claimed that he would never
+    tolerate any organization or individual disrupting national security and order.
+  - 'The riots escalated again. There have been major jailbreaks across the country.
+    Vicious and violent crimes are happening. The national guard has the permission
+    to fire against any suspicious crime activity. Our country is in the dark age. '
+  - "Within half an hour after the chairman\u2019s speech, the Capitol was destroyed
+    by unknown persons. The Commander of the Military Commission, and many other
+    senior members of the party died. The site has been blocked by the National Security
+    Agency. The Chairman declared this was an unforgivable and blatant terrorist
+    attack, and at the same time he succeeded as Commander of the Military Commission.
+    However, some foreign media suspected that this was a carefully arranged internal
+    party coup."
+  - "Under the Pressure, a special task team with officials from the Supreme Court
+    and the Congress, decided they will evaluate every aspect of the society and
+    find what\u2019s wrong. Is this what we need? Or is it already too late for this
+    country?"
+  - "The negative effects of famine continue to worsen in society. Many citizens
+    were dissatisfied with the government's manipulation and inaction by public opinion,
+    and they started to strike. The local government has entered a shutdown due to
+    lack of taxation. According to United Nations forecasts, the country\u2019s fiscal
+    treasury has already seen a huge deficit. The domestic society has entered a
+    vicious circle."
+  - "Scholars and social activists have announced the slogan and charta 07 for solving
+    the social problems. \u201CFour demands, not one less.\u201D Four demands are:
+    1. Equal rights to education. 2. Equal opportunities for employment. 3. Equal
+    medical resources 4. Equal political rights.\u201D "
+  - Angry people occupy the streets and government agencies. The government's previous
+    hardline style has also disappeared. Even some local police officers joined the
+    people to protest against the national government. They launched a hunger strike
+    in various squares. Of course, during this period, the most important thing is
+    food.
+  - "The parades and riots are happening all over the country. With the publication
+    of charta 07, Ahon is the first party to respond. Ahonists have powerful ways
+    of saving this country. They stated that \u201CThe country needs a restart rather
+    than repairs.\u201D They also announced their slogan for saving the country,
+    \u201CRevolution, Reconstruction, Reconciliation.\u201D"
+  - ' "Aolig" claimed that they would not ignore human rights abuses. First of all,
+    they will give shelter and necessary resources to the citizens in need. In an
+    emergency, they will take military measures to defend themselves. The United
+    Nations remained silent about the chaos in its own country. Many media around
+    the world questioned "Aolig", claiming that an NGO should not have such great
+    power. Who supports this NGO? Has the civil war in our country started at any
+    moment?'
+  - 'The new election of president, congress and the supreme court Is on the way.
+    A group of scholars and elected representatives will closely monitor the election.
+    Congressman election first, then Supreme court, and then president. '
+  - In the face of Aolig's strong speech, the party's continued silence is disturbing.
+    The army continued to be stationed in the city. It is reported that due to lack
+    of supplies, more and more soldiers have chosen to be deserters. There are rumors
+    that there have been many military coups within the party, and the life and death
+    of the chairman is still unclear.
+  - Our country is weak. And a party with fists can easily bring solutions. However,
+    many scholars expressed their fear for this country to become another Nazi German.
+  - "United officially declared our country an anarchist region. Faced with the loss
+    of national sovereignty, the government still has not issued any statement. Due
+    to our country\u2019s advanced automated defense system on the border, no foreign
+    forces have yet to compete for territory. Famine swept across the country, and
+    the people could not get any supplies. It is reported that part of the army has
+    organized with former government officials to become local warlords."
+  - 'Ahonists are winning in every state, 68 % of the congress are ahonists! Is this
+    a good sign? But what could be worse? '
+  - ' "Aolig" condemned the government''s inaction with the United Nations. They
+    will use the necessary means to put our country on the right track. According
+    to opinion polls, 86.54 percent of citizens hope that "Aolig" can replace the
+    current government.'
+  - All we want to say is, in this gloomy era, society shines with the brilliance
+    of humanity.
+  - "This is neither good news nor bad news. Aolig\u2019s investigation team stated
+    that all former senior government officials died of a chemical attack by neurotoxins.
+    It is not clear whether this was a terrorist attack or an internal party coup.
+    Aolig sealed off the entire capital, claiming that this area will be lethal for
+    the next 57 years."
+  - "The Country Is Now in a New Era. In general. The Ahon will decide the path of
+    this country. Will she be on the road of  \u201CRevolution, Reconstruction, Reconciliation\u201D?"
+  - This will be a new era. Although we don't know what kind of ending this represents,
+    it means that we can survive on earth for another day.
+  - A new startup company named Cantaloupe is formed by former Apple and Nokia employees.
+    They claim to focus on creating the next revolutionary generation of smartphones.
+  - "MIT\u2019s current student Michael Scoot proposed a compelling alternative signal
+    transmission process for Earth\u2019s satellites. NASA is taking his proposal
+    into serious consideration."
+  - "During this morning\u2019s press conference Cantaloupe announced aPhone, the
+    \u201Csmartest\u201D smartphone yet. aPhone\u2019s self-included AI answers calls,
+    texts, and emails for the user after studying his or her behaviors."
+  - Recently, MIT student Michael Scoot has offered NASA some help in its satellite
+    program. NASA officially announced that Scoot will receive a desirable position
+    after graduation and is looking forward to work on future projects with him.
+  - "Cantaloupe\u2019s aPhone is officially out in [original country]. For $1599,
+    aPhone brings unprecedented convenience to daily life. All major retail stores
+    are sold out as soon as orders went live."
+  - "Michael Scoot, one of MIT\u2019s most influential students, has officially joined
+    NASA\u2019s satellite program after receiving a PhD in quantum physics. "
+  - "After the massive success of aPhone, Cantaloupe plans to introduce the entire
+    AI experience to its users\u2019 home. The user\u2019s entire living style will
+    be customized automatically by Homebox\u2019s AI."
+  - NASA announced in its press conference this morning that a department is created
+    to specify in potential communication with alien civilizations.
+  - As of today, Cantaloupe has received 2 billion in government funding. The government
+    hopes aPhone and Homebox can reach as many users as possible.
+  - "NASA\u2019s brilliant scientist Michael Scoot recently launched an update to
+    all American satellites that allows the transmission speed of all GPS to be 40
+    times faster. Maps and weather forecasts will be much more reliable and precise
+    from now on."
+  - "aPhone and Homebox\u2019s AI is now named Cloudnet. It no longer analyzes specific
+    user data but makes decisions based on metadata for the individual. Cantaloupe
+    claims this is the next step towards eliminating all unnecessary calculations."
+  - "Michael Scoot, American quantum physicist, has been awarded this year\u2019s
+    Nobel Prize of Physics for his contributions in discovering new methods of interdimensional
+    communication."
+  - "The uprising tech company Cantaloupe is potentially gaining a mindblowing amount
+    of investment as they become available in the world\u2019s largest stock exchange
+    markets."
+  - "This morning, NASA sends out an updated version of Voyager Golden Record in
+    a digitized form. Frequencies that contain 10,000 times the original contents
+    will travel to Andromeda, Milky Way\u2019s closest galaxy."
+  - 'With the aid of Cloudnet, Cantaloupe claims it is ready for the next step in
+    AI services: aNdroid. aNdroid comes in various models, but all provide the same
+    cleaning and cooking services.'
+  - "NASA\u2019s current administrator Michael Scoot has resigned due to personal
+    reasons. The recent Nobel Prize winner and head of satellite programs xxx carries
+    on his role."
+  - 'Aimed to provide aPhone, Homebox and aNdroid to as many consumers as possible,
+    Cantaloupe now opened over 1000 physical stores around the world. '
+  - "Last night, NASA launched 4 bizarre-looking cubes into Earth\u2019s orbit. NASA\u2019s
+    current explanation for them is that they are power concentrators for sending
+    messages across the galaxy."
+  - After closely collaborating with the government, aNdroid now supports police,
+    military, medical and multiple other fields. They are mainly used for dangerous
+    missions and tasks too precise for the human hand.
+  - During the recent annual UN meeting, 190 out of 193 agreed to increase attempts
+    to communicate with alien life forces. The presidents of many countries believe
+    there is a mutual benefit of receiving alien technology and knowledge through
+    this communication.
+  - Today Cantaloupe suddenly announced that all of their products are vastly cheaper.
+    There now seems to be no reason for anyone to purchase a smartphone that is not
+    aPhone.
+  - After numerous attempts of communication with alien civilizations, NASA declared
+    this morning that an organized frequency has been received. Scientists and linguists
+    are working hard to decipher the contents of this message.
+  - After months of negotiation, Cantaloupe purchases Apple for $2.1 trillion and
+    Microsoft for $1.3 trillion. All of their devices will now implement Cloudnet
+    AI.
+  - "While some people believe it is dangerous to communicate with aliens, the majority
+    of Earth\u2019s population are excited for the first proof of alien life and
+    even civilization. Scientists have formulated numerous plans of what to do next."
+  - Users around the world claim their Cloudnet is not responding to commands. Although
+    no damages are done, it can get very inconvenient as many users are completely
+    dependent on Cloudnet. Cantaloupe has made no official statements yet.
+  - Administrator of NASA, Michael Scoot, has gained a reasonable understanding of
+    the alien language, and is now ready for a second round of communication with
+    the aliens.
+  - Many claim their friends and relatives are acting unusual, and even the doctors
+    are clueless of what is going on. The most radical opinions claim that aliens
+    have possessed humans.
+  - A NASA satellite reportedly launched an attack on all forms of communication
+    across the globe, including internet and cellular messages. Governments are working
+    on this emergency issue.
+  - "Cloudnet is completely out of control as millions of aNdroids started attacking
+    humans last night. Furthermore, their masters seem to tolerate and support their
+    actions. Is mankind\u2019s survival at stake?"
+  - Telescopes observe giant alien warships teleporting through a portal created
+    by NASA energy cubes. What seems like cannons and weaponry are pointing directly
+    at Earth. Do they come in peace?
+  - "Young film director XXX wins his first major award with his debut work Pulp
+    Science-Fiction\u201D. Critics claim this movie came out of nowhere but is a
+    must-watch for 2020.\r\n"
+  - "Season 20 of The Voice just ended with a bang. XXX, a highschool student from
+    XXX, won the entire audience\u2019s heart with her amazing performance of XXX."
+  - "Tom Hanks just confirmed his involvement in XXX\u2019s new film, Kill Will.
+    He is likely to perform the role of lead antagonist Will. Hanks also mentioned
+    this film is nothing anyone has ever seen before."
+  - "Calvin Harris has dropped a surprise single featuring the recent winner of The
+    Voice, xxx. Xxx posted on Twitter that it was \u201Can amazing experience\u201D
+    to work with the famous DJ."
+  - "XXX\u2019s new film Kill Will is favored by most critics for being a \u201Cmindlessly
+    fun film without depth\u201D(New York Times). The audience, however, loves the
+    film as the opening weekend box office reaches $25 million."
+  - Yesterday, pop star XXX released her first album ...Baby One Last Time, and after
+    12 hours it is already the best selling album of the month. Born in 2001, XXX
+    is now trending amongst teenagers and young adults.
+  - "Kill Will has grossed $113 million internationally. This is a huge financial
+    success for director XXX as this is his first attempt at a commercial film.\r"
+  - Tickets immediately sold as xxx announced her first personal concert last night.
+    The new star has already gained an immense amount of fans.
+  - "80\u2019s classic E.T. the Extraterrestrial finally receives a sequel after
+    more than 40 years. Director Steven Spielberg will no longer be directing this
+    film; instead, the role is granted to the young and talented XXX."
+  - 'Xxx just announced her second album: Adolescent Dreams, scheduled to come out
+    later this year. She also hinted at collaborations with Rihanna and Eminem in
+    separate songs.'
+  - "ET II, the official sequel to 1982\u2019s ET, is apparently a \u201Cdeep regret
+    to anyone who misses it\u201D(IGN). All across the board, critics give out an
+    9/10 or above; it has a 99% on Rotten Tomatoes and 9.6/10 on IMDb."
+  - "Xxx\u2019s new album Adolescent Dreams has become such a phenomenon that it
+    seems like all people want to hear are songs from this album."
+  - "ET II looks to surpass its prequel\u2019s original international box office,
+    which is $793 million. Fans around the world are watching ET II multiple times
+    to express their love for the iconic figure."
+  - Pop star xxx has announced her first tour across the nation. Starting next month
+    in New York, she will eventually make her way to LA, where she held her first
+    concert.
+  - Earlier this morning, Xxx announced his next major film will feature some of
+    the biggest stars of Hollywood, including Tom Hanks,Will Smith,  Leonardo Decaprio,
+    Jackie Chan, Morgan Freeman, Anne Hathaway, Natalie Portman, Halle Berry, and
+    Jing Tian.
+  - Xxx plans to release an android doll that allows one to sing along to her most 
+    popular songs. The doll can be purchased at the official xxx website or at the
+    merch carts that follow the tour.
+  - "Xxx\u2019s agent may have let things slip in an interview. When asked how much
+    is Xxx\u2019s new movie is going to cost, his agent said\u201C it\u2019s four
+    times the budget of Avatar, can you believe it?\u201D It is highly possible that
+    large portions of the budget is for paying the stars featured in this film."
+  - "During a recent interview, Xxx claims that fans have to be patient but she is
+    working very hard on a \u201Cmagnificent project\u201D. "
+  - There are barely any countries left in the world that have not shown War of the
+    Galaxies publicly. Could this movie break records in the box office?
+  - "This morning, xxx released without warning an EP named 22, after her age. The
+    EP contains 4 songs, and is much more experimental compared to xxx\u2019s previous
+    two albums."
+  - "This year\u2019s Oscars seem to be the most anticipated due to XXX\u2019s nominations
+    in multiple categories. Without many surprises to anyone, XXX takes home Best
+    Director and Best Film."
+  - XXX does another surprise drop, this time a single named Starfall. Four minutes
+    and thirty seconds in length, it is an absolute beautiful piece of art.
+  - War of the Galaxies has reached over $3000 million world-wide, making it the
+    most watched movie in cinemas in history. Since its premiere, the film has become
+    a global phenomenon.
+  - "People who have listened to Starfall cannot stop the song inside their heads.
+    Scientists urge anyone who hasn\u2019t yet listened to Starfall to absolutely
+    not attempt to even hear one note of the song. "
+  - "It has been a while since the release of War of the Galaxies, and some audiences
+    are beginning to claim some of the scenes in the movie are real. \u201CAliens
+    are comin\u2019, and there ain\u2019t no stoppin\u2019 \u2018em,\u201D says aPhoneuser20932
+    on Twitter."
+  - United States president announced today that the national anthem of USA will
+    officially be changed to Starfall in the near future. Like many others, the president
+    is a victim of the song, and scientists are working hard for a cure.
+  - Tens of thousands of people are spreading the news that an imminent alien invasion
+    will wipe out half of the human population. The government has ordered a ban
+    on the spreading of all fake news.
+  - "Even as I am writing this report I can\u2019t stop listening to Starfall. I\u2019m
+    not coming into work tomorrow cuz I gotta listen to more Starfall."
+  - Audiences who watched War of the Galaxies now call themselves the New Era Enforcers.
+    They urge the nations of Earth to welcome the conquest of the aliens in order
+    to avoid unnecessary bloodshed.
+  - XXX has called on all of her fans to rise up and throw over the current dysfunctioning
+    government. People who are listening to Starfall seem to be put under a spell
+    to obey. Chaos and riot erupts in hundreds of cities across the globe at once.
+  - 
+  - 
+  - ' '
   - 
   - 
   - 

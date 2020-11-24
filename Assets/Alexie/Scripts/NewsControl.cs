@@ -22,7 +22,7 @@ public class NewsControl : MonoBehaviour
     [TextArea]
     public List<string> normalRandNews;//Random news list
     public List<string> breakingNewsTitles; // titles of breaking news
-    [TextArea]
+    [TextArea(1,7)]
     public List<string> breakNewsList;//Break news list
     public Text normalNews;//Text for normal news
     public Text breakNewsText;
@@ -40,11 +40,22 @@ public class NewsControl : MonoBehaviour
     int selectNormalNews;
     int selectBreakNews;
 
+    //start ran news
+    int polRan;
+    int culRan;
+    int relRan;
+    int techRan;
+
     void Start()
     {
         //Set default numbers
         newsDefPos = normalNews.transform.position;
         resetDefTime = resetTime;
+        //randomize the news 
+        polRan = Random.Range(0, 2); // 0 or 1
+        culRan = Random.Range(0, 2);
+        relRan = Random.Range(0, 2);
+        techRan = Random.Range(0, 2);
     }
 
     void Update()
@@ -74,14 +85,40 @@ public class NewsControl : MonoBehaviour
 
         //Breaking news pop out and in
         //GetComponent<ContinentScript>().pol_cont
-        if (testPol>=6.66 && polPhase == 0)
+        //normalDetect(); //alex I moved ur script into this method
+        DetectBreakingNews();
+
+        if (readingNews == true)
         {
-            if(readingNews == false)
+            breakNews.SetActive(true);
+            //breakingNewsTitle.SetActive(true);
+            breakingNewsTitleText.text = breakingNewsTitles[selectBreakNews];
+            breakNewsText.text = breakNewsList[selectBreakNews];
+        }
+        else
+        { 
+            breakNews.SetActive(false);
+            //breakingNewsTitle.SetActive(false);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        
+    }
+
+    public void normalDetect()
+    {
+        //0-29 POLI; 30-59 TECH ; 60-89 CUL; 90-119 RELI
+
+        if (testPol >= 6.66 && polPhase == 0)
+        {
+            if (readingNews == false)
                 selectBreakNews = Random.Range(0, 2);
             readingNews = true;
             if (Input.GetMouseButtonUp(0) && readingNews == true)
             {
-                polPhase += 1; 
+                polPhase += 1;
             }
         }
         if (testPol >= 13.32 && polPhase == 1)
@@ -601,28 +638,77 @@ public class NewsControl : MonoBehaviour
             if (Input.GetMouseButtonUp(0) && readingNews == true)
                 tecPhase += 1;
         }
-
-        if(Input.GetMouseButtonDown(0) && readingNews == true)
-        {
-            readingNews = false;
-        }
-
-        if (readingNews == true)
-        {
-            breakNews.SetActive(true);
-            //breakingNewsTitle.SetActive(true);
-            breakingNewsTitleText.text = breakingNewsTitles[selectBreakNews];
-            breakNewsText.text = breakNewsList[selectBreakNews];
-        }
-        else
-        {
-            breakNews.SetActive(false);
-            //breakingNewsTitle.SetActive(false);
-        }
     }
 
-    private void OnTriggerStay(Collider other)
+    public void DetectBreakingNews()
     {
-        
+        //0-29 POLI; 30-59 TECH ; 60-89 CUL; 90-119 RELI
+        if (testPol >= 6.66 * (polPhase + 1))//poli detect
+        {
+            if (readingNews == false)
+            {
+                selectBreakNews = 0 + polPhase * 2 + polRan;
+                AudioManager._instance.BreakingNewsPop();
+            }
+                
+            readingNews = true;
+            if (Input.GetMouseButtonUp(0) && readingNews == true)
+            {
+                polPhase += 1;
+                readingNews = false;
+                AudioManager._instance.UseLowPass();
+            }
+        }
+
+        if (testTec >= 6.66 * (tecPhase + 1))//tec detect
+        {
+            if (readingNews == false)
+            {
+                selectBreakNews = 30 + tecPhase * 2 + techRan;
+                AudioManager._instance.BreakingNewsPop();
+            }
+                
+            readingNews = true;
+            if (Input.GetMouseButtonUp(0) && readingNews == true)
+            {
+                tecPhase += 1;
+                readingNews = false;
+                AudioManager._instance.UseLowPass();
+            }
+        }
+
+        if (testCul >= 6.66 * (culPhase + 1))//cul detect
+        {
+            if (readingNews == false)
+            {
+                selectBreakNews = 60 + culPhase * 2 + culRan;
+                AudioManager._instance.BreakingNewsPop();
+            }
+                
+            readingNews = true;
+            if (Input.GetMouseButtonUp(0) && readingNews == true)
+            {
+                culPhase += 1;
+                readingNews = false;
+                AudioManager._instance.UseLowPass();
+            }
+        }
+
+        if (testRel >= 6.66 * (relPhase + 1))//rel detect
+        {
+            if (readingNews == false)
+            {
+                selectBreakNews = 90 + relPhase * 2 + relRan;
+                AudioManager._instance.BreakingNewsPop();
+            }
+                
+            readingNews = true;
+            if (Input.GetMouseButtonUp(0) && readingNews == true)
+            {
+                relPhase += 1;
+                readingNews = false;
+                AudioManager._instance.UseLowPass();
+            }
+        }
     }
 }
