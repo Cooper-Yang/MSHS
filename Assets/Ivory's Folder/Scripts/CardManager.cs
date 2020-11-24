@@ -38,13 +38,6 @@ public class CardManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        
-
-    }
     public bool SendCard(float influencePol, float influenceRel, float influenceCol, float influenceTech)
     {
         int dealIndex = 0;
