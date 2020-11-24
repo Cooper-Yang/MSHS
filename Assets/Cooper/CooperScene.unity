@@ -6686,7 +6686,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2b892867a636e4247b3f8eb3e8434a50, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6820,6 +6820,7 @@ MonoBehaviour:
   mouseOnCard: {fileID: 8300000, guid: f9b89435b03ff8d42800e11a2750cf10, type: 3}
   dragCard: {fileID: 8300000, guid: 495931a9bbf85114a827439d937c30e6, type: 3}
   deleteCard: {fileID: 8300000, guid: 0afa17e8747b4544491686a2f55d4063, type: 3}
+  cardOnce: 0
 --- !u!4 &961689594160574941
 Transform:
   m_ObjectHideFlags: 0
