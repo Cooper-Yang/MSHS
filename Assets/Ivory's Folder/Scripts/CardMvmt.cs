@@ -24,7 +24,7 @@ public class CardMvmt : MonoBehaviour
     public bool mouseOn = false;
     public bool dragging;
 
-
+    CardAudio cA;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +34,7 @@ public class CardMvmt : MonoBehaviour
         originalScal = cardTransform.localScale;
         cardScal = originalScal;
         targetScale = originalScal;
+        cA = GetComponent<CardAudio>();
     }
 
     // Update is called once per frame
@@ -89,7 +90,7 @@ public class CardMvmt : MonoBehaviour
         {
             cardPos = new Vector3(mousePos.x, mousePos.y, cardPos.z);
             mouseOn = false;
-
+            cA.dragCard();
             // shrink card
             // if close to any of the aliens, the closer it gets the smaller it is
             if (gameObject.tag == "EffectCard" && !GetComponent<CardReader>().isConti) // if im a non conti effect card
@@ -115,9 +116,11 @@ public class CardMvmt : MonoBehaviour
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        cA.OnCard();
         if (dragging == false)
         {
             mouseOn = true;
+            
         }
         
     }
@@ -126,6 +129,8 @@ public class CardMvmt : MonoBehaviour
     {
         mouseOn = false;
         //contiImOn = null;
+        cA.canDragPlay = true;
+        cA.canOnPlay = true;
     }
 
     public void OnPointerDown(PointerEventData eventData)

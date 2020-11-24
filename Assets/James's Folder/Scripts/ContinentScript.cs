@@ -297,6 +297,9 @@ public class ContinentScript : MonoBehaviour
 		int lifeSpan = acp.lifeSpanNumber;
 		int genSpeed = acp.genSpeed;
 		int discoverRate = acp.discoverRate;
+		Sprite head = acp.head.sprite;
+		Sprite mouth = acp.mouth.sprite;
+		Sprite eye = acp.eyes.sprite;
 
 
 		//change discover value
@@ -314,6 +317,9 @@ public class ContinentScript : MonoBehaviour
 		aliens.GetComponent<James_AlienScript>().lifeSpan = lifeSpan;
 		aliens.GetComponent<James_AlienScript>().genSpeed = genSpeed;
 		aliens.GetComponent<James_AlienScript>().discoverRate = discoverRate;
+		aliens.GetComponent<James_AlienScript>().head.sprite = head;
+		aliens.GetComponent<James_AlienScript>().mouth.sprite = mouth;
+		aliens.GetComponent<James_AlienScript>().eyes.sprite = eye;
 		//destroy card
 		TurnsManager._instance.nextTurn();
 		//miss +discov here (use + acp.discoverRate)

@@ -22,6 +22,9 @@ public class James_AlienScript : MonoBehaviour
 	public int lifeSpan;
 	public int genSpeed;
 	public int discoverRate;
+	public Image head;
+	public Image mouth;
+	public Image eyes;
 
 	int myIndexinList;
 
