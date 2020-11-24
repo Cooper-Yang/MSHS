@@ -271,6 +271,27 @@ public class James_AlienScript : MonoBehaviour
 		if (lifeSpan <= 0)
 		{
 			GameManager.me.africa.GetComponent<ContinentScript>().myAliens.Remove(gameObject);
+			switch (myCon)
+			{
+				case Continent.africa:
+					GameManager.me.africa.GetComponent<ContinentScript>().myAliens.Remove(gameObject);
+					break;
+				case Continent.asia:
+					GameManager.me.asia.GetComponent<ContinentScript>().myAliens.Remove(gameObject);
+					break;
+				case Continent.europe:
+					GameManager.me.europe.GetComponent<ContinentScript>().myAliens.Remove(gameObject);
+					break;
+				case Continent.northAmerica:
+					GameManager.me.northAmerica.GetComponent<ContinentScript>().myAliens.Remove(gameObject);
+					break;
+				case Continent.southAmerica:
+					GameManager.me.southAmerica.GetComponent<ContinentScript>().myAliens.Remove(gameObject);
+					break;
+				case Continent.australia:
+					GameManager.me.australia.GetComponent<ContinentScript>().myAliens.Remove(gameObject);
+					break;
+			}
 			Destroy(gameObject);
 		}
 		if (turn < TurnsManager._instance.turns)
