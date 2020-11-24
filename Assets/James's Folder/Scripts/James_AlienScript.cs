@@ -340,6 +340,7 @@ public class James_AlienScript : MonoBehaviour
 			TurnsManager._instance.nextTurn();
 			targetingMe = false;
 			AudioManager._instance.AfterPlay();
+			StartCoroutine(NumberChangedVFX(cR.poliVal, cR.culVal, cR.reliVal, cR.techVal));
 			Destroy(collision.gameObject);
 		}
 	}
