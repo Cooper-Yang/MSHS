@@ -840,6 +840,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b475230ce616ac548a480c9e3bb02906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testPol: 0
+  testCul: 0
+  testRel: 0
+  testTec: 0
   readingNews: 0
   rollingNews: 0
   normalRandNews:
@@ -853,10 +857,135 @@ MonoBehaviour:
   - 8
   - 9
   - 10
-  news: {fileID: 545935483}
+  breakNewsList:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  - 4
+  normalNews: {fileID: 545935483}
+  breakNewsText: {fileID: 278416032}
   speed: 0.1
   resetTime: 10
   breakNews: {fileID: 1172636480}
+  polPhase: 0
+  culPhase: 0
+  relPhase: 0
+  tecPhase: 0
 --- !u!4 &1420020727
 Transform:
   m_ObjectHideFlags: 0
