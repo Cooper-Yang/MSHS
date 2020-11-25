@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,6 +26,16 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> aliens;
 
+
+    // state ctrl
+    public int state = 0;
+    public int splash_screen = 0;
+    public int game_screen = 1;
+    public int game_over_caught = 2;
+    public GameObject UGotCaughtByHuman;
+
+    
+
 	public enum thingy
 	{
         pol, cul, rel, tech
@@ -35,9 +46,16 @@ public class GameManager : MonoBehaviour
     {
         me = this;
         aliens = new List<GameObject>();
+        state = game_screen;
     }
 
-    public void CalculateGlobalNums()
+	private void Update()
+	{
+        SceneManagement();
+
+    }
+
+	public void CalculateGlobalNums()
 	{
         pol_gl = (africa.GetComponent<ContinentScript>().pol_cont +
                  northAmerica.GetComponent<ContinentScript>().pol_cont +
@@ -92,5 +110,23 @@ public class GameManager : MonoBehaviour
         {
             aliens.Add(alien);
         }
+    }
+
+    public void SceneManagement()
+	{
+        if (stealthlv._instance.stealthlev >= 100)
+		{
+            // game over
+            UGotCaughtByHuman.SetActive(true);
+            state = game_over_caught;
+		}
+        if (state == game_over_caught)
+		{
+            if (Input.GetKeyDown(KeyCode.R))
+			{
+                Scene scene = SceneManager.GetActiveScene(); 
+                SceneManager.LoadScene(scene.name);
+            }
+		}
     }
 }

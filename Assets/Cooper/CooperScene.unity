@@ -121,6 +121,139 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16870328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16870329}
+  - component: {fileID: 16870331}
+  - component: {fileID: 16870330}
+  m_Layer: 5
+  m_Name: got caught ending
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &16870329
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16870328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1331490202}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 25, y: -0.0000019073}
+  m_SizeDelta: {x: 1506.7614, y: 202.73138}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &16870330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16870328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: LOL YOU GOT CAUGHT BY THOSE DUMB HUMANS!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4284219647
+  m_fontColor: {r: 1, g: 0, b: 0.3614297, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 53.73
+  m_fontSizeBase: 53.73
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &16870331
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16870328}
+  m_CullTransparentMesh: 0
 --- !u!1 &18726759
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +705,134 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &62486490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 62486491}
+  - component: {fileID: 62486493}
+  - component: {fileID: 62486492}
+  m_Layer: 5
+  m_Name: BreakNewsTitle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &62486491
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62486490}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.000069034424, y: 0.00014339831, z: 0.00014339831}
+  m_Children: []
+  m_Father: {fileID: 943925105}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.1, y: 0.36}
+  m_SizeDelta: {x: 10000, y: 786.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &62486492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62486490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 301ebc6426c16404ab9bbd7d19a3b006, type: 3}
+    m_FontSize: 300
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Title
+
+'
+--- !u!222 &62486493
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62486490}
+  m_CullTransparentMesh: 0
+--- !u!1 &101637724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101637725}
+  - component: {fileID: 101637726}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &101637725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101637724}
+  m_LocalRotation: {x: -0.38872388, y: -0.38872394, z: 0.5906723, w: 0.59067225}
+  m_LocalPosition: {x: -35.17733, y: 8.78, z: 0}
+  m_LocalScale: {x: 10, y: 9.985063, z: 9.985063}
+  m_Children:
+  - {fileID: 785939491}
+  m_Father: {fileID: 931960473}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &101637726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101637724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd852fa6b676074f848d682a7f5ab32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pol: 1
+  rel: 0
+  cul: 0
+  tech: 0
 --- !u!1 &228514767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,8 +2305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1517, y: 557}
-  m_SizeDelta: {x: 7578.1016, y: 397.42902}
+  m_AnchoredPosition: {x: 2099, y: 541}
+  m_SizeDelta: {x: 17323.8, y: 397.42902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &534939631
 BoxCollider:
@@ -2081,14 +2342,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 301ebc6426c16404ab9bbd7d19a3b006, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2235,6 +2496,260 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570942375}
   m_CullTransparentMesh: 0
+--- !u!1 &603122014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603122015}
+  - component: {fileID: 603122016}
+  m_Layer: 0
+  m_Name: Ambience (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &603122015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603122014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 961689594160574941}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &603122016
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603122014}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 632d3cbeee154cf49946327003b05ec1, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &769295136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769295137}
+  - component: {fileID: 769295138}
+  m_Layer: 0
+  m_Name: Ambience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &769295137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769295136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 961689594160574941}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &769295138
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769295136}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 632d3cbeee154cf49946327003b05ec1, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &785939490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,12 +2774,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785939490}
-  m_LocalRotation: {x: -0.38872388, y: -0.38872394, z: 0.5906723, w: 0.59067225}
-  m_LocalPosition: {x: -35.177334, y: 0.9733152, z: 0}
-  m_LocalScale: {x: 10.111658, y: 9.985062, z: 9.985062}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000000014901161, w: 1}
+  m_LocalPosition: {x: -0.772048, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 931960473}
-  m_RootOrder: 5
+  m_Father: {fileID: 101637725}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -66.698006, z: 90.00001}
 --- !u!212 &785939492
 SpriteRenderer:
@@ -2340,12 +2855,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792172877}
-  m_LocalRotation: {x: 0.447732, y: 0.4477321, z: 0.5472989, w: 0.54729885}
-  m_LocalPosition: {x: 30.833033, y: 0.54505646, z: -1.0764649}
-  m_LocalScale: {x: 8.746822, y: 8.637313, z: 8.637313}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000000029802319, w: 1}
+  m_LocalPosition: {x: -0.639, y: -0, z: 0}
+  m_LocalScale: {x: 0.88, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 931960473}
-  m_RootOrder: 11
+  m_Father: {fileID: 1478155962}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 78.57201, z: 90.00001}
 --- !u!212 &792172879
 SpriteRenderer:
@@ -2512,8 +3027,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.012070936}
-  m_SizeDelta: {x: 7578.1016, y: 397.42902}
+  m_AnchoredPosition: {x: -0.1, y: 0.031}
+  m_SizeDelta: {x: 10000, y: 3479.6042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845397437
 MonoBehaviour:
@@ -2535,7 +3050,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 301ebc6426c16404ab9bbd7d19a3b006, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2663,12 +3178,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880322243}
-  m_LocalRotation: {x: -0.38872388, y: -0.38872394, z: 0.5906723, w: 0.59067225}
-  m_LocalPosition: {x: -33.79331, y: 0.9733152, z: 3.2293947}
-  m_LocalScale: {x: 10.111658, y: 9.985062, z: 9.985062}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000000014901161, w: 1}
+  m_LocalPosition: {x: -0.78688246, y: 0.000055539123, z: -0.000024616846}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 931960473}
-  m_RootOrder: 7
+  m_Father: {fileID: 1785698701}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -66.698006, z: 90.00001}
 --- !u!212 &880322245
 SpriteRenderer:
@@ -2804,13 +3319,13 @@ Transform:
   - {fileID: 955391076}
   - {fileID: 867394232}
   - {fileID: 1037991475}
-  - {fileID: 785939491}
+  - {fileID: 101637725}
   - {fileID: 481995618}
-  - {fileID: 880322244}
+  - {fileID: 1785698701}
   - {fileID: 1465862321}
   - {fileID: 1555066974}
-  - {fileID: 1769543988}
-  - {fileID: 792172878}
+  - {fileID: 1173101576}
+  - {fileID: 1478155962}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2974,6 +3489,7 @@ Transform:
   m_LocalScale: {x: 1448.5526, y: 697.3583, z: 697.3583}
   m_Children:
   - {fileID: 845397436}
+  - {fileID: 62486491}
   m_Father: {fileID: 1882791532}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3475,6 +3991,54 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1173101575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1173101576}
+  - component: {fileID: 1173101577}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1173101576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173101575}
+  m_LocalRotation: {x: 0.447732, y: 0.4477321, z: 0.5472989, w: 0.54729885}
+  m_LocalPosition: {x: 31.49, y: 7.51, z: -4.43}
+  m_LocalScale: {x: 10, y: 8.637312, z: 8.637312}
+  m_Children:
+  - {fileID: 1769543988}
+  m_Father: {fileID: 931960473}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1173101577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173101575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd852fa6b676074f848d682a7f5ab32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pol: 0
+  rel: 0
+  cul: 0
+  tech: 1
 --- !u!1 &1251256343
 GameObject:
   m_ObjectHideFlags: 0
@@ -3524,6 +4088,11 @@ MonoBehaviour:
   rel_gl: 0
   tech_gl: 0
   aliens: []
+  state: 0
+  splash_screen: 0
+  game_screen: 1
+  game_over_caught: 2
+  UGotCaughtByHuman: {fileID: 16870328}
 --- !u!4 &1251256345
 Transform:
   m_ObjectHideFlags: 0
@@ -3710,6 +4279,7 @@ RectTransform:
   - {fileID: 395612852}
   - {fileID: 1129828777}
   - {fileID: 947027771}
+  - {fileID: 16870329}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4265,6 +4835,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1478155961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478155962}
+  - component: {fileID: 1478155963}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1478155962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478155961}
+  m_LocalRotation: {x: 0.447732, y: 0.4477321, z: 0.5472989, w: 0.54729885}
+  m_LocalPosition: {x: 30.833033, y: 7.44, z: -1.08}
+  m_LocalScale: {x: 10, y: 8.637312, z: 8.637312}
+  m_Children:
+  - {fileID: 792172878}
+  m_Father: {fileID: 931960473}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1478155963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478155961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd852fa6b676074f848d682a7f5ab32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pol: 0
+  rel: 1
+  cul: 0
+  tech: 0
 --- !u!1 &1489411474
 GameObject:
   m_ObjectHideFlags: 0
@@ -4436,7 +5054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555066973}
   m_LocalRotation: {x: -0, y: -0.63032115, z: -0, w: 0.7763345}
-  m_LocalPosition: {x: 29.295223, y: 9.888882, z: -6.6510153}
+  m_LocalPosition: {x: 29.295223, y: 10.2, z: -6.6510153}
   m_LocalScale: {x: 0.17244987, y: 0.17463627, z: 0.17244987}
   m_Children: []
   m_Father: {fileID: 931960473}
@@ -5347,12 +5965,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769543987}
-  m_LocalRotation: {x: 0.447732, y: 0.4477321, z: 0.5472989, w: 0.54729885}
-  m_LocalPosition: {x: 31.486597, y: -6.346015, z: -4.429194}
-  m_LocalScale: {x: 8.746822, y: 8.637313, z: 8.637313}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000000029802319, w: 1}
+  m_LocalPosition: {x: -1.365, y: -0, z: 0}
+  m_LocalScale: {x: 0.89, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 931960473}
-  m_RootOrder: 10
+  m_Father: {fileID: 1173101576}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 78.57201, z: 90.00001}
 --- !u!212 &1769543989
 SpriteRenderer:
@@ -5405,6 +6023,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1785698700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1785698701}
+  - component: {fileID: 1785698702}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1785698701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785698700}
+  m_LocalRotation: {x: -0.38872388, y: -0.38872394, z: 0.5906723, w: 0.59067225}
+  m_LocalPosition: {x: -33.793304, y: 8.93, z: 3.23}
+  m_LocalScale: {x: 10, y: 9.985063, z: 9.985063}
+  m_Children:
+  - {fileID: 880322244}
+  m_Father: {fileID: 931960473}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1785698702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785698700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd852fa6b676074f848d682a7f5ab32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pol: 0
+  rel: 0
+  cul: 1
+  tech: 0
 --- !u!1 &1842916953
 GameObject:
   m_ObjectHideFlags: 0
@@ -6118,10 +6784,510 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b475230ce616ac548a480c9e3bb02906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testPol: 0
+  testCul: 0
+  testRel: 0
+  testTec: 0
+  polPhase: 0
+  culPhase: 0
+  relPhase: 0
+  tecPhase: 0
   readingNews: 0
   rollingNews: 0
-  normalRandNews: []
-  news: {fileID: 534939633}
+  normalRandNews:
+  - "Veggie Burgers Can Be Called Burgers, European Parliament Says.\r"
+  - Person Flying With Jetpack Spotted Near Los Angeles International Airport, Again
+  - Lemur Missing, Possibly Stolen, From San Francisco Zoo
+  - Paradox-Free Time Travel Is Theoretically Possible, Researchers Say
+  - "As Disasters Roil Earth, A New Sun Cycle Promises Calmer Weather \u2014 In Space"
+  - A Possible Sign Of Life Right Next Door To Earth, On Venus
+  - People are buying their own fire trucks in California
+  - Aquarium Is Washing Old Wishes To Pay Bills During Pandemic
+  - Is It Time To Kill The Penny?
+  - Southern America Could Lose $22 Billion Fighting Deadly Olive Tree Disease
+  - 'Oregon Police Remind Residents: Don''t Call 911 If You Run Out Of Toilet Paper'
+  - The Most Dangerous Economist, Adam Jitler.
+  - 'Opinion: This Art Is Bananas'
+  - This Minnesota City Has A Bird Poop Problem, But The Crow Patrol Is On It
+  - A Giant Treehouse 'Like A Castle' Is Destroyed By Fire In Tennessee
+  - '''Not One Drop Of Blood'': Cattle Mysteriously Mutilated In Oregon'
+  - A Bull Has An Afternoon Out In Baltimore
+  - "Mystery Woman Sings Opera In Los Angeles Metro \u2014 And Goes Viral"
+  - '''Storm Area 51'' Fails To Materialize'
+  - 2 Condos Were Illegally Converted Into 18 Micro Apartments In NYC
+  - Is Our Economy In The Upside Down?
+  - Burglars Lift $2 Million Worth Of Body-Shaping  Undergarments
+  - Arctic Fox Sets Record In Walking From Norway To Canada
+  - 'A New Hope: Seal Learns To Sing Star Wars Theme'
+  - 'Spotted: A Swarm Of Ladybugs So Huge, It Showed Up On National Weather Service
+    Radar'
+  - Oregon Man Called Police About A Burglar. Armed Officers Found A Rogue Roomba
+  - All Right. Some Cats Do Fetch
+  - Good Samaritan Returns Lost Lottery Ticket. The Man Who Bought It Wins Jackpot
+  - Vandals Steal Head Of 800-Year-Old Mummy In Ireland
+  - Now Pray With The Pope, From Your iPhone
+  - Tokyo's Metro Is Betting Free Soba Noodles Can Help Ease Congestion
+  - Police Seek Volunteers To Drink To Excess
+  - Activists Circulate Counterfeit Editions Of 'The Washington Post'
+  - How To Dial 911 From Space
+  - '''No Evidence Of Extraterrestrial Activity,'' NYPD Says As City Is Bathed In
+    Blue Light'
+  - The World Has A New Largest-Known Prime Number
+  - Woman Charged With Fake Witchcraft, Days Before Canada Scraps Old Law
+  - Man Is Freed After 2 Days Stuck In Empty Restaurant's Grease Vent
+  - Fugitive Sees 'Wanted' Post Of Himself, Makes Date To Turn Himself In
+  - AI News Anchor Makes Debut In China
+  - "Hideo Kojima Announced Retiring, \u201Cthe Politics Limited the Art.\u201D"
+  breakingNewsTitles:
+  - "A New Party, \u201CAhon\u201D,  Rose up in the Country "
+  - 'The Medical Insurance Plan Has Been Delayed, Again. '
+  - 'The Governors of Some States Announced They Are Resigning.  '
+  - 'Mass labor strikes are causing serious problems. '
+  - "The Famous Economist Said \u201CThis Country Needs a New President.\u201D "
+  - "Former Government  Consultant Stated,  \u201CThe wheels of this country are
+    falling apart.\u201D "
+  - 'Several Places in the Country Breaking Out Riots. '
+  - 'Famines Broke Out in the Country.  '
+  - 'The Government Announced the Curfew.  '
+  - "A New Nationwide NGO, \u201CAolig\u201D, Established. "
+  - 'The President Resigned.  '
+  - "The Chairman Delivered the Speech, \u201CStrength Through Unity, Unity Through
+    Faith.\u201D"
+  - 'The National Guard Deployed Into Major Cities.  '
+  - The Capitol Was Destroyed by the Terrorists.
+  - 'The Supreme Court and the Congress Decided They Will Reevaluate the social problems. '
+  - Many Cities Cannot Afford Running Public Facilities.
+  - "\u201CFour Equals, not one less.\u201D "
+  - 'Parades Broke Out in the Major Cities. '
+  - "\u201CRevolution, Reconstruction, Reconciliation.\u201D  "
+  - "\u201CAolig\u201D Provides Shelter and Supplies for the Citizens."
+  - 'Government Entered the Reorganization Phase.  '
+  - The silence of the party is disturbing
+  - 'Census Showed 78.7% of the Citizens Would Vote for Ahonist Candidate. '
+  - Country Plunged Into Anarchism.
+  - "Ahonist Party\u2019s Candidates Dominated the Congress. "
+  - "\u201CAolig\u201D will use the necessary means to put our country on the right
+    track.  "
+  - 'Vote Rate Is the Highest in History, 99.7%. '
+  - All the Former Senior Government Officials Are Mysteriously Dead.
+  - 'Ahonist Won the Election.  '
+  - "\u201CAolig\u201D claimed that they will help our people form a new government. "
+  - Company Named Cantaloupe Aims to Provide the Best Smartphones
+  - MIT Student Solves Satellite Efficiency Problem
+  - Cantaloupe Reveals Its Phone Design
+  - NASA Promises MIT Student a Place After Graduation
+  - Aphone Is Officially Released
+  - "Mit\u2019s Prodigy Student Joins NASA After Receiving PhD"
+  - Cantaloupe Announces Homebox
+  - NASA Initiates Program on Alien Communication
+  - Cantaloupe Gains Official Government Support
+  - Michael Scoot Improves Data Transmission Between Satellites
+  - Aphone and Homebox Receives Huge Update
+  - 'Michael Scoot Wins Nobel Prize of Physics '
+  - Cantaloupe Now Free to Trade on NYSE and Nasdaq
+  - NASA Sends Multiple Messages Towards Neighboring Galaxy
+  - Cantaloupe Announces Android Maid
+  - XXX Steps up as New Administrator of NASA
+  - Cantaloupe Now Has Physical Stores in 150 Other Countries
+  - 'NASA Launches 4 Energy Cube Satellites Around Earth '
+  - "Cantaloupe\u2019s Android Now Works in Various Fields"
+  - NASA Gains United Nations Support to Increase Message Frequency
+  - All Cantaloupe Devices Are Permanently 40% Off
+  - NASA Receives Possible Alien Response
+  - Cantaloupe Buys Apple and Microsoft
+  - Entire World Ignites in Interest
+  - Some Cantaloupe Devices Are Malfunctioning
+  - Michael Scoot Appointed as Official Communicator With Aliens
+  - Rumors of a Secret Alien Invasion Spreads
+  - Satellite Shuts Down All Communication Across the Globe
+  - Android Declares War on Humans, With the Support of Their Masters
+  - Alien Spaceships Surround Earth
+  - "\u201CPulp Science-Fiction\u201D Wins NYC Indie Film Festival"
+  - The Voice Season 20 Winner Declared
+  - XXX Works on New Movie With Tom Hanks
+  - Calvin Harris Collaborates With XXX
+  - "\u201CKill Will\u201D Receives Generally Positive Review From Critics "
+  - "New Star XXX\u2019s First Album Tops Billboard 100 "
+  - "\u201CKill Will\u201D Played in Over 100 Countries"
+  - "XXX Announces Concert in la\u2019s Staple Stadium"
+  - E.t. II Confirmed by Spielberg, Although He Will Only Be the Producer
+  - "XXX\u2019s Second Studio Album Features Rihanna and Eminem"
+  - 'ET II Receives Overwhelmingly Positive Reviews '
+  - "\u201CAdolescent Dreams\u201D Reigns Over Billboard 100 for Two Months Straight"
+  - "ET II\u2019s Box Office Exceeds 700 Million Globally"
+  - XXX Announces Nationwide Tour That Lasts One Year
+  - "XXX Announces Next Sci-FI Film \u201CWar of the Galaxies\u201D"
+  - XXX Releases Companion Merch That Lets You Sing Along With It
+  - "Budget of \u201CWar of the Galaxies\u201D Rumors to Be Over 900 Million"
+  - XXX Hints at Brand New Studio Album in the Works
+  - "\u201CWar of the Galaxies\u201D Shown in Over 180 Countries"
+  - XXX Drops Surprise Ep
+  - XXX Wins Best Director and Film at Oscars
+  - XXX Drops Another Single, and It Is Beautiful
+  - "\u201CWar of the Galaxies\u201D Breaks World Record of Gross Box Office  "
+  - "People Cannot Stop Listening to \u201CStarfall\u201D"
+  - "Audiences Who Watched\u201CWar of the Galaxies\u201D Claim Aliens Are Real"
+  - "USA Has Changed Its National Anthem to \u201CStarfall\u201D"
+  - More and More People Claim a War Against Aliens Is Inevitable
+  - Society Completely Shuts Down Due to Lack of People Working
+  - Millions Across the Globe Have Completely Lost Their Minds
+  - XXX Leads Fans Into Full-Scale Invasion
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  breakNewsList:
+  - "\u201CAhon,\u201D the new private political party recently registered in the
+    country. The leader of the party stated that the country was sick and in need
+    of new medicine. Rumors said they are already preparing for the next presidential
+    election. "
+  - Medical resources relocation has been a problem for decades. The social problems
+    around the medical issues are escalating. The formation of a new medical insurance
+    plan is the blood and tears of generations of citizens. With the delay of the
+    plan, the society is going to express its resent.
+  - Many governors of major states in the country had resigned for various reasons.
+    All of them refused to accept the interviews. Are there external forces behind
+    the scene? Or is this country really in crysis?
+  - 'Just after the announcement of medical insurance, there are nationwide labor
+    strikes. Public facilities are almost paralyzed. The stock market hitted the
+    limit down. National production capacity has been reduced by 40%. '
+  - "One of the greatest and the most controversial economists in the human world,
+    Adam Jitler, had a bald statement, \u201CThis country cannot be saved. It needs
+    to start over. New law, new government, and a new president. This country is
+    rotted to her foundation\u201D"
+  - "Doggy Alpha, the Former Government  Consultant, are spotted leaving the country
+    on his personal jet. He declared that this country had broken away from his path
+    and was gradually heading for destruction. \u201CThe wheels of this country are
+    falling apart.\u201D"
+  - 'The peaceful parade for equal human rights has evolved into riots, causing billions
+    of financial loss. The causes of riots happening simultaneously in several cities
+    are still being investigated. But an anonymous police officer said that police
+    violence was the  sasdasd problem. '
+  - A large-scale famine broke out across the country, and the cause is under investigation.
+    It is estimated that in the next five months, this Congress will suffer a total
+    food shortage. It is not clear whether the government will import large amounts
+    of food.
+  - "The riots and parades in the country cannot be controlled effectively. Many
+    police stations have been attacked. Government officials have announced the most
+    strict curfews in history. All citizens on the streets after 7 o\u2019clock will
+    face charges. "
+  - A new NGO was established. It is reported that this organization will establish
+    shelters across the country to ensure that low-income groups have food and clothing.
+    The organization also declared that it would not compromise on unequal human
+    rights in the country.
+  - "The president has been accused of inaction due to the chaos. In the recent conference,
+    the president announced his resignation, \u201CI\u2019ve done my best to keep
+    the peace in this country. But I feel helpless about all the things that have
+    happened recently. I cannot make rational decisions during this difficult time.
+    So I will resign from the presidency.\u201D What Adam Jitler is becoming true. "
+  - The chairman of the country made a heartening speech. He hoped that the country
+    could unite and tide over the difficulties. He also claimed that he would never
+    tolerate any organization or individual disrupting national security and order.
+  - 'The riots escalated again. There have been major jailbreaks across the country.
+    Vicious and violent crimes are happening. The national guard has the permission
+    to fire against any suspicious crime activity. Our country is in the dark age. '
+  - "Within half an hour after the chairman\u2019s speech, the Capitol was destroyed
+    by unknown persons. The Commander of the Military Commission, and many other
+    senior members of the party died. The site has been blocked by the National Security
+    Agency. The Chairman declared this was an unforgivable and blatant terrorist
+    attack, and at the same time he succeeded as Commander of the Military Commission.
+    However, some foreign media suspected that this was a carefully arranged internal
+    party coup."
+  - "Under the Pressure, a special task team with officials from the Supreme Court
+    and the Congress, decided they will evaluate every aspect of the society and
+    find what\u2019s wrong. Is this what we need? Or is it already too late for this
+    country?"
+  - "The negative effects of famine continue to worsen in society. Many citizens
+    were dissatisfied with the government's manipulation and inaction by public opinion,
+    and they started to strike. The local government has entered a shutdown due to
+    lack of taxation. According to United Nations forecasts, the country\u2019s fiscal
+    treasury has already seen a huge deficit. The domestic society has entered a
+    vicious circle."
+  - "Scholars and social activists have announced the slogan and charta 07 for solving
+    the social problems. \u201CFour demands, not one less.\u201D Four demands are:
+    1. Equal rights to education. 2. Equal opportunities for employment. 3. Equal
+    medical resources 4. Equal political rights.\u201D "
+  - Angry people occupy the streets and government agencies. The government's previous
+    hardline style has also disappeared. Even some local police officers joined the
+    people to protest against the national government. They launched a hunger strike
+    in various squares. Of course, during this period, the most important thing is
+    food.
+  - "The parades and riots are happening all over the country. With the publication
+    of charta 07, Ahon is the first party to respond. Ahonists have powerful ways
+    of saving this country. They stated that \u201CThe country needs a restart rather
+    than repairs.\u201D They also announced their slogan for saving the country,
+    \u201CRevolution, Reconstruction, Reconciliation.\u201D"
+  - ' "Aolig" claimed that they would not ignore human rights abuses. First of all,
+    they will give shelter and necessary resources to the citizens in need. In an
+    emergency, they will take military measures to defend themselves. The United
+    Nations remained silent about the chaos in its own country. Many media around
+    the world questioned "Aolig", claiming that an NGO should not have such great
+    power. Who supports this NGO? Has the civil war in our country started at any
+    moment?'
+  - 'The new election of president, congress and the supreme court Is on the way.
+    A group of scholars and elected representatives will closely monitor the election.
+    Congressman election first, then Supreme court, and then president. '
+  - In the face of Aolig's strong speech, the party's continued silence is disturbing.
+    The army continued to be stationed in the city. It is reported that due to lack
+    of supplies, more and more soldiers have chosen to be deserters. There are rumors
+    that there have been many military coups within the party, and the life and death
+    of the chairman is still unclear.
+  - Our country is weak. And a party with fists can easily bring solutions. However,
+    many scholars expressed their fear for this country to become another Nazi German.
+  - "United officially declared our country an anarchist region. Faced with the loss
+    of national sovereignty, the government still has not issued any statement. Due
+    to our country\u2019s advanced automated defense system on the border, no foreign
+    forces have yet to compete for territory. Famine swept across the country, and
+    the people could not get any supplies. It is reported that part of the army has
+    organized with former government officials to become local warlords."
+  - 'Ahonists are winning in every state, 68 % of the congress are ahonists! Is this
+    a good sign? But what could be worse? '
+  - ' "Aolig" condemned the government''s inaction with the United Nations. They
+    will use the necessary means to put our country on the right track. According
+    to opinion polls, 86.54 percent of citizens hope that "Aolig" can replace the
+    current government.'
+  - All we want to say is, in this gloomy era, society shines with the brilliance
+    of humanity.
+  - "This is neither good news nor bad news. Aolig\u2019s investigation team stated
+    that all former senior government officials died of a chemical attack by neurotoxins.
+    It is not clear whether this was a terrorist attack or an internal party coup.
+    Aolig sealed off the entire capital, claiming that this area will be lethal for
+    the next 57 years."
+  - "The Country Is Now in a New Era. In general. The Ahon will decide the path of
+    this country. Will she be on the road of  \u201CRevolution, Reconstruction, Reconciliation\u201D?"
+  - This will be a new era. Although we don't know what kind of ending this represents,
+    it means that we can survive on earth for another day.
+  - A new startup company named Cantaloupe is formed by former Apple and Nokia employees.
+    They claim to focus on creating the next revolutionary generation of smartphones.
+  - "MIT\u2019s current student Michael Scoot proposed a compelling alternative signal
+    transmission process for Earth\u2019s satellites. NASA is taking his proposal
+    into serious consideration."
+  - "During this morning\u2019s press conference Cantaloupe announced aPhone, the
+    \u201Csmartest\u201D smartphone yet. aPhone\u2019s self-included AI answers calls,
+    texts, and emails for the user after studying his or her behaviors."
+  - Recently, MIT student Michael Scoot has offered NASA some help in its satellite
+    program. NASA officially announced that Scoot will receive a desirable position
+    after graduation and is looking forward to work on future projects with him.
+  - "Cantaloupe\u2019s aPhone is officially out in [original country]. For $1599,
+    aPhone brings unprecedented convenience to daily life. All major retail stores
+    are sold out as soon as orders went live."
+  - "Michael Scoot, one of MIT\u2019s most influential students, has officially joined
+    NASA\u2019s satellite program after receiving a PhD in quantum physics. "
+  - "After the massive success of aPhone, Cantaloupe plans to introduce the entire
+    AI experience to its users\u2019 home. The user\u2019s entire living style will
+    be customized automatically by Homebox\u2019s AI."
+  - NASA announced in its press conference this morning that a department is created
+    to specify in potential communication with alien civilizations.
+  - As of today, Cantaloupe has received 2 billion in government funding. The government
+    hopes aPhone and Homebox can reach as many users as possible.
+  - "NASA\u2019s brilliant scientist Michael Scoot recently launched an update to
+    all American satellites that allows the transmission speed of all GPS to be 40
+    times faster. Maps and weather forecasts will be much more reliable and precise
+    from now on."
+  - "aPhone and Homebox\u2019s AI is now named Cloudnet. It no longer analyzes specific
+    user data but makes decisions based on metadata for the individual. Cantaloupe
+    claims this is the next step towards eliminating all unnecessary calculations."
+  - "Michael Scoot, American quantum physicist, has been awarded this year\u2019s
+    Nobel Prize of Physics for his contributions in discovering new methods of interdimensional
+    communication."
+  - "The uprising tech company Cantaloupe is potentially gaining a mindblowing amount
+    of investment as they become available in the world\u2019s largest stock exchange
+    markets."
+  - "This morning, NASA sends out an updated version of Voyager Golden Record in
+    a digitized form. Frequencies that contain 10,000 times the original contents
+    will travel to Andromeda, Milky Way\u2019s closest galaxy."
+  - 'With the aid of Cloudnet, Cantaloupe claims it is ready for the next step in
+    AI services: aNdroid. aNdroid comes in various models, but all provide the same
+    cleaning and cooking services.'
+  - "NASA\u2019s current administrator Michael Scoot has resigned due to personal
+    reasons. The recent Nobel Prize winner and head of satellite programs xxx carries
+    on his role."
+  - 'Aimed to provide aPhone, Homebox and aNdroid to as many consumers as possible,
+    Cantaloupe now opened over 1000 physical stores around the world. '
+  - "Last night, NASA launched 4 bizarre-looking cubes into Earth\u2019s orbit. NASA\u2019s
+    current explanation for them is that they are power concentrators for sending
+    messages across the galaxy."
+  - After closely collaborating with the government, aNdroid now supports police,
+    military, medical and multiple other fields. They are mainly used for dangerous
+    missions and tasks too precise for the human hand.
+  - During the recent annual UN meeting, 190 out of 193 agreed to increase attempts
+    to communicate with alien life forces. The presidents of many countries believe
+    there is a mutual benefit of receiving alien technology and knowledge through
+    this communication.
+  - Today Cantaloupe suddenly announced that all of their products are vastly cheaper.
+    There now seems to be no reason for anyone to purchase a smartphone that is not
+    aPhone.
+  - After numerous attempts of communication with alien civilizations, NASA declared
+    this morning that an organized frequency has been received. Scientists and linguists
+    are working hard to decipher the contents of this message.
+  - After months of negotiation, Cantaloupe purchases Apple for $2.1 trillion and
+    Microsoft for $1.3 trillion. All of their devices will now implement Cloudnet
+    AI.
+  - "While some people believe it is dangerous to communicate with aliens, the majority
+    of Earth\u2019s population are excited for the first proof of alien life and
+    even civilization. Scientists have formulated numerous plans of what to do next."
+  - Users around the world claim their Cloudnet is not responding to commands. Although
+    no damages are done, it can get very inconvenient as many users are completely
+    dependent on Cloudnet. Cantaloupe has made no official statements yet.
+  - Administrator of NASA, Michael Scoot, has gained a reasonable understanding of
+    the alien language, and is now ready for a second round of communication with
+    the aliens.
+  - Many claim their friends and relatives are acting unusual, and even the doctors
+    are clueless of what is going on. The most radical opinions claim that aliens
+    have possessed humans.
+  - A NASA satellite reportedly launched an attack on all forms of communication
+    across the globe, including internet and cellular messages. Governments are working
+    on this emergency issue.
+  - "Cloudnet is completely out of control as millions of aNdroids started attacking
+    humans last night. Furthermore, their masters seem to tolerate and support their
+    actions. Is mankind\u2019s survival at stake?"
+  - Telescopes observe giant alien warships teleporting through a portal created
+    by NASA energy cubes. What seems like cannons and weaponry are pointing directly
+    at Earth. Do they come in peace?
+  - "Young film director XXX wins his first major award with his debut work Pulp
+    Science-Fiction\u201D. Critics claim this movie came out of nowhere but is a
+    must-watch for 2020.\r\n"
+  - "Season 20 of The Voice just ended with a bang. XXX, a highschool student from
+    XXX, won the entire audience\u2019s heart with her amazing performance of XXX."
+  - "Tom Hanks just confirmed his involvement in XXX\u2019s new film, Kill Will.
+    He is likely to perform the role of lead antagonist Will. Hanks also mentioned
+    this film is nothing anyone has ever seen before."
+  - "Calvin Harris has dropped a surprise single featuring the recent winner of The
+    Voice, xxx. Xxx posted on Twitter that it was \u201Can amazing experience\u201D
+    to work with the famous DJ."
+  - "XXX\u2019s new film Kill Will is favored by most critics for being a \u201Cmindlessly
+    fun film without depth\u201D(New York Times). The audience, however, loves the
+    film as the opening weekend box office reaches $25 million."
+  - Yesterday, pop star XXX released her first album ...Baby One Last Time, and after
+    12 hours it is already the best selling album of the month. Born in 2001, XXX
+    is now trending amongst teenagers and young adults.
+  - "Kill Will has grossed $113 million internationally. This is a huge financial
+    success for director XXX as this is his first attempt at a commercial film.\r"
+  - Tickets immediately sold as xxx announced her first personal concert last night.
+    The new star has already gained an immense amount of fans.
+  - "80\u2019s classic E.T. the Extraterrestrial finally receives a sequel after
+    more than 40 years. Director Steven Spielberg will no longer be directing this
+    film; instead, the role is granted to the young and talented XXX."
+  - 'Xxx just announced her second album: Adolescent Dreams, scheduled to come out
+    later this year. She also hinted at collaborations with Rihanna and Eminem in
+    separate songs.'
+  - "ET II, the official sequel to 1982\u2019s ET, is apparently a \u201Cdeep regret
+    to anyone who misses it\u201D(IGN). All across the board, critics give out an
+    9/10 or above; it has a 99% on Rotten Tomatoes and 9.6/10 on IMDb."
+  - "Xxx\u2019s new album Adolescent Dreams has become such a phenomenon that it
+    seems like all people want to hear are songs from this album."
+  - "ET II looks to surpass its prequel\u2019s original international box office,
+    which is $793 million. Fans around the world are watching ET II multiple times
+    to express their love for the iconic figure."
+  - Pop star xxx has announced her first tour across the nation. Starting next month
+    in New York, she will eventually make her way to LA, where she held her first
+    concert.
+  - Earlier this morning, Xxx announced his next major film will feature some of
+    the biggest stars of Hollywood, including Tom Hanks,Will Smith,  Leonardo Decaprio,
+    Jackie Chan, Morgan Freeman, Anne Hathaway, Natalie Portman, Halle Berry, and
+    Jing Tian.
+  - Xxx plans to release an android doll that allows one to sing along to her most 
+    popular songs. The doll can be purchased at the official xxx website or at the
+    merch carts that follow the tour.
+  - "Xxx\u2019s agent may have let things slip in an interview. When asked how much
+    is Xxx\u2019s new movie is going to cost, his agent said\u201C it\u2019s four
+    times the budget of Avatar, can you believe it?\u201D It is highly possible that
+    large portions of the budget is for paying the stars featured in this film."
+  - "During a recent interview, Xxx claims that fans have to be patient but she is
+    working very hard on a \u201Cmagnificent project\u201D. "
+  - There are barely any countries left in the world that have not shown War of the
+    Galaxies publicly. Could this movie break records in the box office?
+  - "This morning, xxx released without warning an EP named 22, after her age. The
+    EP contains 4 songs, and is much more experimental compared to xxx\u2019s previous
+    two albums."
+  - "This year\u2019s Oscars seem to be the most anticipated due to XXX\u2019s nominations
+    in multiple categories. Without many surprises to anyone, XXX takes home Best
+    Director and Best Film."
+  - XXX does another surprise drop, this time a single named Starfall. Four minutes
+    and thirty seconds in length, it is an absolute beautiful piece of art.
+  - War of the Galaxies has reached over $3000 million world-wide, making it the
+    most watched movie in cinemas in history. Since its premiere, the film has become
+    a global phenomenon.
+  - "People who have listened to Starfall cannot stop the song inside their heads.
+    Scientists urge anyone who hasn\u2019t yet listened to Starfall to absolutely
+    not attempt to even hear one note of the song. "
+  - "It has been a while since the release of War of the Galaxies, and some audiences
+    are beginning to claim some of the scenes in the movie are real. \u201CAliens
+    are comin\u2019, and there ain\u2019t no stoppin\u2019 \u2018em,\u201D says aPhoneuser20932
+    on Twitter."
+  - United States president announced today that the national anthem of USA will
+    officially be changed to Starfall in the near future. Like many others, the president
+    is a victim of the song, and scientists are working hard for a cure.
+  - Tens of thousands of people are spreading the news that an imminent alien invasion
+    will wipe out half of the human population. The government has ordered a ban
+    on the spreading of all fake news.
+  - "Even as I am writing this report I can\u2019t stop listening to Starfall. I\u2019m
+    not coming into work tomorrow cuz I gotta listen to more Starfall."
+  - Audiences who watched War of the Galaxies now call themselves the New Era Enforcers.
+    They urge the nations of Earth to welcome the conquest of the aliens in order
+    to avoid unnecessary bloodshed.
+  - XXX has called on all of her fans to rise up and throw over the current dysfunctioning
+    government. People who are listening to Starfall seem to be put under a spell
+    to obey. Chaos and riot erupts in hundreds of cities across the globe at once.
+  - 
+  - 
+  - ' '
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  normalNews: {fileID: 534939633}
+  breakNewsText: {fileID: 845397437}
+  breakingNewsTitleText: {fileID: 62486492}
   speed: 0.1
   resetTime: 10
   breakNews: {fileID: 943925103}
@@ -6189,6 +7355,355 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &961689594096365680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961689594096365683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 961689594160574941}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &961689594096365681
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961689594096365683}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2b892867a636e4247b3f8eb3e8434a50, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &961689594096365683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961689594096365680}
+  - component: {fileID: 961689594096365681}
+  m_Layer: 0
+  m_Name: SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &961689594160574940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961689594160574943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce24272ee3f5bb40a03cd2fc2726554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 961689594249641403}
+  sFX: {fileID: 961689594096365681}
+  musicLP: {fileID: 961689594249641401}
+  musicPieces:
+  - {fileID: 8300000, guid: ddf70615308455f459abff68773ed0f6, type: 3}
+  - {fileID: 8300000, guid: 93fa6dc3a870566438c9de717bc5c3b7, type: 3}
+  - {fileID: 8300000, guid: e03442373d42f03499eccea121a26e90, type: 3}
+  alienSounds:
+  - {fileID: 8300000, guid: 9a9d0fdc68b314c408391a3a9956d29e, type: 3}
+  - {fileID: 8300000, guid: d301c34ae7d4b764ab4548945925a295, type: 3}
+  - {fileID: 8300000, guid: f54dd0f45d9babe4f908fc498d103180, type: 3}
+  - {fileID: 8300000, guid: 0e4bb364701d9ca4b876b2abb5e8cfc3, type: 3}
+  - {fileID: 8300000, guid: 15e911a8937875048bc7d0474b475979, type: 3}
+  - {fileID: 8300000, guid: 5ef6e3ec9099c5a4ab13593c76565b92, type: 3}
+  click: {fileID: 8300000, guid: 2b892867a636e4247b3f8eb3e8434a50, type: 3}
+  news: {fileID: 8300000, guid: 5db3dbd496c2e4640809c2446a7f4ecc, type: 3}
+  contiOnSelect: {fileID: 8300000, guid: b991450b79c02b048967c1595cd628f7, type: 3}
+  dealCard: {fileID: 8300000, guid: f1b37e41773c85f4784e93bfb8e2c48a, type: 3}
+  mouseOnCard: {fileID: 8300000, guid: f9b89435b03ff8d42800e11a2750cf10, type: 3}
+  dragCard: {fileID: 8300000, guid: 495931a9bbf85114a827439d937c30e6, type: 3}
+  deleteCard: {fileID: 8300000, guid: 0afa17e8747b4544491686a2f55d4063, type: 3}
+  cardOnce: 0
+--- !u!4 &961689594160574941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961689594160574943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 961689594249641400}
+  - {fileID: 961689594096365680}
+  - {fileID: 769295137}
+  - {fileID: 603122015}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &961689594160574943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961689594160574941}
+  - component: {fileID: 961689594160574940}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &961689594249641400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961689594249641402}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 961689594160574941}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!169 &961689594249641401
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961689594249641402}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.022282856
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &961689594249641402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961689594249641400}
+  - component: {fileID: 961689594249641403}
+  - component: {fileID: 961689594249641401}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &961689594249641403
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961689594249641402}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7bf8418eda081e74e94c6a30746dd6a2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &5146664471433708003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6196,10 +7711,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1331490202}
     m_Modifications:
-    - target: {fileID: 1935105074, guid: dd5a49b63a3de7542867e805fe6d8c4d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5146664472099454680, guid: dd5a49b63a3de7542867e805fe6d8c4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6258,12 +7769,12 @@ PrefabInstance:
     - target: {fileID: 5146664472099454680, guid: dd5a49b63a3de7542867e805fe6d8c4d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 411
+      value: 381
       objectReference: {fileID: 0}
     - target: {fileID: 5146664472099454680, guid: dd5a49b63a3de7542867e805fe6d8c4d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 226.8
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 5146664472099454680, guid: dd5a49b63a3de7542867e805fe6d8c4d,
         type: 3}
