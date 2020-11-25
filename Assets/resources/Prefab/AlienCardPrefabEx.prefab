@@ -1213,6 +1213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f539dc077c1f5cb448f737565331c5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 21300000, guid: 122e4a37155d6cb44a22e70d537d10b5, type: 3}
+  onImage: {fileID: 21300000, guid: c7b4cac8cf385ae4391d6893874713dc, type: 3}
 --- !u!61 &3083244579392137715
 BoxCollider2D:
   m_ObjectHideFlags: 0

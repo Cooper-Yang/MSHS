@@ -8,6 +8,7 @@ TagManager:
   - AlienCanvas
   - EffectCard
   - AlienCard
+  - DeleteZone
   layers:
   - Default
   - TransparentFX
