@@ -29,6 +29,7 @@ public class James_AlienScript : MonoBehaviour
 	//NEW ADDED BY Hank
 	public Text currentage;
 	public int currentageNum;
+	public int howlongdoiliveanditwontchange;
 
 	int myIndexinList;
 
@@ -50,6 +51,7 @@ public class James_AlienScript : MonoBehaviour
 
 	private void Start()
 	{
+		howlongdoiliveanditwontchange = lifeSpan;
 		ogSp = GetComponent<Image>().sprite;
 
 		turn = TurnsManager._instance.turns;
@@ -87,7 +89,7 @@ public class James_AlienScript : MonoBehaviour
 	private void Update()
 	{
 		
-		currentage.text = currentageNum.ToString();
+		currentage.text = lifeSpan.ToString();
 
 		if (GameManager.me.state == GameManager.me.game_screen)
 		{
