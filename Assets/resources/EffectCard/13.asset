@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcfa4c6d6104dc4688a4e30fcc603bc, type: 3}
   m_Name: 13
   m_EditorClassIdentifier: 
-  cardName: Build a Shrine
+  cardName: Construct Temple
   cardLvl: 1
-  description: Temple is useful to control religion!
+  description: More temples means more followers.
   isConti: 0
   politicsSource: 0
   cultureSource: 0
@@ -24,10 +24,10 @@ MonoBehaviour:
   culture: 0
   religion: 0
   technology: 1
-  poliVal: 2
+  poliVal: 5
   culVal: 0
   reliVal: 0
-  techVal: -2
+  techVal: -5
   genVal: 0
   discovRate: 2
   lifeVal: 0

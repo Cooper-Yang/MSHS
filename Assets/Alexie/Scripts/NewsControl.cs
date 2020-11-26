@@ -39,6 +39,7 @@ public class NewsControl : MonoBehaviour
     Vector3 newsDefPos;
     int selectNormalNews;
     int selectBreakNews;
+    int seletedNews = 0;
 
     //start ran news
     int polRan;
@@ -72,8 +73,14 @@ public class NewsControl : MonoBehaviour
             rollingNews = false;
             resetTime = resetDefTime;
             normalNews.transform.position = newsDefPos;
-            selectNormalNews = Random.Range(0, normalRandNews.Count);
+            selectNormalNews += 1;
             rollingNews = true;
+        }
+
+        if(selectNormalNews >= normalRandNews.Count)
+        {
+            selectNormalNews = 0;
+
         }
 
         normalNews.text = normalRandNews[selectNormalNews];

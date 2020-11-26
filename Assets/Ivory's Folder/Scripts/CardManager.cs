@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-    static public CardManager me;
+    public static CardManager me;
 
     //[SerializeField] private GameObject card;
     [SerializeField] private GameObject[] cards;
@@ -69,6 +69,33 @@ public class CardManager : MonoBehaviour
 
             
             Debug.Log("card out");
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool SendAlienCard()
+    {
+        int dealIndex = 0;
+        bool candeal = false;
+        for (int i = 0; i < deck.Count; i++)
+        {
+            if (deck[i] == null)
+            {
+                candeal = true;
+                dealIndex = i;
+                break;
+            }
+        }
+
+        if (candeal)
+        {
+            SpawnAlienCard(dealIndex);
+            DealCard(dealIndex);
+
+            Debug.Log("alien card out");
 
             return true;
         }
