@@ -33,7 +33,7 @@ public class infobars : MonoBehaviour
 
         //Debug.Log(jas.tech_Influence);
 
-
+        
         if (Input.GetMouseButtonDown(0))
         {
             gameObject.SetActive(false);

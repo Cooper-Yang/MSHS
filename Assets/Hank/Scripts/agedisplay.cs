@@ -12,14 +12,15 @@ public class agedisplay : MonoBehaviour
 
     void Start()
     {
-        
+        lifespanNum = transform.parent.GetComponent<James_AlienScript>().howlongdoiliveanditwontchange;
+        lifespan.text = lifespanNum.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        lifespanNum = transform.parent.GetComponent<James_AlienScript>().lifeSpan;
-        lifespan.text = lifespanNum.ToString();
+        currentageNum = transform.parent.GetComponent<James_AlienScript>().lifeSpan;
+        currentage.text = currentageNum.ToString();
     }
 }
     
