@@ -1168,7 +1168,7 @@ MonoBehaviour:
   discoverRate: 0
   propertyMin: 0
   propertyMax: 20
-  lifeMin: 0
+  lifeMin: 9
   lifeMax: 9
   totalAbility: 200
   properties: []

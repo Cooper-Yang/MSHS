@@ -29,7 +29,6 @@ public class AlienCardProcGen : MonoBehaviour
     public int genSpeed;
     public int discoverRate;
 
-    public int propertyMin;
     public int propertyMax;
     public int lifeMin;
     public int lifeMax;
@@ -78,7 +77,7 @@ public class AlienCardProcGen : MonoBehaviour
         rel = (int)(properties[1] / 100 * propertyMax);
         pol = (int)(properties[2] / 100 * propertyMax);
         tech = (int)(properties[3] / 100 * propertyMax);
-        lifeSpanNumber = 9 + (int)(properties[4] / 100 * lifeMax);
+        lifeSpanNumber = lifeMin + (int)(properties[4] / 100 * lifeMax);
         // set bar
         culIcon.sizeDelta = new Vector2((100-8)*properties[0]/100, 19);
         relIcon.sizeDelta = new Vector2((100-8)*properties[1]/100, 19);
