@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LOL YOU GOT CAUGHT BY THOSE DUMB HUMANS!
+  m_text: WE ARE CAUGHT BY THE HOMO SAPIENS!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -739,8 +739,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.56, y: 8.03}
-  m_SizeDelta: {x: 5513.828, y: 365.6494}
+  m_AnchoredPosition: {x: 0.3, y: 7.59}
+  m_SizeDelta: {x: 5513.828, y: 463.06335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62486492
 MonoBehaviour:
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 301ebc6426c16404ab9bbd7d19a3b006, type: 3}
     m_FontSize: 200
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 300
@@ -1287,7 +1287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 47.921, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 81.475006, y: -38.669983}
+  m_AnchoredPosition: {x: 81.475006, y: -38.67}
   m_SizeDelta: {x: -222.23303, y: -903.44104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323728344
@@ -3091,7 +3091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2, y: -1.56}
+  m_AnchoredPosition: {x: -0.2, y: -2.7}
   m_SizeDelta: {x: 5218.1807, y: 1880.887}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845397437
@@ -3975,6 +3975,149 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129828776}
   m_CullTransparentMesh: 0
+--- !u!1 &1147479000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1147479001}
+  - component: {fileID: 1147479004}
+  - component: {fileID: 1147479003}
+  - component: {fileID: 1147479002}
+  - component: {fileID: 1147479005}
+  m_Layer: 5
+  m_Name: SummonButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1147479001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147479000}
+  m_LocalRotation: {x: 0, y: -0.43821433, z: 0, w: 0.8988706}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 0.77, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1208995070}
+  m_Father: {fileID: 1882791532}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -51.98, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -811.1, y: -372.5}
+  m_SizeDelta: {x: 160, y: 151.87}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1147479002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147479000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.6603774, g: 0.6136526, b: 0.6136526, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1147479003}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1147479005}
+        m_MethodName: SummonAlien
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1147479003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147479000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 122e4a37155d6cb44a22e70d537d10b5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1147479004
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147479000}
+  m_CullTransparentMesh: 0
+--- !u!114 &1147479005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147479000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5686207c1f7e54eb9d9a668531a0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1150530215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4103,6 +4246,84 @@ MonoBehaviour:
   rel: 0
   cul: 0
   tech: 1
+--- !u!1 &1208995069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1208995070}
+  - component: {fileID: 1208995072}
+  - component: {fileID: 1208995071}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1208995070
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208995069}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1147479001}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1.0999985, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1208995071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208995069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 301ebc6426c16404ab9bbd7d19a3b006, type: 3}
+    m_FontSize: 37
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 95
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Summon Aliens
+--- !u!222 &1208995072
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208995069}
+  m_CullTransparentMesh: 0
 --- !u!1 &1251256343
 GameObject:
   m_ObjectHideFlags: 0
@@ -6242,6 +6463,7 @@ RectTransform:
   - {fileID: 534939630}
   - {fileID: 943925105}
   - {fileID: 323728343}
+  - {fileID: 1147479001}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6996,36 +7218,36 @@ MonoBehaviour:
   - Society Completely Shuts Down Due to Lack of People Working
   - Millions Across the Globe Have Completely Lost Their Minds
   - XXX Leads Fans Into Full-Scale Invasion
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Miracle appeared? Someone claimed a miracle was revealed. '
+  - "People\u2019s Temple has returned!"
+  - 'Followers are increasing! The whole new religion has gone crazy. '
+  - "A lot of homeless people have started to join People\u2019s Temple."
+  - 'Official announcement! The new religion is called Allianz. '
+  - We cannot let the tragedy happen again.
+  - Religion annexes! Earth-Kittenism is annexed by xxx!
+  - The Unification Church has appeared in Korea!
+  - The Prophet appeared! The prophet of xxx revealed the next disaster.
+  - Believers of the Unification Church humiliated Christian.
+  - 'Allianz believes in suffering and misery. '
+  - "Christian claim that they will help the homeless in People\u2019s Temple. "
+  - Over 25% of the population joined Allianz!
+  - "People\u2019s Temple says no!"
+  - 'Over 50% of the population joined Allianz! '
+  - 'Crusade around the corner! '
+  - Over 75% of the population joined Allianz!
+  - 'The Unification Church joined the war. '
+  - Modern Crusades?
+  - Christian took the advantage!
+  - Parade in the urban!
+  - Miracle?
+  - 'Looking for the truth? '
+  - 'Aliens are real! '
+  - 'Real miracle appeared! '
+  - Zombie virus?
+  - Aliens appeared?
+  - 'The military has interfered with the war. '
+  - Humans are getting erased!
+  - 'Total loss! '
   breakNewsList:
   - "\u201CAhon,\u201D the new private political party recently registered in the
     country. The leader of the party stated that the country was sick and in need
@@ -7319,36 +7541,67 @@ MonoBehaviour:
   - XXX has called on all of her fans to rise up and throw over the current dysfunctioning
     government. People who are listening to Starfall seem to be put under a spell
     to obey. Chaos and riot erupts in hundreds of cities across the globe at once.
-  - 
-  - 
-  - ' '
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Someone in the church got crazy. He claimed that the miracle had been shown and
+    he was the chosen one.
+  - "Evidence shows that People\u2019s Temple started to show up around the world."
+  - These days, some people said they saw miracles after following the chosen one.
+  - "Do people really have no memories? People\u2019s Temple has to be stopped.\r\n"
+  - The new religion is officially admitted. As the followers increase, will this
+    be the largest religion ever?
+  - "Insiders claimed that People\u2019s Temple is torturing the homeless instead
+    of helping them."
+  - According to insiders, Earth-Kittenism joined xxx since xxx claimed their belief
+    looks like cats!
+  - "What is going on these days? All the religions that should not appear are popping
+    out.\r"
+  - The next disaster will cause critical damage to humans. The prophet said the
+    only way to survive is joining xxx.
+  - 'Are they going to keep humiliating Christian? The history shall not be repeated.
+
+'
+  - "Because of the creed of xxx, a large number of sadomasochismus are attracted
+    to join the religion.\r"
+  - 'Christian are going to save the believers in the People''s Temple.
+
+'
+  - Joining xxx has been a social activity among the young. People who refuse to
+    join will be bullied by others. The government should stop!
+  - "People\u2019s Temple says the Christian is lying. They will claim war if Christian
+    steps forward.\r\n"
+  - The leader of xxx holds a party for this. He claimed that he would annex all
+    the populations into xxx.
+  - "Seems like both Christian and People\u2019s Temple don\u2019t want to give in.
+    War is coming!\r"
+  - No one actually knows what xxx is going to do! Conspiracy theories claim that
+    the leader of xxx may be aliens!
+  - "They said that the enemy\u2019s enemy is their friend.\r"
+  - The leader of Allianz provoked Christianity and claimed they are going to reappear
+    in the Crusades.
+  - 'Christian is an old and powerful religion. It is no wise to fight against Christian.
+    The other two cults are losing the war.
+
+'
+  - "There were a lot of people so that we couldn\u2019t see what actually happened.
+    According to insiders, the leader of xxx nailed himself onto a cross and walked
+    all the way through downtown."
+  - Supernatural power has shown in the war. Christian lost their advantage.
+  - The leader of Allianz claimed that he had found the truth, which Gandhi was looking
+    for. He will show the truth within several days.
+  - 'The experts thought that the supernatural power was from the aliens.
+
+'
+  - The leader of Allianz really summoned miracle. A large light beam showed up and
+    people genuflected in front of the leader.
+  - 'All the believers become zombies and seem to be controlled by someone.
+
+'
+  - A lot of human-like creatures flew down the light beam. Are they aliens?
+  - 'Since aliens appeared in the war, the military is not going to wait.
+
+'
+  - "They are aliens! Humans seem to lose the war\u2026"
+  - "As soon as the military approached the believers, they turned into zombies and
+    got controlled. We lost the war!\r"
   normalNews: {fileID: 534939633}
   breakNewsText: {fileID: 845397437}
   breakingNewsTitleText: {fileID: 62486492}

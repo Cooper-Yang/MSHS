@@ -25,6 +25,7 @@ public class alienclick : MonoBehaviour
             if (panel != null)
             {
                 AudioManager._instance.ClickOnAliens();
+                transform.SetAsLastSibling();
                 panel.SetActive(true);
             }
         }
