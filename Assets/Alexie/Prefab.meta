@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Alexie/Prefab.meta
 guid: 48769c6de03a4d34ba9a09929400dc6d
+=======
+guid: 5a4bebc6fbb1b52438e773dd40a652c4
+>>>>>>> 0bb18065e269961368e30c7e41d9c2f2b2ab63bf:Assets/Cooper/Audio.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

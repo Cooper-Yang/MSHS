@@ -24,7 +24,7 @@ public class alienclick : MonoBehaviour
         {
             if (panel != null)
             {
-                
+                AudioManager._instance.ClickOnAliens();
                 panel.SetActive(true);
             }
         }
@@ -35,6 +35,7 @@ public class alienclick : MonoBehaviour
                                                           //float sourcePol, float sourceRel, float sourceCol, float sourceTech
             {
                 gameObject.GetComponent<alienpercentage>().percent = 0; //return to 0
+                AudioManager._instance.DealCard();
             }
             else
             gameObject.GetComponent<alienpercentage>().percent = 100;//if not then keep the card at 100 percent

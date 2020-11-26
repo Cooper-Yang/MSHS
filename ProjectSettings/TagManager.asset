@@ -8,6 +8,7 @@ TagManager:
   - AlienCanvas
   - EffectCard
   - AlienCard
+  - DeleteZone
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - SuperUI
   - 
   - 
   - 

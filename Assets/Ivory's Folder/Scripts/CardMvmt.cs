@@ -24,7 +24,7 @@ public class CardMvmt : MonoBehaviour
     public bool mouseOn = false;
     public bool dragging;
 
-
+    CardAudio cA;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +34,7 @@ public class CardMvmt : MonoBehaviour
         originalScal = cardTransform.localScale;
         cardScal = originalScal;
         targetScale = originalScal;
+        cA = GetComponent<CardAudio>();
     }
 
     // Update is called once per frame
@@ -60,13 +61,13 @@ public class CardMvmt : MonoBehaviour
         float scaleLerpGoal = .07f;
         float scaleLerpValue;
         Vector2 lerpPos;
-
+        
 
         if (mouseOn == true)
         {
             lerpValue = Mathf.Lerp(cardTransform.position.y, originalPos.y + lerpGoal, Time.deltaTime / lerpTime);
             cardPos = new Vector2(cardTransform.position.x, lerpValue);
-
+            //AudioManager._instance.CursorOnCard();
             scaleLerpValue = Mathf.Lerp(cardTransform.localScale.x, originalScal.x + scaleLerpGoal, Time.deltaTime / lerpTime);
             cardScal = new Vector2(scaleLerpValue, scaleLerpValue);
             this.transform.SetAsLastSibling();
@@ -75,7 +76,7 @@ public class CardMvmt : MonoBehaviour
         {
             lerpPos = Vector2.Lerp(cardTransform.position, originalPos, Time.deltaTime / lerpTime);
             cardPos = lerpPos;
-
+            //AudioManager._instance.cardOnce = true;
             scaleLerpValue = Mathf.Lerp(cardTransform.localScale.x, targetScale.x , Time.deltaTime / lerpTime);
             cardScal = new Vector2(scaleLerpValue, scaleLerpValue);
         }
@@ -89,7 +90,7 @@ public class CardMvmt : MonoBehaviour
         {
             cardPos = new Vector3(mousePos.x, mousePos.y, cardPos.z);
             mouseOn = false;
-
+            cA.dragCard();
             // shrink card
             // if close to any of the aliens, the closer it gets the smaller it is
             if (gameObject.tag == "EffectCard" && !GetComponent<CardReader>().isConti) // if im a non conti effect card
@@ -98,7 +99,8 @@ public class CardMvmt : MonoBehaviour
                 float shortestDis = 1000;
                 foreach (var alien in GameManager.me.aliens)
                 {
-                    if (Vector2.Distance(cardTransform.position, alien.transform.position) < shortestDis)
+                    
+                    if (alien != null &&Vector2.Distance(cardTransform.position, alien.transform.position) < shortestDis  )
                     {
                         shortestDis = Vector2.Distance(cardTransform.position, alien.transform.position);
                     }
@@ -114,9 +116,11 @@ public class CardMvmt : MonoBehaviour
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        cA.OnCard();
         if (dragging == false)
         {
             mouseOn = true;
+            
         }
         
     }
@@ -125,6 +129,8 @@ public class CardMvmt : MonoBehaviour
     {
         mouseOn = false;
         //contiImOn = null;
+        cA.canDragPlay = true;
+        cA.canOnPlay = true;
     }
 
     public void OnPointerDown(PointerEventData eventData)
