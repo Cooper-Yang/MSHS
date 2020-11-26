@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class agedisplay : MonoBehaviour
 {
-    public Text ageNum;
-    public int age;
+    public Text currentage;
+    public int currentageNum;
+    public Text lifespan;
+    public int lifespanNum;
+
     void Start()
     {
         
@@ -15,8 +18,8 @@ public class agedisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        age = transform.parent.GetComponent<James_AlienScript>().lifeSpan;
-        ageNum.text = age.ToString();
+        lifespanNum = transform.parent.GetComponent<James_AlienScript>().lifeSpan;
+        lifespan.text = lifespanNum.ToString();
     }
 }
     
