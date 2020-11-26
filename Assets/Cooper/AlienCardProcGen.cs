@@ -38,7 +38,7 @@ public class AlienCardProcGen : MonoBehaviour
 
 
         lifeSpanNumber = 9;
-        lifeSpan.text = "Life Span: " +lifeSpan;
+        lifeSpan.text = "Life Span: " +lifeSpanNumber;
 
         int randomStat = Random.Range(0,4);         //0 = Poli, 1= culture, 2 = religion, 3= tech 
 
