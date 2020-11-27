@@ -95,7 +95,7 @@ public class NewsControl : MonoBehaviour
 
         if(rollingNews == true)
         {
-            normalNews.transform.position += Vector3.left * speed;
+            normalNews.transform.position += Vector3.left * speed * Time.deltaTime;
         }
 
         //Breaking news pop out and in
