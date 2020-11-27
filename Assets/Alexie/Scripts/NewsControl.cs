@@ -80,7 +80,15 @@ public class NewsControl : MonoBehaviour
         if(selectNormalNews >= normalRandNews.Count)
         {
             selectNormalNews = 0;
-
+            var count = normalRandNews.Count;
+            var last = count - 1;
+            for (var i = 0; i < last; ++i)
+            {
+                var r = UnityEngine.Random.Range(i, count);
+                var tmp = normalRandNews[i];
+                normalRandNews[i] = normalRandNews[r];
+                normalRandNews[r] = tmp;
+            }
         }
 
         normalNews.text = normalRandNews[selectNormalNews];
