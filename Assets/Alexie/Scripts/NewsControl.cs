@@ -37,7 +37,7 @@ public class NewsControl : MonoBehaviour
     //Do not change Numbers
     float resetDefTime; //For testing
     Vector3 newsDefPos;
-    int selectNormalNews;
+    int selectNormalNews = -1;
     int selectBreakNews;
     int seletedNews = 0;
 
@@ -61,12 +61,10 @@ public class NewsControl : MonoBehaviour
 
     void Update()
     {
-        /*
         testPol = GameManager.me.pol_gl;
         testCul = GameManager.me.cul_gl;
         testRel = GameManager.me.rel_gl;
         testTec = GameManager.me.tech_gl;
-        */
         resetTime -= Time.deltaTime;//For testing time
         //Normal news move and reset
 
