@@ -273,19 +273,38 @@ public class ContinentScript : MonoBehaviour
 
 		Collider2D contiCollider = GetComponent<PolygonCollider2D>();
 		Bounds thisbound = contiCollider.bounds;
-		float randx = Random.Range(thisbound.min.x, thisbound.max.x);
-		float randy = Random.Range(thisbound.min.y, thisbound.max.y);
 
-		float posx = 0;
+        float randx = Random.Range(thisbound.min.x, thisbound.max.x);
+        float randy = Random.Range(thisbound.min.y, thisbound.max.y);
+
+        List<Collider2D> alienCollider = new List<Collider2D>();
+        for (int i = 0; i < myAliens.Count; i++)
+        {
+            alienCollider.Add(myAliens[i].GetComponent<CircleCollider2D>());
+        }
+
+        List<Bounds> alienBounds = new List<Bounds>();
+        for (int i = 0; i < alienCollider.Count; i++)
+        {
+            alienBounds.Add(alienCollider[i].bounds);
+        }
+
+        
+
+        float posx = 0;
 		float posy = 0;
 
 		while(!contiCollider.OverlapPoint(new Vector2(randx,randy)))
         {
-			randx = Random.Range(thisbound.min.x, thisbound.max.x);
-			randy = Random.Range(thisbound.min.y, thisbound.max.y);
-		}
 
-		posx = randx;
+            randx = Random.Range(thisbound.min.x, thisbound.max.x);
+            randy = Random.Range(thisbound.min.y, thisbound.max.y);
+
+        }
+
+
+
+        posx = randx;
 		posy = randy;
 
 		GameObject otherCard = collision.gameObject;
@@ -308,9 +327,9 @@ public class ContinentScript : MonoBehaviour
 		//generate alien
 		GameObject aliens = Instantiate(alienPrefab, GameObject.FindGameObjectWithTag("AlienCanvas").transform);
 		aliens.GetComponent<James_AlienScript>().myCon = ContiName;
-		aliens.transform.position = new Vector3(posx, posy, aliens.transform.position.z);
-		//aliens.transform.SetParent();
-		aliens.GetComponent<James_AlienScript>().pol_Influence = pol;
+        aliens.transform.position = new Vector3(posx, posy, aliens.transform.position.z);
+        //aliens.transform.SetParent();
+        aliens.GetComponent<James_AlienScript>().pol_Influence = pol;
 		aliens.GetComponent<James_AlienScript>().rel_Influence = rel;
 		aliens.GetComponent<James_AlienScript>().cul_Influence = cul;
 		aliens.GetComponent<James_AlienScript>().tech_Influence = tech;
