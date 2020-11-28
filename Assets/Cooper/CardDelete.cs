@@ -24,7 +24,6 @@ public class CardDelete : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
 
-                TurnsManager._instance.nextTurn();
                 AudioManager._instance.DeletCard();
                 Destroy(gameObject);
             }
