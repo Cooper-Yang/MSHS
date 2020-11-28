@@ -92,8 +92,11 @@ public class NewsControl : MonoBehaviour
                 normalRandNews[r] = tmp;
             }
         }
-
-        normalNews.text = normalRandNews[selectNormalNews];
+        
+        if(selectNormalNews >= 0)
+        {
+            normalNews.text = normalRandNews[selectNormalNews];
+        }
 
         if(rollingNews == true)
         {
