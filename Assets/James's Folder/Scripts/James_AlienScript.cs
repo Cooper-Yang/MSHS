@@ -26,6 +26,11 @@ public class James_AlienScript : MonoBehaviour
 	public Image mouth;
 	public Image eyes;
 
+	//NEW ADDED BY Hank
+	public Text currentage;
+	public int currentageNum;
+	public int howlongdoiliveanditwontchange;
+
 	int myIndexinList;
 
 	public float radius = 0; // caculated with total influence
@@ -46,6 +51,7 @@ public class James_AlienScript : MonoBehaviour
 
 	private void Start()
 	{
+		howlongdoiliveanditwontchange = lifeSpan;
 		ogSp = GetComponent<Image>().sprite;
 
 		turn = TurnsManager._instance.turns;
@@ -82,6 +88,9 @@ public class James_AlienScript : MonoBehaviour
 
 	private void Update()
 	{
+		
+		currentage.text = lifeSpan.ToString();
+
 		if (GameManager.me.state == GameManager.me.game_screen)
 		{
 			alienLifeDeath(); //control the life span (and generate dots)

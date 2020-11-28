@@ -854,8 +854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32.1, y: -5.1}
-  m_SizeDelta: {x: 90, y: 22}
+  m_AnchoredPosition: {x: -2.02, y: -5.1}
+  m_SizeDelta: {x: 150.1623, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3801206831887859481
 CanvasRenderer:
@@ -894,8 +894,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'LifeSpan
 
@@ -1166,6 +1166,11 @@ MonoBehaviour:
   lifeSpanNumber: 0
   genSpeed: 0
   discoverRate: 0
+  propertyMax: 50
+  lifeMin: 18
+  lifeMax: 9
+  totalAbility: 200
+  properties: []
 --- !u!114 &6999101257066605294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,8 +1218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f539dc077c1f5cb448f737565331c5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 21300000, guid: 122e4a37155d6cb44a22e70d537d10b5, type: 3}
-  onImage: {fileID: 21300000, guid: c7b4cac8cf385ae4391d6893874713dc, type: 3}
 --- !u!61 &3083244579392137715
 BoxCollider2D:
   m_ObjectHideFlags: 0

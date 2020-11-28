@@ -131,4 +131,44 @@ public class CardHolder : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (GameManager.me.pol_gl>33.3)
+        {
+            politicDeckLevelOne.AddRange(politicDeckLevelTwo);
+        }
+        if (GameManager.me.pol_gl > 66.6)
+        {
+            politicDeckLevelOne.AddRange(politicDeckLevelThree);
+        }
+
+        if (GameManager.me.cul_gl > 33.3)
+        {
+            cultureDeckLevelOne.AddRange(cultureDeckLevelTwo);
+        }
+        if (GameManager.me.cul_gl > 66.6)
+        {
+            cultureDeckLevelOne.AddRange(cultureDeckLevelThree);
+        }
+
+        if (GameManager.me.rel_gl > 33.3)
+        {
+            religionDeckLevelOne.AddRange(religionDeckLevelTwo);
+        }
+        if (GameManager.me.rel_gl > 66.6)
+        {
+            religionDeckLevelOne.AddRange(religionDeckLevelThree);
+        }
+
+        if (GameManager.me.tech_gl > 33.3)
+        {
+            technologyDeckLevelOne.AddRange(technologyDeckLevelTwo);
+        }
+        if (GameManager.me.tech_gl > 66.6)
+        {
+            technologyDeckLevelOne.AddRange(technologyDeckLevelTwo);
+        }
+
+
+    }
 }
