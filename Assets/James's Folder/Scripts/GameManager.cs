@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,12 +32,25 @@ public class GameManager : MonoBehaviour
     public int state = 0;
     public int splash_screen = 0;
     public int game_screen = 1;
-    public int game_over_caught = 2;
+    public int game_over = 2;
+    public int good_ending_screen = 3;
     public GameObject UGotCaughtByHuman;
+    public TextMeshProUGUI ending_ugui;
+    private bool culDefeat = false;
+    private bool polDefeat = false;
+    private bool relDefeat = false;
+    private bool techDefeat = false;
 
-    
+    [TextArea]
+    public string culDefeat_text;
+    [TextArea]
+    public string polDefeat_text;
+    [TextArea]
+    public string relDefeat_text;
+    [TextArea]
+    public string techDefeat_text;
 
-	public enum thingy
+    public enum thingy
 	{
         pol, cul, rel, tech
 	}
@@ -114,13 +128,51 @@ public class GameManager : MonoBehaviour
 
     public void SceneManagement()
 	{
-        if (stealthlv._instance.stealthlev >= 100)
+        if (NewsControl.me.culPhase >= 15 || NewsControl.me.relPhase >= 15 || NewsControl.me.polPhase >= 15 || NewsControl.me.tecPhase >= 15)
+		{
+            ending_ugui.text = "You Won.";
+            UGotCaughtByHuman.SetActive(true);
+            state = game_over;
+        }
+        else if (stealthlv._instance.stealthlev >= 100)
 		{
             // game over
+            if (cul_gl < rel_gl && cul_gl < pol_gl && cul_gl < tech_gl)
+			{
+                culDefeat = true;
+			}
+            else if (rel_gl < cul_gl && rel_gl < pol_gl && rel_gl < tech_gl)
+			{
+                relDefeat = true;
+			}
+            else if (pol_gl < cul_gl && pol_gl < rel_gl && pol_gl < tech_gl)
+			{
+                polDefeat = true;
+			}
+            else if (tech_gl < cul_gl && tech_gl < rel_gl && tech_gl < pol_gl)
+			{
+                techDefeat = true;
+			}
+            if (culDefeat)
+			{
+                ending_ugui.text = culDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + "turns.";
+            }
+            else if (relDefeat)
+			{
+                ending_ugui.text = relDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + "turns.";
+            }
+            else if (polDefeat)
+            {
+                ending_ugui.text = polDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + "turns.";
+            }
+            else if (techDefeat)
+            {
+                ending_ugui.text = techDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + "turns.";
+            }
             UGotCaughtByHuman.SetActive(true);
-            state = game_over_caught;
+            state = game_over;
 		}
-        if (state == game_over_caught)
+        if (state == game_over)
 		{
             if (Input.GetKeyDown(KeyCode.R))
 			{
