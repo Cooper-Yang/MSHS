@@ -61,10 +61,12 @@ public class NewsControl : MonoBehaviour
 
     void Update()
     {
+        /*
         testPol = GameManager.me.pol_gl;
         testCul = GameManager.me.cul_gl;
         testRel = GameManager.me.rel_gl;
         testTec = GameManager.me.tech_gl;
+        */
         resetTime -= Time.deltaTime;//For testing time
         //Normal news move and reset
 
