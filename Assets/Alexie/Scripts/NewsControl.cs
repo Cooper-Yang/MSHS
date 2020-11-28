@@ -37,8 +37,9 @@ public class NewsControl : MonoBehaviour
     //Do not change Numbers
     float resetDefTime; //For testing
     Vector3 newsDefPos;
-    int selectNormalNews;
+    int selectNormalNews = -1;
     int selectBreakNews;
+    int seletedNews = 0;
 
     //start ran news
     int polRan;
@@ -72,15 +73,29 @@ public class NewsControl : MonoBehaviour
             rollingNews = false;
             resetTime = resetDefTime;
             normalNews.transform.position = newsDefPos;
-            selectNormalNews = Random.Range(0, normalRandNews.Count);
+            selectNormalNews += 1;
             rollingNews = true;
+        }
+
+        if(selectNormalNews >= normalRandNews.Count)
+        {
+            selectNormalNews = 0;
+            var count = normalRandNews.Count;
+            var last = count - 1;
+            for (var i = 0; i < last; ++i)
+            {
+                var r = UnityEngine.Random.Range(i, count);
+                var tmp = normalRandNews[i];
+                normalRandNews[i] = normalRandNews[r];
+                normalRandNews[r] = tmp;
+            }
         }
 
         normalNews.text = normalRandNews[selectNormalNews];
 
         if(rollingNews == true)
         {
-            normalNews.transform.position += Vector3.left * speed;
+            normalNews.transform.position += Vector3.left * speed * Time.deltaTime;
         }
 
         //Breaking news pop out and in
