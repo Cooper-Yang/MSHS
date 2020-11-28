@@ -53,7 +53,7 @@ public class AlienCardProcGen : MonoBehaviour
         mouth.sprite = mouthSpr[Random.Range(0, mouthSpr.Length)];
 
         SetValues();
-        lifeSpan.text = "Life Span: " + lifeSpanNumber;
+        lifeSpan.text = "Health " + lifeSpanNumber;
     }
 
     private void SetValues()

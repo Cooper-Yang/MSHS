@@ -1750,6 +1750,7 @@ MonoBehaviour:
   eyes: {fileID: 106017522052483591}
   currentage: {fileID: 5146664471766214189}
   currentageNum: 0
+  howlongdoiliveanditwontchange: 0
   radius: 0
   polVfxIcon: {fileID: 5146664471690531301}
   relVfxIcon: {fileID: 5146664473035648725}
@@ -2322,7 +2323,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Age
+  m_Text: Health
 --- !u!1 &7351957309950904767
 GameObject:
   m_ObjectHideFlags: 0
