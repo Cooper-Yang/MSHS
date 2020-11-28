@@ -1166,9 +1166,8 @@ MonoBehaviour:
   lifeSpanNumber: 0
   genSpeed: 0
   discoverRate: 0
-  propertyMin: 0
-  propertyMax: 20
-  lifeMin: 9
+  propertyMax: 50
+  lifeMin: 18
   lifeMax: 9
   totalAbility: 200
   properties: []

@@ -4530,6 +4530,20 @@ MonoBehaviour:
   game_screen: 1
   game_over_caught: 2
   UGotCaughtByHuman: {fileID: 16870328}
+  bE_ugui: {fileID: 0}
+  culDefeat_text: "Sometimes, simply trying isn\u2019t enough. No matter how hard
+    you work, the results are just bad. Nobody likes it. Want to become popular?
+    Work in some other fields, because pop culture is simply not for you."
+  polDefeat_text: Humans' minds can never be understood. It is not a matter of time.
+    Aliens can never know what humans are thinking. Interfering politics may be a
+    bad idea. After all, no one can understand politics, even politicians.
+  relDefeat_text: Maybe God is real. Everything was done perfectly, but the believers
+    still found the truth. Some mystery force helped them out. The military erased
+    the existence of aliens on the Earth.
+  techDefeat_text: A rapid technological leap is followed by voices of concern and
+    disapproval. Humans suspect the source of such unimaginable feats and demand
+    an explanation. A group of human scientists traced evidence back to you. You
+    are exposed!
 --- !u!4 &1251256345
 Transform:
   m_ObjectHideFlags: 0
