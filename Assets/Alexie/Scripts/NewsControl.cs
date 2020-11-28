@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class NewsControl : MonoBehaviour
 {
+    static public NewsControl me;
     public float testPol;
     public float testCul;
     public float testRel;
@@ -49,6 +50,7 @@ public class NewsControl : MonoBehaviour
 
     void Start()
     {
+        me = this;
         //Set default numbers
         newsDefPos = normalNews.transform.position;
         resetDefTime = resetTime;
