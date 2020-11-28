@@ -26,6 +26,15 @@ public class CardHolder : MonoBehaviour
     public List<CardObject> technologyDeckLevelTwo = new List<CardObject>();
     public List<CardObject> technologyDeckLevelThree = new List<CardObject>();
 
+    bool p1 = true;
+    bool p2 = true;
+    bool c1 = true;
+    bool c2 = true;
+    bool r1 = true;
+    bool r2 = true;
+    bool t1 = true;
+    bool t2 = true;
+
     public static CardHolder Instance
     {
         get { return _instance; }
@@ -133,40 +142,49 @@ public class CardHolder : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.me.pol_gl>33.3)
+        
+        if (GameManager.me.pol_gl>33.3 && p1)
         {
             politicDeckLevelOne.AddRange(politicDeckLevelTwo);
+            p1 = false;
         }
-        if (GameManager.me.pol_gl > 66.6)
+        if (GameManager.me.pol_gl > 66.6 && p2)
         {
             politicDeckLevelOne.AddRange(politicDeckLevelThree);
+            p2 = false;
         }
 
-        if (GameManager.me.cul_gl > 33.3)
+        if (GameManager.me.cul_gl > 33.3 && c1)
         {
             cultureDeckLevelOne.AddRange(cultureDeckLevelTwo);
+            c1 = false;
         }
-        if (GameManager.me.cul_gl > 66.6)
+        if (GameManager.me.cul_gl > 66.6 && c2)
         {
             cultureDeckLevelOne.AddRange(cultureDeckLevelThree);
+            c2 = false;
         }
 
-        if (GameManager.me.rel_gl > 33.3)
+        if (GameManager.me.rel_gl > 33.3 && r1)
         {
             religionDeckLevelOne.AddRange(religionDeckLevelTwo);
+            r1 = false;
         }
-        if (GameManager.me.rel_gl > 66.6)
+        if (GameManager.me.rel_gl > 66.6 && r2)
         {
             religionDeckLevelOne.AddRange(religionDeckLevelThree);
+            r2 = false;
         }
 
-        if (GameManager.me.tech_gl > 33.3)
+        if (GameManager.me.tech_gl > 33.3 && t1)
         {
             technologyDeckLevelOne.AddRange(technologyDeckLevelTwo);
+            t1 = false;
         }
-        if (GameManager.me.tech_gl > 66.6)
+        if (GameManager.me.tech_gl > 66.6 && t2)
         {
             technologyDeckLevelOne.AddRange(technologyDeckLevelTwo);
+            t2 = false;
         }
 
 
