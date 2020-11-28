@@ -16,10 +16,10 @@ MonoBehaviour:
   cardLvl: 1
   description: Go to sleep at 10 and wake up at 6.
   isConti: 0
-  politicsSource: 0
-  cultureSource: 0
-  religionSource: 0
-  technologySource: 0
+  politicsSource: 1
+  cultureSource: 1
+  religionSource: 1
+  technologySource: 1
   politics: 0
   culture: 0
   religion: 0
