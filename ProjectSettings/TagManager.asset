@@ -10,6 +10,7 @@ TagManager:
   - AlienCard
   - DeleteZone
   - AlienOnEarch
+  - cardplace
   layers:
   - Default
   - TransparentFX

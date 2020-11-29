@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class CardManager : MonoBehaviour
     [SerializeField] private GameObject[] cards;
     [SerializeField] private CardMvmt CM;
     public List<GameObject> deck = new List<GameObject>();
+
+    public Text cardCount;
 
     private float Posy = -3.7f;
     private float midPosx = -6f;
@@ -43,8 +46,22 @@ public class CardManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        int cardNum = 10;
+        for (int i = 0; i < deck.Count; i++)
+        {
+            if (deck[i] == null)
+            {
+                cardNum--;
+            }
+        }
+        cardCount.text = cardNum + "/10";
+    }
+
     public bool SendCard(float influencePol, float influenceRel, float influenceCol, float influenceTech)
     {
+        
         int dealIndex = 0;
         bool candeal = false;
         for (int i = 0; i < deck.Count; i++)
@@ -59,6 +76,7 @@ public class CardManager : MonoBehaviour
 
         if (candeal)
         {
+            
             //random here
             int num = Random.Range(0, 3);
             if(num == 0)//alien 
@@ -136,7 +154,7 @@ public class CardManager : MonoBehaviour
         newCard.GetComponent<CardReader>().loadCardScriptableObj(influencePol, influenceRel, influenceCol, influenceTech);
                                                 //float sourcePol, float sourceRel, float sourceCol, float sourceTech
 
-        newCard.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
+        newCard.transform.SetParent(GameObject.FindGameObjectWithTag("cardplace").transform);
         newCard.transform.localScale = new Vector3(newCard.transform.localScale.x*.1f, newCard.transform.localScale.y * .1f, newCard.transform.localScale.z * .1f);
         deck[index] = newCard;
 
@@ -146,7 +164,7 @@ public class CardManager : MonoBehaviour
     {
         int randnum = 0;
         GameObject newCard = Instantiate(cards[randnum], new Vector2(cardSpawnPos.x, cardSpawnPos.y), Quaternion.identity);
-        newCard.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
+        newCard.transform.SetParent(GameObject.FindGameObjectWithTag("cardplace").transform);
         newCard.transform.localScale = new Vector3(newCard.transform.localScale.x * .1f, newCard.transform.localScale.y * .1f, newCard.transform.localScale.z * .1f);
         deck[index] = newCard;
     }

@@ -16,7 +16,7 @@ public class CardReader : MonoBehaviour
     public GameObject reliIcon;
     public GameObject poliIcon;
     public Text description;
-
+    public GameObject stealthIcon;
     public bool isConti;
 
     public int poliVal;
@@ -122,6 +122,11 @@ public class CardReader : MonoBehaviour
         else
         {
             backGround.sprite = normalBack;
+        }
+
+        if (card.discovRate < 0)
+        {
+            stealthIcon.SetActive(true);
         }
 
         poliVal = card.poliVal;

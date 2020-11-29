@@ -99,7 +99,7 @@ public class ContinentScript : MonoBehaviour
 		}
 	}
 
-    private void OnMouseDown()
+    /*private void OnMouseDown()
 	{
 		continentInfo.text = "\nPolitic: " + (int)pol_cont + "%" + 
 							 "\nCultural: " + (int)cul_cont + "%" +
@@ -115,7 +115,7 @@ public class ContinentScript : MonoBehaviour
 	private void OnMouseExit()
 	{
 		continentInfo.text = "";
-	}
+	}*/
 
 	public void CalculateIindividualDots()
 	{
