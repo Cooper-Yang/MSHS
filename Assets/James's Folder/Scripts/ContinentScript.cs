@@ -101,10 +101,10 @@ public class ContinentScript : MonoBehaviour
 
     private void OnMouseDown()
 	{
-		continentInfo.text = "\nPolitic: " + (int)pol_cont/ 100 + "%" + 
-							 "\nCultural: " + (int)cul_cont/ 100 + "%" +
-							 "\nReligious: " + (int)rel_cont/ 100 + "%" +
-							 "\nTechnical: " + (int)tech_cont/ 100 + "%";
+		continentInfo.text = "\nPolitic: " + (int)pol_cont + "%" + 
+							 "\nCultural: " + (int)cul_cont + "%" +
+							 "\nReligious: " + (int)rel_cont + "%" +
+							 "\nTechnical: " + (int)tech_cont + "%";
 	}
 
 	private void OnMouseUpAsButton()
@@ -133,19 +133,23 @@ public class ContinentScript : MonoBehaviour
 			{
 				if (aS.myDots[i].name == "pol dot(Clone)")
 				{
-					pol_cont += aS.radius * pol_tendency;
+					//pol_cont += aS.radius * pol_tendency;
+					pol_cont += 0.75f;
 				}
 				else if (aS.myDots[i].name == "cul dot(Clone)")
 				{
-					cul_cont += aS.radius * cul_tendency;
+					//cul_cont += aS.radius * cul_tendency;
+					cul_cont += 0.75f;
 				}
 				else if (aS.myDots[i].name == "rel dot(Clone)")
 				{
-					rel_cont += aS.radius * rel_tendency;
+					//rel_cont += aS.radius * rel_tendency;
+					rel_cont += 0.75f;
 				}
 				else if (aS.myDots[i].name == "tech dot(Clone)")
 				{
-					tech_cont += aS.radius * tech_tendency;
+					//tech_cont += aS.radius * tech_tendency;
+					tech_cont += 0.75f;
 				}
 			}
 		}
