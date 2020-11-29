@@ -196,7 +196,12 @@ public class ContinentScript : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-		collidedCard = collision;
+		if (collision.gameObject.CompareTag("AlienCard")|| collision.gameObject.CompareTag("EffectCard"))
+		{
+			collidedCard = collision;
+			print("collision staying with conti");
+		}
+		
 	}
 
     private void OnCollisionExit2D(Collision2D collision)
