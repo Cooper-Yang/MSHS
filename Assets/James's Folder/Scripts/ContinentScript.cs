@@ -101,11 +101,10 @@ public class ContinentScript : MonoBehaviour
 
     private void OnMouseDown()
 	{
-		continentInfo.text = "Aliens: " + 
-							 "\nPol Ctrl: " + pol_cont + 
-							 "\nCul Ctrl: " + cul_cont +
-							 "\nRel Ctrl: " + rel_cont +
-							 "\nTech Ctrl: " + tech_cont;
+		continentInfo.text = "\nPolitic: " + (int)pol_cont + "%" + 
+							 "\nCultural: " + (int)cul_cont + "%" +
+							 "\nReligious: " + (int)rel_cont + "%" +
+							 "\nTechnical: " + (int)tech_cont + "%";
 	}
 
 	private void OnMouseUpAsButton()
@@ -134,19 +133,23 @@ public class ContinentScript : MonoBehaviour
 			{
 				if (aS.myDots[i].name == "pol dot(Clone)")
 				{
-					pol_cont += aS.radius * pol_tendency;
+					//pol_cont += aS.radius * pol_tendency;
+					pol_cont += 0.75f;
 				}
 				else if (aS.myDots[i].name == "cul dot(Clone)")
 				{
-					cul_cont += aS.radius * cul_tendency;
+					//cul_cont += aS.radius * cul_tendency;
+					cul_cont += 0.75f;
 				}
 				else if (aS.myDots[i].name == "rel dot(Clone)")
 				{
-					rel_cont += aS.radius * rel_tendency;
+					//rel_cont += aS.radius * rel_tendency;
+					rel_cont += 0.75f;
 				}
 				else if (aS.myDots[i].name == "tech dot(Clone)")
 				{
-					tech_cont += aS.radius * tech_tendency;
+					//tech_cont += aS.radius * tech_tendency;
+					tech_cont += 0.75f;
 				}
 			}
 		}
@@ -301,10 +304,39 @@ public class ContinentScript : MonoBehaviour
             randy = Random.Range(thisbound.min.y, thisbound.max.y);
 
         }
+		bool overlap = true;
+		int repeatTime = 0;
+
+		if (myAliens.Count > 0)
+		{
+			while (overlap && repeatTime < 10000)
+			{
+				randx = Random.Range(thisbound.min.x, thisbound.max.x);
+				randy = Random.Range(thisbound.min.y, thisbound.max.y);
+
+				for (int i = 0; i < myAliens.Count; i++)
+				{
+
+					if (Vector2.Distance(myAliens[i].transform.position, new Vector2(randx, randy)) < 0.3)
+					{
+						overlap = true;
+						break;
+					}
+					else
+						overlap = false;
+				}
+
+				if (!contiCollider.OverlapPoint(new Vector2(randx, randy)))
+				{
+					overlap = true;
+				}
+				repeatTime++;
+
+			}
+		}
 
 
-
-        posx = randx;
+		posx = randx;
 		posy = randy;
 
 		GameObject otherCard = collision.gameObject;
