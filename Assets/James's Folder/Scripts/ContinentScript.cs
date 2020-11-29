@@ -300,10 +300,39 @@ public class ContinentScript : MonoBehaviour
             randy = Random.Range(thisbound.min.y, thisbound.max.y);
 
         }
+		bool overlap = true;
+		int repeatTime = 0;
+
+		if (myAliens.Count > 0)
+		{
+			while (overlap && repeatTime < 10000)
+			{
+				randx = Random.Range(thisbound.min.x, thisbound.max.x);
+				randy = Random.Range(thisbound.min.y, thisbound.max.y);
+
+				for (int i = 0; i < myAliens.Count; i++)
+				{
+
+					if (Vector2.Distance(myAliens[i].transform.position, new Vector2(randx, randy)) < 0.3)
+					{
+						overlap = true;
+						break;
+					}
+					else
+						overlap = false;
+				}
+
+				if (!contiCollider.OverlapPoint(new Vector2(randx, randy)))
+				{
+					overlap = true;
+				}
+				repeatTime++;
+
+			}
+		}
 
 
-
-        posx = randx;
+		posx = randx;
 		posy = randy;
 
 		GameObject otherCard = collision.gameObject;
