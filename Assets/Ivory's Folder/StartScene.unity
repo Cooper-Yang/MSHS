@@ -10159,9 +10159,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "- Effect Cards alter the highlighted Influence Level or Health of an Active
+  m_Text: "- Effect Cards alter the highlighted Influence Level, Health of an Active
     Duty Alien. \r\n- Effect Cards of each field are gained based on the Active Duty
-    Alien\u2019s Influence Level in each field.\r\n"
+    Alien\u2019s Influence Level in each field.\r\n\n- Some Effect Cards can alter
+    the Exposure Level."
 --- !u!222 &1762551760
 CanvasRenderer:
   m_ObjectHideFlags: 0
