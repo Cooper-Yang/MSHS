@@ -725,8 +725,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.18, y: -6.18}
-  m_SizeDelta: {x: 130.50525, y: 121.932144}
+  m_AnchoredPosition: {x: 0, y: -7.05}
+  m_SizeDelta: {x: 107.49, y: 98.798965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &114163202
 Canvas:
@@ -1062,7 +1062,8 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: '- To win the game, reach the maximum Total Influence Level in any of the
-    four fields
+    four fields.
+
 
     - Total Influence Levels are shown beside the map.'
 --- !u!222 &203757158
@@ -1959,8 +1960,8 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "- The Active Duty Aliens\u2019 local influence is shown through colored
-    dots surrounding them.\n- The dots\u2019 color corresponds to the color of the
-    field of Influence. \n"
+    dots surrounding them.\n\n- The dots\u2019 color corresponds to the color of
+    the field of Influence. \n"
 --- !u!222 &489078120
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2282,7 +2283,7 @@ GameObject:
   - component: {fileID: 569613731}
   - component: {fileID: 569613730}
   m_Layer: 5
-  m_Name: exposurepic
+  m_Name: exposurepic1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2863,7 +2864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.33, y: -5.91}
+  m_AnchoredPosition: {x: 0, y: -6.6}
   m_SizeDelta: {x: 211.68677, y: 117.29323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &785629930
@@ -3901,6 +3902,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '- Each alien has different Influence Levels.
 
+
     - An alien with a high
     Influence Level in a field will contribute more to the Total Influence Level
     of that field.'
@@ -4306,8 +4308,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.763, y: 3.445}
-  m_SizeDelta: {x: 954.1814, y: 224.2879}
+  m_AnchoredPosition: {x: -6.8, y: 3.445}
+  m_SizeDelta: {x: 1030.4106, y: 224.2879}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1333201825
 Canvas:
@@ -4362,10 +4364,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "- Alien Cards are spies following your command. \n- Each Alien Card has
-    different Levels of Influence in the four fields, as well as a different maximum
-    Health. \n- Drag the Alien Card onto any 1 of the 6 continents to send them on
-    active duty."
+  m_Text: "- Alien Cards are spies following your command. \n\n- Each Alien Card
+    has different Levels of Influence in the four fields, as well as a different
+    maximum Health. \n\n- Drag the Alien Card onto any 1 of the 6 continents to send
+    them on active duty."
 --- !u!222 &1333201827
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9259,7 +9261,7 @@ RectTransform:
   m_LocalScale: {x: 0.025310287, y: 0.025310287, z: 0}
   m_Children: []
   m_Father: {fileID: 1795641771}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9319,7 +9321,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "- Each time you play a card, the Exposure Level increases. \n- If the
+  m_Text: "- Each time you play a card, the Exposure Level increases. \n\n- If the
     Exposure Level reaches its maximum, Homo sapiens uncover the invasion plan, and
     you lose the game."
 --- !u!222 &1407134009
@@ -9614,7 +9616,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "- Once an Alien Card is played onto a continent, it will begin affecting
-    the continent based on the alien\u2019s Influence Levels.\n- Every round, the
+    the continent based on the alien\u2019s Influence Levels.\n\n- Every round, the
     alien will lose 1 Health. When its Health runs out, the alien dies. \n"
 --- !u!222 &1690217857
 CanvasRenderer:
@@ -10101,8 +10103,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.763, y: 3.445}
-  m_SizeDelta: {x: 954.1814, y: 224.2879}
+  m_AnchoredPosition: {x: -6.85, y: 3.445}
+  m_SizeDelta: {x: 1026.1757, y: 224.2879}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1762551758
 Canvas:
@@ -10297,6 +10299,7 @@ Transform:
   m_LocalScale: {x: 35, y: 35, z: 0}
   m_Children:
   - {fileID: 569613729}
+  - {fileID: 1952747525}
   - {fileID: 2053084230}
   - {fileID: 1407134006}
   m_Father: {fileID: 1732683108}
@@ -10530,6 +10533,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '- Click on the alien to view its current Influence Levels and Health.
 
+
     -
     Every 3 rounds, the alien is ready to report back to you. Click on the alien
     to gain a random card.'
@@ -10660,8 +10664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.051, y: 1.815}
-  m_SizeDelta: {x: 139.03598, y: 106.69281}
+  m_AnchoredPosition: {x: 13.104, y: 1.815}
+  m_SizeDelta: {x: 129.10562, y: 106.69281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1904128312
 Canvas:
@@ -10681,7 +10685,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -2052665377
+  m_SortingLayerID: 1268665105
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1904128313
@@ -10820,6 +10824,102 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917168692}
+  m_CullTransparentMesh: 0
+--- !u!1 &1952747524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952747525}
+  - component: {fileID: 1952747528}
+  - component: {fileID: 1952747527}
+  - component: {fileID: 1952747526}
+  m_Layer: 5
+  m_Name: exposurepic2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1952747525
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952747524}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.075, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1795641771}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -17.12, y: -5.833}
+  m_SizeDelta: {x: 73.38129, y: 44.806847}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &1952747526
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952747524}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 1268665105
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &1952747527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952747524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e5580258a5b261c4d84cc9ea4e135f02, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1952747528
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952747524}
   m_CullTransparentMesh: 0
 --- !u!1 &2007896605
 GameObject:
@@ -11010,8 +11110,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '- Each time you play a card, a round passes.
 
+
     - Each round, all Active
     Duty Aliens lose 1 Health.
+
 
     - Each round, the Total Influence Level of each
     field changes based on Active Duty Aliens on the map and their own Influence
@@ -11055,7 +11157,7 @@ RectTransform:
   m_LocalScale: {x: 0.025310287, y: 0.025310287, z: 0}
   m_Children: []
   m_Father: {fileID: 1795641771}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11240,8 +11342,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.01, y: -5.35}
-  m_SizeDelta: {x: 144.37924, y: 124.771835}
+  m_AnchoredPosition: {x: 0, y: -6.454}
+  m_SizeDelta: {x: 140.33405, y: 111.62511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2058882632
 Canvas:
