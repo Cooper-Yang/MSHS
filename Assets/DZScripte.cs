@@ -36,12 +36,13 @@ public class DZScripte : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.tag);
+        
         isOnImage = true;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        
         isOnImage = false;
     }
 

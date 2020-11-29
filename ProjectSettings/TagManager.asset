@@ -9,6 +9,7 @@ TagManager:
   - EffectCard
   - AlienCard
   - DeleteZone
+  - AlienOnEarch
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - 
   - SuperUI
-  - 
+  - UI_alien
   - 
   - 
   - 

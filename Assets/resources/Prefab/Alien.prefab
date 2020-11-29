@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8946732355595075162}
   - component: {fileID: 6250457061422859535}
   - component: {fileID: 576490783190448676}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: techbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 8466667661055783443}
   - component: {fileID: 9069930982056405899}
   - component: {fileID: 8796897997746290085}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: closebutton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 1365574970051242415}
   - component: {fileID: 4139817207416001566}
   - component: {fileID: 763212425321964932}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 610947135914907488}
   - component: {fileID: 7736061308771441466}
   - component: {fileID: 106017522052483591}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 7534814124681960457}
   - component: {fileID: 176642937104460554}
   - component: {fileID: 6812987959017862271}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: religionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 8554293859016036451}
   - component: {fileID: 8239627689314393550}
   - component: {fileID: 2188463144479573954}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: politicsbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 5903629537687879932}
   - component: {fileID: 8118037072059830069}
   - component: {fileID: 1115033853092966482}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: lifespan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 8553567816322105498}
   - component: {fileID: 8943830489373547966}
   - component: {fileID: 5120100125579228292}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: culticon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 2738183908008006925}
   - component: {fileID: 2578580533855579712}
   - component: {fileID: 3731568003591794781}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: greybar2rel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 1145923215347689037}
   - component: {fileID: 4156133027066662003}
   - component: {fileID: 8888611760256024101}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: religionbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -834,7 +834,7 @@ GameObject:
   - component: {fileID: 8228916430441095478}
   - component: {fileID: 4517467429868184856}
   - component: {fileID: 340187901738077736}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: culturebar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 8444439135579900803}
   - component: {fileID: 9114554991766667450}
   - component: {fileID: 3035930589498680733}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: greybarpol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +982,7 @@ GameObject:
   - component: {fileID: 526988822673943582}
   - component: {fileID: 343048987637533664}
   - component: {fileID: 2201003550913389250}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: uiforeground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 904564982247804516}
   - component: {fileID: 7417396201649685504}
   - component: {fileID: 4327197742813962976}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: politicsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 4177461265879167052}
   - component: {fileID: 1026721720185401880}
   - component: {fileID: 380844899836703902}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cultureText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1212,7 +1212,7 @@ GameObject:
   - component: {fileID: 1122072461294745612}
   - component: {fileID: 8757959857709228764}
   - component: {fileID: 6907063446354033332}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: techText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1290,7 +1290,7 @@ GameObject:
   - component: {fileID: 5146664471542472265}
   - component: {fileID: 5146664471542472271}
   - component: {fileID: 5146664471542472264}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1365,7 @@ GameObject:
   - component: {fileID: 5146664471690531300}
   - component: {fileID: 5146664471690531306}
   - component: {fileID: 5146664471690531307}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: pol up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1439,7 +1439,7 @@ GameObject:
   - component: {fileID: 5146664471766214190}
   - component: {fileID: 5146664471766214188}
   - component: {fileID: 5146664471766214189}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1526,9 +1526,9 @@ GameObject:
   - component: {fileID: 5146664472099454687}
   - component: {fileID: 1935105074}
   - component: {fileID: 7606063965964787733}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Alien
-  m_TagString: Untagged
+  m_TagString: AlienOnEarch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1808,7 +1808,7 @@ GameObject:
   - component: {fileID: 5146664472818486693}
   - component: {fileID: 5146664472818486699}
   - component: {fileID: 5146664472818486692}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: cul up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1882,7 +1882,7 @@ GameObject:
   - component: {fileID: 5146664473035648724}
   - component: {fileID: 5146664473035648730}
   - component: {fileID: 5146664473035648731}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: rel up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1956,7 +1956,7 @@ GameObject:
   - component: {fileID: 5146664473134349886}
   - component: {fileID: 5146664473134349884}
   - component: {fileID: 5146664473134349885}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: tech up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2030,7 +2030,7 @@ GameObject:
   - component: {fileID: 2389525520862949758}
   - component: {fileID: 3818861953496441963}
   - component: {fileID: 4849420841738177625}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: relicon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2106,7 +2106,7 @@ GameObject:
   - component: {fileID: 245193830388466047}
   - component: {fileID: 1367297340497233612}
   - component: {fileID: 7035707931911604644}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: greybar1tech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2180,7 +2180,7 @@ GameObject:
   - component: {fileID: 4683412005027308322}
   - component: {fileID: 3166149201189394872}
   - component: {fileID: 6673300477146939695}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: greybar3cul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2254,7 +2254,7 @@ GameObject:
   - component: {fileID: 3725711683218571599}
   - component: {fileID: 7967317942276788190}
   - component: {fileID: 2503331501519027677}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: ageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2335,7 +2335,7 @@ GameObject:
   - component: {fileID: 2220819341359358989}
   - component: {fileID: 7881618836898723504}
   - component: {fileID: 4997599067574167477}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: policon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2411,7 +2411,7 @@ GameObject:
   - component: {fileID: 5756527268261205764}
   - component: {fileID: 5710731277963843080}
   - component: {fileID: 8922136575287678136}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2485,7 +2485,7 @@ GameObject:
   - component: {fileID: 504973213860533158}
   - component: {fileID: 3301731807888593060}
   - component: {fileID: 1686694255006205333}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: currentage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2563,7 +2563,7 @@ GameObject:
   - component: {fileID: 2137110485896950444}
   - component: {fileID: 3663213224674728039}
   - component: {fileID: 2946542884701670790}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2641,7 +2641,7 @@ GameObject:
   - component: {fileID: 2754302101851759057}
   - component: {fileID: 835718087135520372}
   - component: {fileID: 5457032041215973365}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: /
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2721,7 +2721,7 @@ GameObject:
   - component: {fileID: 7386137334800215789}
   - component: {fileID: 2763289791657201458}
   - component: {fileID: 3167733053671963896}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: infoMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2842,7 +2842,7 @@ GameObject:
   - component: {fileID: 9064672104254105404}
   - component: {fileID: 2916773461790312643}
   - component: {fileID: 2046535996107524498}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: techicon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
