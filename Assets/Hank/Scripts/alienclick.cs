@@ -39,7 +39,16 @@ public class alienclick : MonoBehaviour
                 AudioManager._instance.DealCard();
             }
             else
-            gameObject.GetComponent<alienpercentage>().percent = 100;//if not then keep the card at 100 percent
+            {
+                gameObject.GetComponent<alienpercentage>().percent = 100;//if not then keep the card at 100 percent
+                if (panel != null)
+                {
+                    AudioManager._instance.ClickOnAliens();
+                    transform.SetAsLastSibling();
+                    panel.SetActive(true);
+                }
+            }
+            
         }
      
     }
