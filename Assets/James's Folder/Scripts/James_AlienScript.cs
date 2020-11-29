@@ -43,7 +43,7 @@ public class James_AlienScript : MonoBehaviour
 	public GameObject techVfxIcon;
 
 	// for using effect card on a single alien
-	public static Collision2D collidedCard;
+	public static GameObject collidedCard;
 	public Sprite glowSp;
 	public Sprite ogSp;
 	public bool glowPls;
@@ -88,7 +88,16 @@ public class James_AlienScript : MonoBehaviour
 
 	private void Update()
 	{
-		
+		if (collidedCard != null)
+		{
+			print("collidedCard name: " + collidedCard.gameObject.name);
+			//print("pos: " + collidedCard.gameObject.transform.position);
+			if (collidedCard.gameObject.name == "Alien(Clone)")
+			{
+				print(collidedCard.gameObject.transform.position);
+				collidedCard = null;
+			}
+		}
 		currentage.text = lifeSpan.ToString();
 
 		if (GameManager.me.state == GameManager.me.game_screen)
@@ -96,17 +105,13 @@ public class James_AlienScript : MonoBehaviour
 			alienLifeDeath(); //control the life span (and generate dots)
 			if (targetingMe)
 			{
-				
 				if (Input.GetMouseButtonUp(0))
 				{
-					Debug.Log(collidedCard.gameObject == null);
-					collidedCard.gameObject.GetComponent<CardMvmt>().enabled = false;
 					AffectSingleAlien(collidedCard);
 				}
 			}
 			Glow();
 		}
-		
 	}
 
 	// Glow ctrl
@@ -230,6 +235,10 @@ public class James_AlienScript : MonoBehaviour
 
 	public IEnumerator NumberChangedVFX(float pol, float cul, float rel, float tech) // input change amount
 	{
+		print(pol);
+		print(cul);
+		print(rel);
+		print(tech);
 		// show the corresponding icons
 		if (pol > 0)
 		{
@@ -271,7 +280,7 @@ public class James_AlienScript : MonoBehaviour
 			techVfxIcon.transform.localScale = new Vector3(1, -1, 1);
 			techVfxIcon.SetActive(true);
 		}
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(5);
 		// hide all icons
 		polVfxIcon.SetActive(false);
 		culVfxIcon.SetActive(false);
@@ -317,44 +326,60 @@ public class James_AlienScript : MonoBehaviour
 		}
 	}
 
-	/*private void OnCollisionEnter2D(Collision2D collision)
+	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "EffectCard")
-		{
-			glowPls = true;
-			collidedCard = collision;
-			targetingMe = true;
-			
-		}
-		
-	}*/
+		//if (collision.gameObject.name != gameObject.name &&
+		//	collision.gameObject.layer != 9 &&
+		//	collision.gameObject.CompareTag("EffectCard"))
+		//{
+		//	glowPls = true;
+		//	collidedCard = collision;
+		//	targetingMe = true;
+		//	print("collided card set to: " + collision.gameObject.name);
+		//}
+		//else
+		//{
+		//	print(collision.gameObject.name);
+		//}
+	}
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-		if (collision.gameObject.tag == "EffectCard")
-		{
-			glowPls = true;
-			collidedCard = collision;
-			targetingMe = true;
-		}
+		//Debug.Log("collision Stay with: " + collision.gameObject.tag);
+
+		//if (collision.gameObject.name != gameObject.name &&
+		//	collision.gameObject.layer != 9 &&
+		//	collision.gameObject.CompareTag("EffectCard") &&
+		//	!collision.gameObject.GetComponent<CardReader>().isConti)
+		//{
+		//	glowPls = true;
+		//	collidedCard = collision;
+		//	if (collision.gameObject.CompareTag("AlienOnEarch"))
+		//	{
+		//		print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		//	}
+		//	print("collision.gO.name: " + collision.gameObject.name);
+		//	print("collided card set to: " + collision.gameObject.name);
+		//	targetingMe = true;
+		//}
 	}
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-		if (collision.gameObject.tag == "EffectCard")
+		if (collision.gameObject.CompareTag("EffectCard"))
 		{
 			glowPls = false;
 			StartCoroutine(WaitThenReset());
 		}
-		
+
 	}
 
-	private void AffectSingleAlien(Collision2D collision)
+	private void AffectSingleAlien(GameObject collision)
     {
-		if (collision.gameObject.tag == "EffectCard")
+		//TurnsManager._instance.nextTurn();
+		if (collision.gameObject.CompareTag("EffectCard"))
 		{
 			// apply effects to this alien
-			Debug.Log("apply effects to this alien");
 			GameObject otherCard = collision.gameObject;
 			CardReader cR = otherCard.GetComponent<CardReader>();
 			pol_Influence += cR.poliVal;
@@ -369,13 +394,22 @@ public class James_AlienScript : MonoBehaviour
 			StartCoroutine(NumberChangedVFX(cR.poliVal, cR.culVal, cR.reliVal, cR.techVal));
 			Destroy(collision.gameObject);
 		}
+		else
+		{
+			print("tag: "+collision.gameObject.tag);
+			print("game object.name: "+collision.gameObject.name);
+		}
 	}
 
 	private IEnumerator WaitThenReset()
     {
-		Debug.Log("wait then reset");
 		yield return new WaitForEndOfFrame();
 		targetingMe = false;
-		//collidedCard = null;
+		collidedCard = null;
+	}
+
+	public void SetCollidedCard(GameObject card)
+	{
+		collidedCard = card;
 	}
 }

@@ -196,7 +196,12 @@ public class ContinentScript : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-		collidedCard = collision;
+		if (collision.gameObject.CompareTag("AlienCard")|| collision.gameObject.CompareTag("EffectCard"))
+		{
+			collidedCard = collision;
+			print("collision staying with conti");
+		}
+		
 	}
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -245,11 +250,14 @@ public class ContinentScript : MonoBehaviour
             //probly a conti hold a list of alien? works with line 10 probly
             foreach (var alien in myAliens)
             {
+				print("conti effect card used");
 				James_AlienScript ja = alien.GetComponent<James_AlienScript>();
+				
 				ja.pol_Influence += cR.poliVal;
 				ja.cul_Influence += cR.culVal;
 				ja.rel_Influence += cR.reliVal;
 				ja.tech_Influence += cR.techVal;
+				StartCoroutine(ja.NumberChangedVFX(cR.poliVal, cR.culVal, cR.reliVal, cR.techVal));
 				ja.lifeSpan += cR.lifeVal;
 			}
 		}

@@ -9,6 +9,7 @@ TagManager:
   - EffectCard
   - AlienCard
   - DeleteZone
+  - AlienOnEarch
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - 
   - SuperUI
-  - 
+  - UI_alien
   - 
   - 
   - 
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: infrontofphasebg
     uniqueID: 2242301919
+    locked: 0
+  - name: 3
+    uniqueID: 1268665105
     locked: 0

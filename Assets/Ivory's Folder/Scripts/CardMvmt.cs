@@ -95,7 +95,6 @@ public class CardMvmt : MonoBehaviour
             // if close to any of the aliens, the closer it gets the smaller it is
             if (gameObject.tag == "EffectCard" && !GetComponent<CardReader>().isConti) // if im a non conti effect card
             {
-                
                 float shortestDis = 1000;
                 foreach (var alien in GameManager.me.aliens)
                 {
@@ -111,10 +110,31 @@ public class CardMvmt : MonoBehaviour
                 
             }
         }
-
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.CompareTag("AlienOnEarch"))
+		{
+            print("collision entered");
+            collision.gameObject.GetComponent<James_AlienScript>().SetCollidedCard(gameObject);
+            collision.gameObject.GetComponent<James_AlienScript>().glowPls = true;
+            collision.gameObject.GetComponent<James_AlienScript>().targetingMe = true;
+        }
+    }
+
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+        if (collision.gameObject.CompareTag("AlienOnEarch"))
+        {
+            //print("collision exited");
+            //collision.gameObject.GetComponent<James_AlienScript>().SetCollidedCard(null);
+            //collision.gameObject.GetComponent<James_AlienScript>().glowPls = false;
+            //collision.gameObject.GetComponent<James_AlienScript>().targetingMe = false;
+        }
+    }
+
+	public void OnPointerEnter(PointerEventData eventData)
     {
         cA.OnCard();
         if (dragging == false)
