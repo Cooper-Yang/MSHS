@@ -42,7 +42,7 @@ public class CardReader : MonoBehaviour
         //random
         float influenceAll = influencePol + influenceRel + influenceCol + influenceTech;
         float num = Random.value;
-        if(num < influencePol/influenceAll)//politics
+        /*if(num < influencePol/influenceAll)//politics
         {
             card = CardHolder._instance.politicDeckLevelOne[Random.Range(0, CardHolder._instance.politicDeckLevelOne.Count)];
         }
@@ -55,6 +55,23 @@ public class CardReader : MonoBehaviour
             card = CardHolder._instance.cultureDeckLevelOne[Random.Range(0, CardHolder._instance.cultureDeckLevelOne.Count)];
         }
         else if(num< influencePol / influenceAll + influenceRel / influenceAll + influenceCol / influenceAll + influenceTech / influenceAll)//technology
+        {
+            card = CardHolder._instance.technologyDeckLevelOne[Random.Range(0, CardHolder._instance.technologyDeckLevelOne.Count)];
+        }*/
+
+        if (num < 25)//politics
+        {
+            card = CardHolder._instance.politicDeckLevelOne[Random.Range(0, CardHolder._instance.politicDeckLevelOne.Count)];
+        }
+        else if (num >=25 && num <50)//religion
+        {
+            card = CardHolder._instance.religionDeckLevelOne[Random.Range(0, CardHolder._instance.religionDeckLevelOne.Count)];
+        }
+        else if (num >= 50 && num < 75)//culture
+        {
+            card = CardHolder._instance.cultureDeckLevelOne[Random.Range(0, CardHolder._instance.cultureDeckLevelOne.Count)];
+        }
+        else if (num >= 75 && num < 100)//technology
         {
             card = CardHolder._instance.technologyDeckLevelOne[Random.Range(0, CardHolder._instance.technologyDeckLevelOne.Count)];
         }
