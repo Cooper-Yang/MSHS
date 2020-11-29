@@ -46,3 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: infrontofparticle
+    uniqueID: 1820548649
+    locked: 0
+  - name: infrontofphasebg
+    uniqueID: 2242301919
+    locked: 0
