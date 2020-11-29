@@ -6,13 +6,18 @@ public class CardManager : MonoBehaviour
 {
     public static CardManager me;
 
+    public static int polIndRan = -1;
+    public static int culIndRan = -1;
+    public static int tecIndRan = -1;
+    public static int relIndRan = -1;
+
     //[SerializeField] private GameObject card;
     [SerializeField] private GameObject[] cards;
     [SerializeField] private CardMvmt CM;
     public List<GameObject> deck = new List<GameObject>();
 
     private float Posy = -3.7f;
-    private float midPosx = -7f;
+    private float midPosx = -6f;
     //private float mid2Posx = -0.5f;
 
     private Vector2 cardSpawnPos;

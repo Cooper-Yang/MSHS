@@ -23,11 +23,11 @@ MonoBehaviour:
   politics: 0
   culture: 0
   religion: 0
-  technology: 0
+  technology: 1
   poliVal: 0
   culVal: 0
   reliVal: 0
-  techVal: 0
+  techVal: 5
   genVal: 0.25
   discovRate: 2
   lifeVal: 0
