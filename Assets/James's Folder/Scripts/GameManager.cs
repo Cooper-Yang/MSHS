@@ -8,6 +8,12 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager me;
 
+    public GameObject canvas;
+    public GameObject trash;
+    public GameObject summon;
+    public GameObject news;
+    public GameObject cards;
+
     public float world_interval;
     public GameObject politicDotPrefab;
     public GameObject religionDotPrefab;
@@ -155,29 +161,35 @@ public class GameManager : MonoBehaviour
 			}
             if (culDefeat)
 			{
-                ending_ugui.text = culDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + "turns.";
+                ending_ugui.text = culDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + " turns.\nPress R to Restart.";
             }
             else if (relDefeat)
 			{
-                ending_ugui.text = relDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + "turns.";
+                ending_ugui.text = relDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + " turns.\nPress R to Restart.";
             }
             else if (polDefeat)
             {
-                ending_ugui.text = polDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + "turns.";
+                ending_ugui.text = polDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + " turns.\nPress R to Restart.";
             }
             else if (techDefeat)
             {
-                ending_ugui.text = techDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + "turns.";
+                ending_ugui.text = techDefeat_text + "\nYour infiltration lasted for " + TurnsManager._instance.turns + " turns.\nPress R to Restart.";
             }
             UGotCaughtByHuman.SetActive(true);
             state = game_over;
 		}
         if (state == game_over)
 		{
+            canvas.SetActive(false);
+            summon.SetActive(false);
+            trash.SetActive(false);
+            news.SetActive(false);
+            cards.SetActive(false);
             if (Input.GetKeyDown(KeyCode.R))
 			{
                 Scene scene = SceneManager.GetActiveScene(); 
                 SceneManager.LoadScene(scene.name);
+
             }
 		}
     }

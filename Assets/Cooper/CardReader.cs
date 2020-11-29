@@ -16,7 +16,7 @@ public class CardReader : MonoBehaviour
     public GameObject reliIcon;
     public GameObject poliIcon;
     public Text description;
-
+    public GameObject stealthIcon;
     public bool isConti;
 
     public int poliVal;
@@ -41,7 +41,8 @@ public class CardReader : MonoBehaviour
     {
         //random
         float influenceAll = influencePol + influenceRel + influenceCol + influenceTech;
-        float num = Random.value;
+        float num = Random.Range(0,101);
+       
         /*if(num < influencePol/influenceAll)//politics
         {
             card = CardHolder._instance.politicDeckLevelOne[Random.Range(0, CardHolder._instance.politicDeckLevelOne.Count)];
@@ -58,23 +59,51 @@ public class CardReader : MonoBehaviour
         {
             card = CardHolder._instance.technologyDeckLevelOne[Random.Range(0, CardHolder._instance.technologyDeckLevelOne.Count)];
         }*/
-
+        print(num);
         if (num < 25)//politics
         {
-            card = CardHolder._instance.politicDeckLevelOne[Random.Range(0, CardHolder._instance.politicDeckLevelOne.Count)];
+            int randIndex = Random.Range(0, CardHolder._instance.politicDeckLevelOne.Count);
+            while(randIndex == CardManager.polIndRan)
+            {
+                randIndex = Random.Range(0, CardHolder._instance.politicDeckLevelOne.Count);
+            }
+            CardManager.polIndRan = randIndex;
+            card = CardHolder._instance.politicDeckLevelOne[randIndex];
+            
         }
         else if (num >=25 && num <50)//religion
         {
-            card = CardHolder._instance.religionDeckLevelOne[Random.Range(0, CardHolder._instance.religionDeckLevelOne.Count)];
+            int randIndex = Random.Range(0, CardHolder._instance.religionDeckLevelOne.Count);
+            while (randIndex == CardManager.relIndRan)
+            {
+                randIndex = Random.Range(0, CardHolder._instance.religionDeckLevelOne.Count);
+            }
+            CardManager.relIndRan = randIndex;
+            card = CardHolder._instance.religionDeckLevelOne[randIndex];
         }
-        else if (num >= 50 && num < 75)//culture
+        else if (num >= 50 && num < 75)//technology
         {
-            card = CardHolder._instance.cultureDeckLevelOne[Random.Range(0, CardHolder._instance.cultureDeckLevelOne.Count)];
+            int randIndex = Random.Range(0, CardHolder._instance.technologyDeckLevelOne.Count);
+            while (randIndex == CardManager.tecIndRan)
+            {
+                randIndex = Random.Range(0, CardHolder._instance.technologyDeckLevelOne.Count);
+            }
+            CardManager.tecIndRan = randIndex;
+            card = CardHolder._instance.technologyDeckLevelOne[randIndex];
+            
         }
-        else if (num >= 75 && num < 100)//technology
+        else if (num >= 75 && num < 100)//culture
         {
-            card = CardHolder._instance.technologyDeckLevelOne[Random.Range(0, CardHolder._instance.technologyDeckLevelOne.Count)];
+            int randIndex = Random.Range(0, CardHolder._instance.cultureDeckLevelOne.Count);
+            while (randIndex == CardManager.culIndRan)
+            {
+                randIndex = Random.Range(0, CardHolder._instance.cultureDeckLevelOne.Count);
+            }
+            CardManager.culIndRan = randIndex;
+            card = CardHolder._instance.cultureDeckLevelOne[randIndex];
         }
+
+        
 
         cardName.text = card.cardName;
         techIcon.SetActive(card.technology);
@@ -93,6 +122,11 @@ public class CardReader : MonoBehaviour
         else
         {
             backGround.sprite = normalBack;
+        }
+
+        if (card.discovRate < 0)
+        {
+            stealthIcon.SetActive(true);
         }
 
         poliVal = card.poliVal;

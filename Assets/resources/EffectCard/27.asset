@@ -21,11 +21,11 @@ MonoBehaviour:
   religionSource: 0
   technologySource: 0
   politics: 0
-  culture: 1
+  culture: 0
   religion: 1
   technology: 0
   poliVal: 0
-  culVal: 10
+  culVal: 0
   reliVal: 15
   techVal: 0
   genVal: 0

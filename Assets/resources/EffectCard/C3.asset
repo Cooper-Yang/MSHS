@@ -27,7 +27,7 @@ MonoBehaviour:
   poliVal: 0
   culVal: 0
   reliVal: -10
-  techVal: 0
+  techVal: 10
   genVal: 0
   discovRate: 5
   lifeVal: 6
