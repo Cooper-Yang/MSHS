@@ -101,11 +101,10 @@ public class ContinentScript : MonoBehaviour
 
     private void OnMouseDown()
 	{
-		continentInfo.text = "Aliens: " + 
-							 "\nPol Ctrl: " + pol_cont + 
-							 "\nCul Ctrl: " + cul_cont +
-							 "\nRel Ctrl: " + rel_cont +
-							 "\nTech Ctrl: " + tech_cont;
+		continentInfo.text = "\nPolitic: " + (int)pol_cont/ 100 + "%" + 
+							 "\nCultural: " + (int)cul_cont/ 100 + "%" +
+							 "\nReligious: " + (int)rel_cont/ 100 + "%" +
+							 "\nTechnical: " + (int)tech_cont/ 100 + "%";
 	}
 
 	private void OnMouseUpAsButton()
