@@ -105,11 +105,8 @@ public class James_AlienScript : MonoBehaviour
 			alienLifeDeath(); //control the life span (and generate dots)
 			if (targetingMe)
 			{
-				 print("targetting me");
 				if (Input.GetMouseButtonUp(0))
 				{
-					print("mouse button up");
-
 					AffectSingleAlien(collidedCard);
 				}
 			}
@@ -238,6 +235,10 @@ public class James_AlienScript : MonoBehaviour
 
 	public IEnumerator NumberChangedVFX(float pol, float cul, float rel, float tech) // input change amount
 	{
+		print(pol);
+		print(cul);
+		print(rel);
+		print(tech);
 		// show the corresponding icons
 		if (pol > 0)
 		{
@@ -279,7 +280,7 @@ public class James_AlienScript : MonoBehaviour
 			techVfxIcon.transform.localScale = new Vector3(1, -1, 1);
 			techVfxIcon.SetActive(true);
 		}
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(5);
 		// hide all icons
 		polVfxIcon.SetActive(false);
 		culVfxIcon.SetActive(false);
@@ -365,7 +366,6 @@ public class James_AlienScript : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-		print(collision.gameObject.tag + " exited");
 		if (collision.gameObject.CompareTag("EffectCard"))
 		{
 			glowPls = false;
@@ -376,12 +376,10 @@ public class James_AlienScript : MonoBehaviour
 
 	private void AffectSingleAlien(GameObject collision)
     {
-		print("affect single alien called");
 		//TurnsManager._instance.nextTurn();
 		if (collision.gameObject.CompareTag("EffectCard"))
 		{
 			// apply effects to this alien
-			Debug.Log("affect single alien called on an effect card");
 			GameObject otherCard = collision.gameObject;
 			CardReader cR = otherCard.GetComponent<CardReader>();
 			pol_Influence += cR.poliVal;
@@ -405,7 +403,6 @@ public class James_AlienScript : MonoBehaviour
 
 	private IEnumerator WaitThenReset()
     {
-		Debug.Log("wait then reset");
 		yield return new WaitForEndOfFrame();
 		targetingMe = false;
 		collidedCard = null;
