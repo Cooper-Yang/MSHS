@@ -43,7 +43,7 @@ public class James_AlienScript : MonoBehaviour
 	public GameObject techVfxIcon;
 
 	// for using effect card on a single alien
-	public Collision2D collidedCard;
+	public static Collision2D collidedCard;
 	public Sprite glowSp;
 	public Sprite ogSp;
 	public bool glowPls;
@@ -94,10 +94,13 @@ public class James_AlienScript : MonoBehaviour
 		if (GameManager.me.state == GameManager.me.game_screen)
 		{
 			alienLifeDeath(); //control the life span (and generate dots)
-			if (Input.GetMouseButtonUp(0))
+			if (targetingMe)
 			{
-				if (targetingMe)
+				
+				if (Input.GetMouseButtonUp(0))
 				{
+					Debug.Log(collidedCard.gameObject == null);
+					collidedCard.gameObject.GetComponent<CardMvmt>().enabled = false;
 					AffectSingleAlien(collidedCard);
 				}
 			}
@@ -314,18 +317,29 @@ public class James_AlienScript : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision)
+	/*private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "EffectCard")
 		{
 			glowPls = true;
 			collidedCard = collision;
 			targetingMe = true;
+			
 		}
 		
+	}*/
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+		if (collision.gameObject.tag == "EffectCard")
+		{
+			glowPls = true;
+			collidedCard = collision;
+			targetingMe = true;
+		}
 	}
 
-	private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
 		if (collision.gameObject.tag == "EffectCard")
 		{
@@ -359,8 +373,9 @@ public class James_AlienScript : MonoBehaviour
 
 	private IEnumerator WaitThenReset()
     {
+		Debug.Log("wait then reset");
 		yield return new WaitForEndOfFrame();
 		targetingMe = false;
-		collidedCard = null;
+		//collidedCard = null;
 	}
 }
