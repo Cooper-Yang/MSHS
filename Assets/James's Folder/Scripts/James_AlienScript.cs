@@ -392,13 +392,13 @@ public class James_AlienScript : MonoBehaviour
 			TurnsManager._instance.nextTurn();
 			targetingMe = false;
 			AudioManager._instance.AfterPlay();
-			StartCoroutine(NumberChangedVFX(cR.poliVal + GameManager.me.buff, cR.culVal + GameManager.me.buff, cR.reliVal + GameManager.me.buff, cR.techVal + GameManager.me.buff));
+			StartCoroutine(NumberChangedVFX(cR.poliVal, cR.culVal, cR.reliVal, cR.techVal));
 			Destroy(collision.gameObject);
 		}
 		else
 		{
-			print("tag: "+collision.gameObject.tag);
-			print("game object.name: "+collision.gameObject.name);
+			//Wprint("tag: "+collision.gameObject.tag);
+			//print("game object.name: "+collision.gameObject.name);
 		}
 	}
 

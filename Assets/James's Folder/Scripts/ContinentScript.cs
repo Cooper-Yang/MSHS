@@ -123,36 +123,55 @@ public class ContinentScript : MonoBehaviour
 		cul_cont = 0;
 		rel_cont = 0;
 		tech_cont = 0;
-		foreach (GameObject alien in myAliens)
+		foreach (var dot in myDots)
 		{
-			if (alien == null)
-				continue;
-			
-			James_AlienScript aS = alien.GetComponent<James_AlienScript>();
-			for (int i = 0; i < aS.myDots.Count; i++)
+			if (dot.name == "pol dot(Clone)")
 			{
-				if (aS.myDots[i].name == "pol dot(Clone)")
-				{
-					//pol_cont += aS.radius * pol_tendency;
-					pol_cont += 0.75f;
-				}
-				else if (aS.myDots[i].name == "cul dot(Clone)")
-				{
-					//cul_cont += aS.radius * cul_tendency;
-					cul_cont += 0.75f;
-				}
-				else if (aS.myDots[i].name == "rel dot(Clone)")
-				{
-					//rel_cont += aS.radius * rel_tendency;
-					rel_cont += 0.75f;
-				}
-				else if (aS.myDots[i].name == "tech dot(Clone)")
-				{
-					//tech_cont += aS.radius * tech_tendency;
-					tech_cont += 0.75f;
-				}
+				pol_cont += GameManager.me.dot_addAmount;
+			}
+			else if (dot.name == "cul dot(Clone)")
+			{
+				cul_cont += GameManager.me.dot_addAmount;
+			}
+			else if (dot.name == "rel dot(Clone)")
+			{
+				rel_cont += GameManager.me.dot_addAmount;
+			}
+			else if (dot.name == "tech dot(Clone)")
+			{
+				tech_cont += GameManager.me.dot_addAmount;
 			}
 		}
+		//foreach (GameObject alien in myAliens)
+		//{
+			//if (alien == null)
+			//	continue;
+			
+			//James_AlienScript aS = alien.GetComponent<James_AlienScript>();
+			//for (int i = 0; i < aS.myDots.Count; i++)
+			//{
+			//	if (aS.myDots[i].name == "pol dot(Clone)")
+			//	{
+			//		//pol_cont += aS.radius * pol_tendency;
+			//		pol_cont += 0.75f;
+			//	}
+			//	else if (aS.myDots[i].name == "cul dot(Clone)")
+			//	{
+			//		//cul_cont += aS.radius * cul_tendency;
+			//		cul_cont += 0.75f;
+			//	}
+			//	else if (aS.myDots[i].name == "rel dot(Clone)")
+			//	{
+			//		//rel_cont += aS.radius * rel_tendency;
+			//		rel_cont += 0.75f;
+			//	}
+			//	else if (aS.myDots[i].name == "tech dot(Clone)")
+			//	{
+			//		//tech_cont += aS.radius * tech_tendency;
+			//		tech_cont += 0.75f;
+			//	}
+			//}
+		//}
 	}
 
 	void ContiGlow()
@@ -257,7 +276,7 @@ public class ContinentScript : MonoBehaviour
 				ja.cul_Influence += cR.culVal + GameManager.me.buff;
 				ja.rel_Influence += cR.reliVal + GameManager.me.buff;
 				ja.tech_Influence += cR.techVal + GameManager.me.buff;
-				StartCoroutine(ja.NumberChangedVFX(cR.poliVal + GameManager.me.buff, cR.culVal + GameManager.me.buff, cR.reliVal + GameManager.me.buff, cR.techVal + GameManager.me.buff));
+				StartCoroutine(ja.NumberChangedVFX(cR.poliVal, cR.culVal, cR.reliVal, cR.techVal));
 				ja.lifeSpan += cR.lifeVal;
 			}
 		}
