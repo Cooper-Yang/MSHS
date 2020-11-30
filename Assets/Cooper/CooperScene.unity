@@ -804,7 +804,7 @@ RectTransform:
   m_Children:
   - {fileID: 392582474}
   m_Father: {fileID: 1882791532}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1261,7 +1261,7 @@ RectTransform:
   m_LocalScale: {x: 0.010292063, y: 0.11475533, z: 0.11475533}
   m_Children: []
   m_Father: {fileID: 1882791532}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 47.921, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1391,16 +1391,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392582473}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.46236777, z: 0, w: 0.8866883}
+  m_LocalPosition: {x: 0, y: 0, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 139300845}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -55.08, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7, y: -326}
+  m_AnchoredPosition: {x: -768, y: -487}
   m_SizeDelta: {x: 301.03546, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &392582475
@@ -3852,7 +3852,7 @@ Transform:
   - {fileID: 845397436}
   - {fileID: 62486491}
   m_Father: {fileID: 1882791532}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &947027771 stripped
 RectTransform:
@@ -4459,7 +4459,7 @@ RectTransform:
   m_Children:
   - {fileID: 1208995070}
   m_Father: {fileID: 1882791532}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -57.605003, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7166,10 +7166,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 534939630}
+  - {fileID: 139300845}
   - {fileID: 943925105}
   - {fileID: 323728343}
   - {fileID: 1147479001}
-  - {fileID: 139300845}
   - {fileID: 16870329}
   m_Father: {fileID: 0}
   m_RootOrder: 3
