@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
 	{
         if (NewsControl.me.culPhase >= 15 )
 		{
-            outL.color = new Color(0,110,0);
+            outL.color = new Color(0,100,0);
             indL.color = new Color(0, 170, 0);
             ending_ugui.text = "You Won.\nOur culture is trending in human society.\nIt took "+ TurnsManager._instance.turns + " turns to prevail.";
             UGotCaughtByHuman.SetActive(true);
@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour
         }
         else if (NewsControl.me.relPhase >= 15)
         {
-            outL.color = new Color(0, 110, 0);
+            outL.color = new Color(0, 100, 0);
             indL.color = new Color(0, 170, 0);
             ending_ugui.text = "You Won.\nWe, the God of human.\nIt took " + TurnsManager._instance.turns + " turns to prevail.";
             UGotCaughtByHuman.SetActive(true);
@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
         }
         else if (NewsControl.me.polPhase >= 15)
         {
-            outL.color = new Color(0, 110, 0);
+            outL.color = new Color(0, 100, 0);
             indL.color = new Color(0, 170, 0);
             ending_ugui.text = "You Won.\nThere are no more politics among human.\nIt took " + TurnsManager._instance.turns + " turns to prevail.";
             UGotCaughtByHuman.SetActive(true);
@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
         }
         else if (NewsControl.me.tecPhase >= 15)
         {
-            outL.color = new Color(0, 110, 0);
+            outL.color = new Color(0, 100, 0);
             indL.color = new Color(0, 170, 0);
             ending_ugui.text = "You Won.\nHumans' inferior technology has proven their imminent defeat.\nIt took " + TurnsManager._instance.turns + " turns to prevail.";
             UGotCaughtByHuman.SetActive(true);
