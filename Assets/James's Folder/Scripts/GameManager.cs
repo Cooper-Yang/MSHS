@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
     public List<GameObject> aliens;
 
 
+    public float dot_addAmount;
+
+
     // state ctrl
     public int state = 0;
     public int splash_screen = 0;

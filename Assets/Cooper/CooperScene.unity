@@ -4910,6 +4910,7 @@ MonoBehaviour:
   rel_gl: 0
   tech_gl: 0
   aliens: []
+  dot_addAmount: 2
   state: 0
   splash_screen: 0
   game_screen: 1
@@ -4930,6 +4931,7 @@ MonoBehaviour:
     disapproval. Humans suspect the source of such unimaginable feats and demand
     an explanation. A group of human scientists traced evidence back to you. You
     are exposed.
+  buff: 10
 --- !u!4 &1251256345
 Transform:
   m_ObjectHideFlags: 0
