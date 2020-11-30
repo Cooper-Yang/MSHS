@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
 	{
         if (NewsControl.me.culPhase >= 15 || NewsControl.me.relPhase >= 15 || NewsControl.me.polPhase >= 15 || NewsControl.me.tecPhase >= 15)
 		{
-            ending_ugui.text = "You Won.";
+            ending_ugui.text = "You Won.\nIt took "+ TurnsManager._instance.turns + " turns.";
             UGotCaughtByHuman.SetActive(true);
             state = game_over;
         }
