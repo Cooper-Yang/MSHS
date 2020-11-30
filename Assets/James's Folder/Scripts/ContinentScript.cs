@@ -253,11 +253,11 @@ public class ContinentScript : MonoBehaviour
 				print("conti effect card used");
 				James_AlienScript ja = alien.GetComponent<James_AlienScript>();
 				
-				ja.pol_Influence += cR.poliVal;
-				ja.cul_Influence += cR.culVal;
-				ja.rel_Influence += cR.reliVal;
-				ja.tech_Influence += cR.techVal;
-				StartCoroutine(ja.NumberChangedVFX(cR.poliVal, cR.culVal, cR.reliVal, cR.techVal));
+				ja.pol_Influence += cR.poliVal + GameManager.me.buff;
+				ja.cul_Influence += cR.culVal + GameManager.me.buff;
+				ja.rel_Influence += cR.reliVal + GameManager.me.buff;
+				ja.tech_Influence += cR.techVal + GameManager.me.buff;
+				StartCoroutine(ja.NumberChangedVFX(cR.poliVal + GameManager.me.buff, cR.culVal + GameManager.me.buff, cR.reliVal + GameManager.me.buff, cR.techVal + GameManager.me.buff));
 				ja.lifeSpan += cR.lifeVal;
 			}
 		}

@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
     [TextArea]
     public string techDefeat_text;
 
+    public int buff;
+
     public enum thingy
 	{
         pol, cul, rel, tech
