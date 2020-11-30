@@ -56,6 +56,7 @@ public class CardHolder : MonoBehaviour
     {
         allCard= Resources.LoadAll("EffectCard", typeof(CardObject)).Cast<CardObject>().ToList();
 
+
         for (int i = 0; i < allCard.Count; i++)
         {
             if (allCard[i].politicsSource)
