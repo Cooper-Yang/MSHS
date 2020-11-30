@@ -28,6 +28,12 @@ public class ContinentScript : MonoBehaviour
 	public bool onStay = false;
 	public Collision2D collidedCard;
 
+	public int stealthBuff;
+
+    private void Start()
+    {
+		stealthBuff = 1;
+    }
 
     private void Update()
     {
@@ -287,7 +293,7 @@ public class ContinentScript : MonoBehaviour
 		}
 
 		//change discover value
-		stealthlv._instance.changeDisValue(cR.discovRate);
+		stealthlv._instance.changeDisValue(cR.discovRate+stealthBuff);
 
 		TurnsManager._instance.nextTurn();
 		//miss +discov here (use + cR.discoverRate) is it still missing? ain't line 186 does the job?
@@ -381,7 +387,7 @@ public class ContinentScript : MonoBehaviour
 
 
 		//change discover value
-		stealthlv._instance.changeDisValue(acp.discoverRate);
+		stealthlv._instance.changeDisValue(acp.discoverRate + stealthBuff);
 
 		//generate alien
 		GameObject aliens = Instantiate(alienPrefab, GameObject.FindGameObjectWithTag("AlienCanvas").transform);
