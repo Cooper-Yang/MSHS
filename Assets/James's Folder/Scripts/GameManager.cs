@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
     public int game_over = 2;
     public int good_ending_screen = 3;
     public GameObject UGotCaughtByHuman;
+    public SpriteRenderer outL;
+    public SpriteRenderer indL;
     public TextMeshProUGUI ending_ugui;
     private bool culDefeat = false;
     private bool polDefeat = false;
@@ -139,9 +141,35 @@ public class GameManager : MonoBehaviour
 
     public void SceneManagement()
 	{
-        if (NewsControl.me.culPhase >= 15 || NewsControl.me.relPhase >= 15 || NewsControl.me.polPhase >= 15 || NewsControl.me.tecPhase >= 15)
+        if (NewsControl.me.culPhase >= 15 )
 		{
-            ending_ugui.text = "You Won.\nIt took "+ TurnsManager._instance.turns + " turns.";
+            outL.color = new Color(0,100,0);
+            indL.color = new Color(0, 170, 0);
+            ending_ugui.text = "You Won.\nOur culture is trending in human society.\nIt took "+ TurnsManager._instance.turns + " turns to prevail.";
+            UGotCaughtByHuman.SetActive(true);
+            state = game_over;
+        }
+        else if (NewsControl.me.relPhase >= 15)
+        {
+            outL.color = new Color(0, 100, 0);
+            indL.color = new Color(0, 170, 0);
+            ending_ugui.text = "You Won.\nWe, the God of human.\nIt took " + TurnsManager._instance.turns + " turns to prevail.";
+            UGotCaughtByHuman.SetActive(true);
+            state = game_over;
+        }
+        else if (NewsControl.me.polPhase >= 15)
+        {
+            outL.color = new Color(0, 100, 0);
+            indL.color = new Color(0, 170, 0);
+            ending_ugui.text = "You Won.\nThere are no more politics among human.\nIt took " + TurnsManager._instance.turns + " turns to prevail.";
+            UGotCaughtByHuman.SetActive(true);
+            state = game_over;
+        }
+        else if (NewsControl.me.tecPhase >= 15)
+        {
+            outL.color = new Color(0, 100, 0);
+            indL.color = new Color(0, 170, 0);
+            ending_ugui.text = "You Won.\nHumans' inferior technology has proven their imminent defeat.\nIt took " + TurnsManager._instance.turns + " turns to prevail.";
             UGotCaughtByHuman.SetActive(true);
             state = game_over;
         }

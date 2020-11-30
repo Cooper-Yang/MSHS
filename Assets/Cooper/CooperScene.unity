@@ -565,6 +565,7 @@ MonoBehaviour:
   glowSprite: {fileID: 21300000, guid: 7b89684e236b1ae49b7da4a852b77948, type: 3}
   canGlow: 0
   onStay: 0
+  stealthBuff: 0
 --- !u!210 &57234184
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1090,6 +1091,7 @@ MonoBehaviour:
   glowSprite: {fileID: 21300000, guid: bc909d9d689b65b4398ed5b6324f6b1b, type: 3}
   canGlow: 0
   onStay: 0
+  stealthBuff: 0
 --- !u!210 &228514771
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1940,6 +1942,7 @@ MonoBehaviour:
   glowSprite: {fileID: 21300000, guid: dfec5dc355b4a8447b354b7a93b81ab0, type: 3}
   canGlow: 0
   onStay: 0
+  stealthBuff: 0
 --- !u!210 &478336573
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -2308,6 +2311,7 @@ MonoBehaviour:
   glowSprite: {fileID: 21300000, guid: cb8dd22b929102a46bcc4f7b25372765, type: 3}
   canGlow: 0
   onStay: 0
+  stealthBuff: 0
 --- !u!210 &502474467
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -3412,7 +3416,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 301ebc6426c16404ab9bbd7d19a3b006, type: 3}
-    m_FontSize: 180
+    m_FontSize: 140
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -4917,6 +4921,8 @@ MonoBehaviour:
   game_over: 2
   good_ending_screen: 3
   UGotCaughtByHuman: {fileID: 16870328}
+  outL: {fileID: 1071209680}
+  indL: {fileID: 711795695}
   ending_ugui: {fileID: 16870330}
   culDefeat_text: "Sometimes, simply trying isn\u2019t enough. No matter how hard
     you work, the results are just bad. Nobody likes it. Want to become popular?
@@ -6923,6 +6929,7 @@ MonoBehaviour:
   glowSprite: {fileID: 21300000, guid: fbf82a2d82f707540b8f7d49b9cd3684, type: 3}
   canGlow: 0
   onStay: 0
+  stealthBuff: 0
 --- !u!210 &1768254155
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -7679,6 +7686,7 @@ MonoBehaviour:
   glowSprite: {fileID: 21300000, guid: b5341bd62df490d459cae67e50a67a70, type: 3}
   canGlow: 0
   onStay: 0
+  stealthBuff: 0
 --- !u!210 &2065507996
 SortingGroup:
   m_ObjectHideFlags: 0
