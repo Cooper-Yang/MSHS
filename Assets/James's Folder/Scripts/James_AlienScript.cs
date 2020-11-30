@@ -90,12 +90,12 @@ public class James_AlienScript : MonoBehaviour
 	{
 		if (collidedCard != null)
 		{
-			print("collidedCard name: " + collidedCard.gameObject.name);
+			//print("collidedCard name: " + collidedCard.gameObject.name);
 			//print("pos: " + collidedCard.gameObject.transform.position);
 			if (collidedCard.gameObject.name == "Alien(Clone)")
 			{
-				print(collidedCard.gameObject.transform.position);
-				collidedCard = null;
+				//print(collidedCard.gameObject.transform.position);
+				//collidedCard = null;
 			}
 		}
 		currentage.text = lifeSpan.ToString();
@@ -107,7 +107,12 @@ public class James_AlienScript : MonoBehaviour
 			{
 				if (Input.GetMouseButtonUp(0))
 				{
-					AffectSingleAlien(collidedCard);
+					if (gameObject != null &&
+						collidedCard != null &&
+						lifeSpan > 0)
+					{
+						AffectSingleAlien(collidedCard);
+					}
 				}
 			}
 			Glow();
@@ -235,10 +240,6 @@ public class James_AlienScript : MonoBehaviour
 
 	public IEnumerator NumberChangedVFX(float pol, float cul, float rel, float tech) // input change amount
 	{
-		print(pol);
-		print(cul);
-		print(rel);
-		print(tech);
 		// show the corresponding icons
 		if (pol > 0)
 		{
@@ -382,16 +383,16 @@ public class James_AlienScript : MonoBehaviour
 			// apply effects to this alien
 			GameObject otherCard = collision.gameObject;
 			CardReader cR = otherCard.GetComponent<CardReader>();
-			pol_Influence += cR.poliVal;
-			cul_Influence += cR.culVal;
-			rel_Influence += cR.reliVal;
-			tech_Influence += cR.techVal;
+			pol_Influence += cR.poliVal + GameManager.me.buff;
+			cul_Influence += cR.culVal + GameManager.me.buff;
+			rel_Influence += cR.reliVal + GameManager.me.buff;
+			tech_Influence += cR.techVal + GameManager.me.buff;
 			lifeSpan += cR.lifeVal;
 			stealthlv._instance.changeDisValue(cR.discovRate);
 			TurnsManager._instance.nextTurn();
 			targetingMe = false;
 			AudioManager._instance.AfterPlay();
-			StartCoroutine(NumberChangedVFX(cR.poliVal, cR.culVal, cR.reliVal, cR.techVal));
+			StartCoroutine(NumberChangedVFX(cR.poliVal + GameManager.me.buff, cR.culVal + GameManager.me.buff, cR.reliVal + GameManager.me.buff, cR.techVal + GameManager.me.buff));
 			Destroy(collision.gameObject);
 		}
 		else
