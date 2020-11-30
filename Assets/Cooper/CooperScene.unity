@@ -4910,7 +4910,7 @@ MonoBehaviour:
   rel_gl: 0
   tech_gl: 0
   aliens: []
-  dot_addAmount: 2
+  dot_addAmount: 1.8
   state: 0
   splash_screen: 0
   game_screen: 1
