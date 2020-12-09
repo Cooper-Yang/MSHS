@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cooper/CooperScene.unity
     guid: 80142f22bb3923c4abafc9797824fd0d
-  - enabled: 1
-    path: Assets/Ivory's Folder/Ivory'sScene.unity
-    guid: 67704d71b552bd64a83448e085af50c4
   m_configObjects: {}
